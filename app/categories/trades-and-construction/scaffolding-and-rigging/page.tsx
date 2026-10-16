@@ -397,13 +397,16 @@ export default function ScaffoldingRiggingAndIndustrialAccessPage() {
                     </div>
                   </div>
                   <div className="flex flex-col gap-space-xs mt-space-md">
-                    <button className="w-full h-11 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm flex items-center justify-center gap-space-xs transition-colors cursor-pointer">
+                    <Link
+                      href="/jobs/senior-scaffolding-superintendent"
+                      className="w-full h-11 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm flex items-center justify-center gap-space-xs transition-colors cursor-pointer"
+                    >
                       Quick Apply
                       <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                    </button>
+                    </Link>
                     <Link
                       className="w-full h-11 bg-surface-container-lowest hover:bg-surface-container text-secondary font-label-lg text-label-lg rounded-lg transition-colors flex items-center justify-center cursor-pointer"
-                      href="/find-jobs"
+                      href="/jobs/senior-scaffolding-superintendent"
                     >
                       View Position
                     </Link>
