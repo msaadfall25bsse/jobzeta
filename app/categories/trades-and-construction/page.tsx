@@ -66,7 +66,7 @@ export default function TradesAndConstructionPage() {
       icon: "shield",
       desc: "Site Foremen, OSHA / DGUV Safety Officers, Quality Inspectors, Cost Estimators.",
       band: "€60,000 - €95,000",
-      link: "#",
+      link: "/categories/trades-and-construction/site-supervision-and-safety",
     },
     {
       title: "Renewable Energy Trades",
