@@ -280,7 +280,7 @@ export default function MasonryAndFinishingPage() {
                       <img
                         alt="Certified commercial stone mason and architectural bricklayer laying klinker bricks and precast limestone facade"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        src="https://lh3.googleusercontent.com/aida/AEtjO1WF3oLv_xJCgxrV2oILoN0PIlwTAiTXQ7p3sQdVAe-A4L3jdgm8TXD62l3ANal4_Np-21nKZv2uQo60butpSbfqAxrh4_M_o01607PIdHj9pzEdo70bv2CQkulvhcSPDodHb0IsiMfaPOov9nVoV4uYw1DVTOgdg-qHcYDbZ_ckHqmGtm3lyC_VWTATbppaVoZ0rPNsyncFXbgTQuDuLpmDGd0h9igLiMhrCPtb1C0tCQ"
+                        src="/masonry-facade-lead.jpg"
                       />
                       <span className="absolute top-2 left-2 px-2.5 py-1 rounded bg-on-background/80 backdrop-blur-sm text-on-primary font-label-sm text-[10px] font-bold tracking-wider uppercase shadow">
                         Architectural Masonry &amp; Facades
