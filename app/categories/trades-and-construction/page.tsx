@@ -58,7 +58,7 @@ export default function TradesAndConstructionPage() {
       icon: "countertops",
       desc: "Stonemasons, Commercial Bricklayers, Facade Specialists, Industrial Tilers.",
       band: "£38,000 - £56,000",
-      link: "#",
+      link: "/categories/trades-and-construction/masonry-and-finishing",
     },
     {
       title: "Site Supervision & Safety",
