@@ -74,7 +74,7 @@ export default function TradesAndConstructionPage() {
       icon: "wind_power",
       desc: "Wind Turbine Techs (GWO Certified), Utility Solar Installers, Battery Storage Techs.",
       band: "$70,000 - $105,000",
-      link: "#",
+      link: "/categories/trades-and-construction/scaffolding-and-rigging",
     },
   ];
 
