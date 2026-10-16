@@ -401,15 +401,15 @@ export default function SiteSupervisionAndSafetyPage() {
                     </div>
                     {/* Action CTAs */}
                     <div className="flex flex-col gap-space-xs">
-                      <button
+                      <Link
                         className="w-full h-11 inline-flex items-center justify-center font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-lg shadow-sm transition-colors cursor-pointer"
-                        type="button"
+                        href="/jobs/senior-civil-superintendent-hse"
                       >
                         Quick Apply →
-                      </button>
+                      </Link>
                       <Link
                         className="w-full h-11 inline-flex items-center justify-center font-label-lg text-label-lg text-secondary bg-surface-container-lowest hover:bg-surface-container-high rounded-lg shadow-xs transition-colors cursor-pointer"
-                        href="/find-jobs"
+                        href="/jobs/senior-civil-superintendent-hse"
                       >
                         View Position
                       </Link>
