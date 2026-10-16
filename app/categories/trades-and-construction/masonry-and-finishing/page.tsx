@@ -430,13 +430,16 @@ export default function MasonryAndFinishingPage() {
                     </div>
                     {/* CTA Cluster */}
                     <div className="space-y-space-sm pt-space-md">
-                      <button className="w-full py-3.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+                      <Link
+                        href="/jobs/senior-structural-mason"
+                        className="w-full py-3.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      >
                         <span>Quick Apply</span>
                         <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                      </button>
+                      </Link>
                       <Link
                         className="w-full py-2.5 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
-                        href="/find-jobs"
+                        href="/jobs/senior-structural-mason"
                       >
                         <span className="material-symbols-outlined text-[18px]">open_in_new</span>
                         View Position
