@@ -6,32 +6,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function DangerousGoodsHazmatTankerPage() {
-  const [tankerSpec, setTankerSpec] = useState("Stainless 316L Pressurized");
-  const [corridor, setCorridor] = useState("Antwerp & Rotterdam Europort");
-  const [adrCert, setAdrCert] = useState("All Classes in Tanks (2-9)");
-  const [emailAlert, setEmailAlert] = useState("");
-  const [alertSuccess, setAlertSuccess] = useState(false);
-  const [isHoveredDirectives, setIsHoveredDirectives] = useState(false);
-
-  const handleAlertSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (emailAlert.trim()) {
-      setAlertSuccess(true);
-      setTimeout(() => setAlertSuccess(false), 5000);
-      setEmailAlert("");
-    }
-  };
+  const [tankerSpec, setTankerSpec] = useState("Tanker Spec: Stainless 316L Pressurized");
+  const [corridor, setCorridor] = useState("Corridor: Antwerp & Rotterdam Europort");
+  const [adrCert, setAdrCert] = useState("ADR Certificate: All Classes in Tanks (2-9)");
 
   return (
     <div className="bg-[#f7fafe] font-sans text-[#181c1f] min-h-screen flex flex-col antialiased">
       <Header />
 
-      <main className="w-full pt-16 flex-1 bg-[#f7fafe]">
+      <main className="w-full pt-16 flex-1 bg-surface">
         <div className="flex flex-col w-full">
           {/* Status & Directory Meta Bar */}
-          <div className="w-full bg-[#f1f4f8] px-4 md:px-6 py-2.5 border-b border-[#e0e3e7]">
-            <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-[#3d4947] text-xs font-semibold">
-              <div className="flex items-center gap-2 flex-wrap">
+          <div className="w-full bg-[#f1f4f8] px-gutter py-2.5">
+            <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm text-[#3d4947] font-label-sm text-label-sm">
+              <div className="flex items-center gap-space-sm flex-wrap">
                 <span className="font-mono bg-[#e0e3e7] text-[#3f5f8d] px-2 py-0.5 rounded font-bold tracking-wider">
                   DT-HM-ADR-9140
                 </span>
@@ -44,7 +32,7 @@ export default function DangerousGoodsHazmatTankerPage() {
                   ADR Class 1-9 &amp; US HAZMAT (H/X) Endorsement Verified
                 </span>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-space-md">
                 <span className="inline-flex items-center gap-1">
                   <span className="material-symbols-outlined text-[15px] text-[#4f5d70]">sensors</span>
                   ARA Corridor Telemetry: 99.4% Latency Clear
@@ -55,10 +43,10 @@ export default function DangerousGoodsHazmatTankerPage() {
           </div>
 
           {/* Breadcrumbs & Category Hero Area */}
-          <section className="w-full bg-[#f7fafe] px-4 md:px-6 pt-6 pb-10">
-            <div className="max-w-7xl mx-auto flex flex-col gap-6">
+          <section className="w-full bg-surface px-gutter pt-space-lg pb-space-xl">
+            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
               {/* Breadcrumb Navigation */}
-              <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-xs md:text-sm text-[#3d4947] flex-wrap font-medium">
+              <nav aria-label="Breadcrumb" className="flex items-center gap-space-xs font-label-md text-label-md text-[#3d4947] flex-wrap">
                 <Link className="hover:text-[#00685f] transition-colors" href="/">Home</Link>
                 <span className="material-symbols-outlined text-[14px]">chevron_right</span>
                 <Link className="hover:text-[#00685f] transition-colors" href="/categories">Categories</Link>
@@ -69,114 +57,97 @@ export default function DangerousGoodsHazmatTankerPage() {
               </nav>
 
               {/* Title & Action Split Row */}
-              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-                <div className="max-w-4xl flex flex-col gap-2">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="px-2.5 py-1 rounded bg-[#3f5f8d]/10 text-[#3f5f8d] text-xs font-bold uppercase tracking-wider">
+              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+                <div className="max-w-4xl flex flex-col gap-space-sm">
+                  <div className="flex items-center gap-space-sm">
+                    <span className="px-2.5 py-1 rounded bg-[#3f5f8d]/10 text-[#3f5f8d] font-label-sm text-label-sm font-bold uppercase tracking-wider">
                       Vocational Sector: ADR &amp; Industrial Bulk
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-[#00685f]/10 text-[#00685f] text-xs font-bold uppercase tracking-wider">
+                    <span className="px-2.5 py-1 rounded bg-[#00685f]/10 text-[#00685f] font-label-sm text-label-sm font-bold uppercase tracking-wider">
                       Critical Supply Chain
                     </span>
                   </div>
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black tracking-tight leading-tight">
+                  <h1 className="font-headline-xl text-headline-xl text-black tracking-tight">
                     Dangerous Goods, Petrochemical &amp; Hazmat Tanker Operations (ADR / Class 1-9)
                   </h1>
-                  <p className="text-base sm:text-lg text-[#3d4947] leading-relaxed">
+                  <p className="font-body-lg text-body-lg text-[#3d4947] leading-relaxed">
                     Certified Class CE and CDL Class A hazmat bulk chemical, cryogenic gas, and fuel tanker drivers operating across European chemical clusters (ARA ports, Ruhr, Rhône valley) and North American corridors.
                   </p>
                 </div>
 
                 {/* Quick Action Buttons */}
-                <div className="flex items-center gap-3 flex-shrink-0">
-                  <button
-                    onClick={() => {
-                      if (navigator.share) {
-                        navigator.share({
-                          title: "Dangerous Goods & Hazmat Tanker Operations (ADR / Class 1-9)",
-                          url: window.location.href,
-                        });
-                      } else {
-                        navigator.clipboard.writeText(window.location.href);
-                        alert("Page URL copied to clipboard!");
-                      }
-                    }}
-                    className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-[#e5e8ec] text-black text-sm font-semibold hover:bg-[#e0e3e7] transition-colors shadow-sm cursor-pointer"
-                    type="button"
-                  >
+                <div className="flex items-center gap-space-sm flex-shrink-0">
+                  <button className="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-lg bg-[#e5e8ec] text-[#181c1f] font-label-lg text-label-lg hover:bg-[#e0e3e7] transition-colors shadow-sm" type="button">
                     <span className="material-symbols-outlined text-[18px]">share</span>
                     Share Hazmat Stream
                   </button>
-                  <a
-                    href="#subscribe-alerts"
-                    className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-[#00685f] text-white text-sm font-bold hover:bg-[#008378] transition-colors shadow-sm cursor-pointer"
-                  >
+                  <button className="inline-flex items-center gap-1.5 px-space-md py-2.5 rounded-lg bg-[#00685f] text-white font-label-lg text-label-lg hover:bg-[#008378] transition-colors shadow-sm" type="button">
                     <span className="material-symbols-outlined text-[18px]">notifications_active</span>
                     Set ADR Dispatch Alerts
-                  </a>
+                  </button>
                 </div>
               </div>
 
               {/* KPI Statistics Cards (3 columns) */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-sm">
                 {/* Metric Card 1 */}
-                <div className="p-6 rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-4">
+                <div className="p-space-lg rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-space-md">
                   <div className="flex items-start justify-between">
                     <div className="flex flex-col">
-                      <span className="text-xs uppercase tracking-wider text-[#3d4947] font-semibold">Active Hazmat Requisitions</span>
-                      <span className="text-3xl sm:text-4xl font-extrabold text-black tracking-tight mt-1">3,180</span>
+                      <span className="font-label-md text-label-md text-[#3d4947] uppercase tracking-wider">Active Hazmat Requisitions</span>
+                      <span className="font-headline-xl text-headline-xl text-black font-bold tracking-tight">3,180</span>
                     </div>
                     <div className="w-12 h-12 rounded-xl bg-[#00685f]/10 text-[#00685f] flex items-center justify-center">
                       <span className="material-symbols-outlined text-[26px]">local_shipping</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[#00685f] text-xs font-bold">
+                  <div className="flex items-center gap-2 text-[#00685f] font-label-sm text-label-sm">
                     <span className="material-symbols-outlined text-[16px]">trending_up</span>
                     <span>+22.4% MoM Specialized Chemical Fleet Demand</span>
                   </div>
                 </div>
 
                 {/* Metric Card 2 */}
-                <div className="p-6 rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-4">
+                <div className="p-space-lg rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-space-md">
                   <div className="flex items-start justify-between">
                     <div className="flex flex-col">
-                      <span className="text-xs uppercase tracking-wider text-[#3d4947] font-semibold">Average Global Wage Band</span>
-                      <span className="text-3xl sm:text-4xl font-extrabold text-[#3f5f8d] tracking-tight mt-1">€58k – €92k</span>
+                      <span className="font-label-md text-label-md text-[#3d4947] uppercase tracking-wider">Average Global Wage Band</span>
+                      <span className="font-headline-xl text-headline-xl text-[#3f5f8d] font-bold tracking-tight">€58k – €92k</span>
                     </div>
                     <div className="w-12 h-12 rounded-xl bg-[#3f5f8d]/10 text-[#3f5f8d] flex items-center justify-center">
                       <span className="material-symbols-outlined text-[26px]">payments</span>
                     </div>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                  <p className="font-body-sm text-body-sm text-[#3d4947]">
                     $64,000 – $102,000 USD eq. with danger pay multiplier, tank wash bonuses, and ADR night per diem.
                   </p>
                 </div>
 
                 {/* Metric Card 3 */}
-                <div className="p-6 rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-4">
+                <div className="p-space-lg rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-space-md">
                   <div className="flex items-start justify-between">
                     <div className="flex flex-col">
-                      <span className="text-xs uppercase tracking-wider text-[#3d4947] font-semibold">Compliance Gateways</span>
-                      <span className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight mt-1">ADR &amp; US (H/X)</span>
+                      <span className="font-label-md text-label-md text-[#3d4947] uppercase tracking-wider">Compliance Gateways</span>
+                      <span className="font-headline-xl text-headline-xl text-black font-bold tracking-tight">ADR &amp; US (H/X)</span>
                     </div>
                     <div className="w-12 h-12 rounded-xl bg-[#00685f]/10 text-[#00685f] flex items-center justify-center">
                       <span className="material-symbols-outlined text-[26px]">verified_user</span>
                     </div>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                  <p className="font-body-sm text-body-sm text-[#3d4947]">
                     ADR Tanker Certification (Classes 2-9) &amp; US Hazmat Endorsement (H/X) with FMCSA Background Check.
                   </p>
                 </div>
               </div>
 
               {/* Advanced Technical Filter Strip */}
-              <div className="p-4 rounded-xl bg-[#ebeef2] border border-[#e0e3e7] shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
+              <div className="p-space-md rounded-xl bg-[#ebeef2] shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center gap-space-sm border border-[#e0e3e7]">
                 <div className="relative flex-1 min-w-[220px]">
                   <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#3d4947] text-[20px]">propane_tank</span>
                   <select
                     value={tankerSpec}
                     onChange={(e) => setTankerSpec(e.target.value)}
-                    className="w-full h-11 pl-10 pr-8 bg-white border border-[#e0e3e7] text-black text-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:border-[#00685f]"
+                    className="w-full h-11 pl-10 pr-8 bg-white text-black font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none border border-[#e0e3e7]"
                   >
                     <option>Tanker Spec: Stainless 316L Pressurized</option>
                     <option>Tanker Spec: Cryogenic IMO-4 (LNG/Liquid N2)</option>
@@ -192,7 +163,7 @@ export default function DangerousGoodsHazmatTankerPage() {
                   <select
                     value={corridor}
                     onChange={(e) => setCorridor(e.target.value)}
-                    className="w-full h-11 pl-10 pr-8 bg-white border border-[#e0e3e7] text-black text-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:border-[#00685f]"
+                    className="w-full h-11 pl-10 pr-8 bg-white text-black font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none border border-[#e0e3e7]"
                   >
                     <option>Corridor: Antwerp &amp; Rotterdam Europort</option>
                     <option>Corridor: Rhine-Ruhr &amp; Ludwigshafen Hub</option>
@@ -208,7 +179,7 @@ export default function DangerousGoodsHazmatTankerPage() {
                   <select
                     value={adrCert}
                     onChange={(e) => setAdrCert(e.target.value)}
-                    className="w-full h-11 pl-10 pr-8 bg-white border border-[#e0e3e7] text-black text-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:border-[#00685f]"
+                    className="w-full h-11 pl-10 pr-8 bg-white text-black font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none border border-[#e0e3e7]"
                   >
                     <option>ADR Certificate: All Classes in Tanks (2-9)</option>
                     <option>ADR Certificate: Class 3 Flammables Exclusively</option>
@@ -219,10 +190,7 @@ export default function DangerousGoodsHazmatTankerPage() {
                   <span className="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[#3d4947] pointer-events-none text-[18px]">arrow_drop_down</span>
                 </div>
 
-                <button
-                  className="h-11 px-6 rounded-lg bg-[#00685f] text-white text-sm font-bold hover:bg-[#008378] transition-colors flex items-center justify-center gap-2 shadow-sm whitespace-nowrap cursor-pointer"
-                  type="button"
-                >
+                <button className="h-11 px-space-lg rounded-lg bg-[#00685f] text-white font-label-lg text-label-lg hover:bg-[#008378] transition-colors flex items-center justify-center gap-2 shadow-sm whitespace-nowrap" type="button">
                   <span className="material-symbols-outlined text-[18px]">search</span>
                   Filter Corridors
                 </button>
@@ -231,74 +199,75 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Featured Technical Requisition Section (Interactive Reveal Mechanism) */}
-          <section className="w-full px-4 md:px-6 py-10 bg-[#f1f4f8] border-y border-[#e0e3e7]">
-            <div className="max-w-7xl mx-auto flex flex-col gap-6">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <section className="w-full px-gutter py-space-xl bg-[#f1f4f8]">
+            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
                 <div>
-                  <span className="text-xs text-[#00685f] uppercase font-bold tracking-wider">Priority Enterprise Dispatch</span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-black">Featured Primary Requisition</h2>
+                  <span className="font-label-sm text-label-sm text-[#00685f] uppercase font-bold tracking-wider">Priority Enterprise Dispatch</span>
+                  <h2 className="font-headline-lg text-headline-lg text-black">Featured Primary Requisition</h2>
                 </div>
-                <div className="flex items-center gap-2 text-[#3d4947] text-sm font-medium">
+                <div className="flex items-center gap-2 text-[#3d4947] font-label-md text-label-md">
                   <span className="inline-block w-2.5 h-2.5 rounded-full bg-[#00685f]"></span>
                   Direct Dispatch from Tier-1 Chemical Terminal
                 </div>
               </div>
 
               {/* EXACTLY 1 Primary Job Card with Interactive Hover Text Reveal */}
-              <article className="group relative rounded-2xl bg-white border border-[#e0e3e7] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+              <article className="group relative rounded-2xl bg-white shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-[#e0e3e7]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px]">
                   {/* Left Media Container (Image + Frosted Pills) */}
                   <div className="relative lg:col-span-5 h-72 lg:h-auto overflow-hidden">
                     <img
                       alt="ADR certified chemical road tanker driver inspecting pressure valves and telematics in high-visibility protective gear at a petrochemical terminal in Port of Antwerp."
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      src="/adr-hazmat-tanker-hero.jpg"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCplvXiMgD4Xs15BHHLwEOqg381z309Dt0oA6EUxGVihXbuLbItqVf-fe2iVqYfRUof2mTtRaSH0JoAbKURRZ_zwwtxdynnC-CMPxqgLWqfXDZy5Vz6nF8qleRtCCqaHgJ0VGtE1chtRJ6u3-7OTF_dua6sJCDEZ7SLf7FPHt8TwaYBeLSdcspiFn6tuwmKXF9LjnIZS3f6gYX6UqqV0PoONKG1cnqsVmAOFkZ4o0m7poc5SZsVV2judA"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181c1f]/90 via-[#181c1f]/30 to-transparent"></div>
                     
                     {/* Frosted Meta Badges */}
                     <div className="absolute top-4 left-4 right-4 flex flex-wrap gap-2">
-                      <span className="px-2.5 py-1 rounded-full bg-white/85 backdrop-blur-md text-black text-xs font-bold shadow-sm">
+                      <span className="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-md text-black font-label-sm text-label-sm font-bold shadow-sm">
                         ADR Chemical &amp; Petrochemical
                       </span>
-                      <span className="px-2.5 py-1 rounded-full bg-white/85 backdrop-blur-md text-[#3d4947] font-mono text-xs shadow-sm font-semibold">
+                      <span className="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-md text-[#3d4947] font-mono font-label-sm text-label-sm shadow-sm">
                         Ref: BY-ANT-HAZMAT-4412
                       </span>
                     </div>
+
                     <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                      <span className="px-2.5 py-1 rounded-full bg-[#00685f] text-white text-xs font-bold flex items-center gap-1 shadow-sm">
+                      <span className="px-2.5 py-1 rounded-full bg-[#00685f] text-white font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
                         <span className="material-symbols-outlined text-[14px]">local_fire_department</span>
                         IMO-4 &amp; ADR Certified Tanker
                       </span>
-                      <span className="text-white text-xs bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
+                      <span className="text-white font-label-sm text-label-sm bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
                         Updated 15m ago
                       </span>
                     </div>
                   </div>
 
                   {/* Right Content & Directives Container */}
-                  <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
+                  <div className="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between gap-space-md">
                     {/* Header Meta */}
-                    <div className="flex flex-col gap-2.5">
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <div className="flex items-center gap-2.5">
-                          <span className="w-9 h-9 rounded-lg bg-[#3f5f8d] text-white flex items-center justify-center font-bold text-sm">DSV</span>
+                    <div className="flex flex-col gap-space-sm">
+                      <div className="flex flex-wrap items-center justify-between gap-space-sm">
+                        <div className="flex items-center gap-2">
+                          <span className="w-8 h-8 rounded-lg bg-[#3f5f8d] text-white flex items-center justify-center font-bold text-sm">DSV</span>
                           <div>
-                            <h3 className="text-sm font-bold text-black">DSV Road &amp; Panalpina Tanker Division</h3>
-                            <p className="text-xs text-[#3d4947]">Tier-1 ADR Bulk Fleet Operations • Posted 2h ago</p>
+                            <h3 className="font-label-lg text-label-lg text-black font-bold">DSV Road &amp; Panalpina Tanker Division</h3>
+                            <p className="font-label-sm text-label-sm text-[#3d4947]">Tier-1 ADR Bulk Fleet Operations • Posted 2h ago</p>
                           </div>
                         </div>
-                        <span className="px-3 py-1 rounded-full bg-[#00685f]/10 text-[#00685f] text-xs font-bold flex items-center gap-1">
+                        <span className="px-3 py-1 rounded-full bg-[#00685f]/10 text-[#00685f] font-label-sm text-label-sm font-bold flex items-center gap-1">
                           <span className="material-symbols-outlined text-[16px]">verified</span>
                           Direct Carrier Requisition
                         </span>
                       </div>
 
-                      <h2 className="text-xl sm:text-2xl font-bold text-black group-hover:text-[#00685f] transition-colors leading-snug">
+                      <h2 className="font-headline-md text-headline-md text-black font-bold group-hover:text-[#00685f] transition-colors">
                         Senior ADR Tanker Driver - Petrochemical &amp; Liquid Chemicals (Bulk Stainless Steel Road Tanker)
                       </h2>
 
-                      <div className="flex flex-wrap items-center gap-2 text-[#3d4947] text-xs sm:text-sm">
+                      <div className="flex flex-wrap items-center gap-space-sm text-[#3d4947] font-body-sm text-body-sm">
                         <span className="flex items-center gap-1 text-[#3f5f8d] font-bold">
                           <span className="material-symbols-outlined text-[18px]">location_on</span>
                           Port of Antwerp / Rotterdam Europort Hub (Trans-European Chemical Corridors)
@@ -312,104 +281,92 @@ export default function DangerousGoodsHazmatTankerPage() {
 
                       {/* Badges Strip */}
                       <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black text-xs font-bold">
+                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black font-label-sm text-label-sm font-bold">
                           ADR Tankers Class 3, 6.1, 8
                         </span>
-                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black text-xs font-medium">
+                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black font-label-sm text-label-sm">
                           Digital Tachograph Gen 2
                         </span>
-                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black text-xs font-medium">
+                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black font-label-sm text-label-sm">
                           Euro VI Tanker Fleet
                         </span>
-                        <span className="px-2.5 py-1 rounded-full bg-[#d5e3ff] text-[#001c3b] text-xs font-bold">
+                        <span className="px-2.5 py-1 rounded-full bg-[#d5e3ff] text-[#001c3b] font-label-sm text-label-sm font-bold">
                           Hazard Allowance Included
                         </span>
                       </div>
                     </div>
 
                     {/* Compensation Band Banner */}
-                    <div className="p-4 rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div className="p-space-md rounded-xl bg-[#f1f4f8] flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm border border-[#e0e3e7]">
                       <div>
-                        <span className="text-xs text-[#3d4947] uppercase tracking-wider block font-semibold">Total Compensation Structure</span>
-                        <div className="text-xl sm:text-2xl font-extrabold text-[#00685f]">
-                          €58,000 – €88,000 <span className="text-sm text-[#3d4947] font-normal">/ year base</span>
+                        <span className="font-label-sm text-label-sm text-[#3d4947] uppercase tracking-wider block">Total Compensation Structure</span>
+                        <div className="font-headline-sm text-headline-sm text-[#00685f] font-bold">
+                          €58,000 – €88,000 <span className="font-body-sm text-body-sm text-[#3d4947] font-normal">/ year base</span>
                         </div>
                       </div>
-                      <div className="text-left sm:text-right text-xs sm:text-sm text-[#3f5f8d] font-semibold">
+                      <div className="text-left sm:text-right font-label-md text-label-md text-[#3f5f8d]">
                         <span className="block">+ €55–€85/day ADR danger allowance</span>
                         <span className="text-[#00685f] font-bold block">+ €4,200 zero-spill safety bonus</span>
                       </div>
                     </div>
 
-                    {/* Interactive Hover / Click Text Reveal Box */}
-                    <div
-                      onMouseEnter={() => setIsHoveredDirectives(true)}
-                      onMouseLeave={() => setIsHoveredDirectives(false)}
-                      onClick={() => setIsHoveredDirectives(!isHoveredDirectives)}
-                      className="relative overflow-hidden rounded-xl bg-[#ebeef2] border border-[#e0e3e7] p-4 transition-all duration-300 cursor-pointer"
-                    >
-                      {/* Default State Hint */}
-                      {!isHoveredDirectives && (
-                        <div className="flex items-center justify-between text-[#3d4947]">
-                          <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-[#00685f] text-[20px] animate-pulse">info</span>
-                            <span className="text-xs sm:text-sm font-bold text-black">Hover / tap to reveal hazmat protocol &amp; technical directives</span>
-                          </div>
-                          <span className="material-symbols-outlined text-[18px]">expand_more</span>
+                    {/* Interactive Hover Text Reveal Box */}
+                    <div className="relative overflow-hidden rounded-xl bg-[#ebeef2] p-space-md transition-all duration-300 border border-[#e0e3e7]">
+                      {/* Default State Hint (Visible normally, fades out slightly on hover) */}
+                      <div className="flex items-center justify-between text-[#3d4947] transition-opacity duration-300 group-hover:hidden">
+                        <div className="flex items-center gap-2">
+                          <span className="material-symbols-outlined text-[#00685f] text-[20px] animate-pulse">info</span>
+                          <span className="font-label-md text-label-md font-bold text-black">Hover to reveal hazmat protocol &amp; technical directives</span>
                         </div>
-                      )}
+                        <span className="material-symbols-outlined text-[18px]">expand_more</span>
+                      </div>
 
-                      {/* Expanded Reveal State */}
-                      {isHoveredDirectives && (
-                        <div className="flex flex-col gap-2.5 transition-all duration-300">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2 text-[#00685f] text-sm font-bold">
-                              <span className="material-symbols-outlined text-[20px]">security</span>
-                              <span>Operational Technical Directives &amp; Safety Mandate:</span>
-                            </div>
-                            <span className="material-symbols-outlined text-[18px] text-[#4f5d70]">expand_less</span>
+                      {/* Expanded Reveal State on Hover */}
+                      <div className="hidden group-hover:flex flex-col gap-space-sm transition-all duration-300">
+                        <div className="flex items-center gap-2 text-[#00685f] font-label-md text-label-md font-bold">
+                          <span className="material-symbols-outlined text-[20px]">security</span>
+                          <span>Operational Technical Directives &amp; Safety Mandate:</span>
+                        </div>
+                        <p className="font-body-sm text-body-sm text-black leading-relaxed">
+                          Responsible for bulk chemical transport utilizing 3-compartment insulated 316L stainless steel pressure tankers (37,500L). Requires vapor recovery system (VRS) hookup protocols and closed-loop nitrogen purge loading at BASF Ludwigshafen, Dow Terneuzen, and Covestro Antwerp sites.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-xs text-black font-label-sm text-label-sm pt-1">
+                          <div className="flex items-center gap-1.5">
+                            <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
+                            <span>Class 8 Corrosives &amp; Class 3 Flammables</span>
                           </div>
-                          <p className="text-xs sm:text-sm text-[#181c1f] leading-relaxed">
-                            Responsible for bulk chemical transport utilizing 3-compartment insulated 316L stainless steel pressure tankers (37,500L). Requires vapor recovery system (VRS) hookup protocols and closed-loop nitrogen purge loading at BASF Ludwigshafen, Dow Terneuzen, and Covestro Antwerp sites.
-                          </p>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[#181c1f] text-xs pt-1">
-                            <div className="flex items-center gap-1.5">
-                              <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
-                              <span className="font-semibold">Class 8 Corrosives &amp; Class 3 Flammables</span>
-                            </div>
-                            <div className="flex items-center gap-1.5">
-                              <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
-                              <span className="font-semibold">Compulsory Emergency Shower &amp; SCBA Drills</span>
-                            </div>
-                            <div className="flex items-center gap-1.5">
-                              <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
-                              <span className="font-semibold">Pre-trip Valve &amp; Bursting Disc Inspection</span>
-                            </div>
-                            <div className="flex items-center gap-1.5">
-                              <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
-                              <span className="font-semibold">Automated Fleet Spill Control Telematics</span>
-                            </div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
+                            <span>Compulsory Emergency Shower &amp; SCBA Drills</span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
+                            <span>Pre-trip Valve &amp; Bursting Disc Inspection</span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
+                            <span>Automated Fleet Spill Control Telematics</span>
                           </div>
                         </div>
-                      )}
+                      </div>
                     </div>
 
                     {/* Action & Statutory Clearance Row */}
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-1">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs">
                       <div className="flex flex-col">
-                        <span className="text-xs text-[#3d4947] uppercase tracking-wider font-semibold">Statutory Clearance</span>
-                        <span className="text-sm text-black font-bold">ADR Tanker Class 2-9 + SQAS Driver Audit</span>
+                        <span className="font-label-sm text-label-sm text-[#3d4947] uppercase tracking-wider">Statutory Clearance</span>
+                        <span className="font-label-md text-label-md text-black font-bold">ADR Tanker Class 2-9 + SQAS Driver Audit</span>
                       </div>
-                      <div className="flex items-center gap-2.5">
+                      <div className="flex items-center gap-space-sm">
                         <Link
                           href="/jobs/senior-adr-tanker-driver-petrochemical"
-                          className="px-4 py-2.5 rounded-lg bg-[#e5e8ec] text-black text-sm font-semibold hover:bg-[#e0e3e7] transition-colors text-center"
+                          className="px-space-md py-2.5 rounded-lg bg-[#e5e8ec] text-black font-label-lg text-label-lg hover:bg-[#e0e3e7] transition-colors text-center"
                         >
                           View Route &amp; Technical Specs
                         </Link>
                         <Link
                           href="/jobs/senior-adr-tanker-driver-petrochemical"
-                          className="px-5 py-2.5 rounded-lg bg-[#00685f] text-white text-sm font-bold hover:bg-[#008378] transition-colors shadow-sm flex items-center justify-center gap-1.5 text-center"
+                          className="px-space-lg py-2.5 rounded-lg bg-[#00685f] text-white font-label-lg text-label-lg hover:bg-[#008378] transition-colors shadow-sm flex items-center justify-center gap-1.5 text-center"
                         >
                           <span>Quick Dispatch Apply</span>
                           <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -423,90 +380,88 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Statutory Verification Framework — Hazardous Materials Licensing (4 Columns) */}
-          <section className="w-full px-4 md:px-6 py-12 bg-[#f7fafe]">
-            <div className="max-w-7xl mx-auto flex flex-col gap-6">
-              <div className="flex flex-col gap-1">
-                <span className="text-xs text-[#00685f] uppercase font-bold tracking-wider">Global Regulatory Interoperability</span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-black">
-                  Statutory Verification Framework — Hazardous Materials Licensing
-                </h2>
-                <p className="text-sm sm:text-base text-[#3d4947] max-w-3xl leading-relaxed">
+          <section className="w-full px-gutter py-space-xl bg-surface">
+            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+              <div className="flex flex-col gap-space-xs">
+                <span className="font-label-sm text-label-sm text-[#00685f] uppercase font-bold tracking-wider">Global Regulatory Interoperability</span>
+                <h2 className="font-headline-lg text-headline-lg text-black">Statutory Verification Framework — Hazardous Materials Licensing</h2>
+                <p className="font-body-md text-body-md text-[#3d4947] max-w-3xl">
                   Multi-jurisdiction driver verification protocols ensuring uninhibited cross-border passage across petrochemical transport networks.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
                 {/* Jurisdiction 1: Germany & DACH */}
-                <div className="p-6 rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex flex-col gap-2">
+                <div className="p-space-lg rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col justify-between gap-space-md shadow-sm">
+                  <div className="flex flex-col gap-space-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono text-[#3f5f8d] font-bold uppercase">DACH &amp; Central EU</span>
+                      <span className="font-label-sm text-label-sm font-mono text-[#3f5f8d] font-bold uppercase">DACH &amp; Central EU</span>
                       <span className="material-symbols-outlined text-[#3f5f8d]">verified</span>
                     </div>
-                    <h3 className="text-lg font-bold text-black">Germany &amp; DACH</h3>
-                    <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                    <h3 className="font-headline-sm text-headline-sm text-black">Germany &amp; DACH</h3>
+                    <p className="font-body-sm text-body-sm text-[#3d4947]">
                       ADR-Bescheinigung Tank (GGVSEB / BAM approved) and Driver Card (Fahrerkarte Gen 2). Requires continuous SQAS terminal clearance.
                     </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="px-2.5 py-1 rounded bg-[#e5e8ec] text-black text-xs font-semibold">
+                  <div className="pt-space-sm">
+                    <span className="px-2 py-1 rounded bg-[#e5e8ec] text-black font-label-sm text-label-sm">
                       Standard: GGVSEB / BAM
                     </span>
                   </div>
                 </div>
 
                 {/* Jurisdiction 2: United Kingdom & Ireland */}
-                <div className="p-6 rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex flex-col gap-2">
+                <div className="p-space-lg rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col justify-between gap-space-md shadow-sm">
+                  <div className="flex flex-col gap-space-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono text-[#3f5f8d] font-bold uppercase">UK &amp; Ireland Hub</span>
+                      <span className="font-label-sm text-label-sm font-mono text-[#3f5f8d] font-bold uppercase">UK &amp; Ireland Hub</span>
                       <span className="material-symbols-outlined text-[#3f5f8d]">verified</span>
                     </div>
-                    <h3 className="text-lg font-bold text-black">United Kingdom &amp; IE</h3>
-                    <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                    <h3 className="font-headline-sm text-headline-sm text-black">United Kingdom &amp; IE</h3>
+                    <p className="font-body-sm text-body-sm text-[#3d4947]">
                       UK ADR Driver Training Certificate covering Tanks &amp; Packages with Driver CPC and DfT Dangerous Goods Security verification.
                     </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="px-2.5 py-1 rounded bg-[#e5e8ec] text-black text-xs font-semibold">
+                  <div className="pt-space-sm">
+                    <span className="px-2 py-1 rounded bg-[#e5e8ec] text-black font-label-sm text-label-sm">
                       Standard: DfT &amp; SQA Validated
                     </span>
                   </div>
                 </div>
 
                 {/* Jurisdiction 3: United States & Canada */}
-                <div className="p-6 rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex flex-col gap-2">
+                <div className="p-space-lg rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col justify-between gap-space-md shadow-sm">
+                  <div className="flex flex-col gap-space-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono text-[#3f5f8d] font-bold uppercase">North America FMCSA</span>
+                      <span className="font-label-sm text-label-sm font-mono text-[#3f5f8d] font-bold uppercase">North America FMCSA</span>
                       <span className="material-symbols-outlined text-[#3f5f8d]">verified</span>
                     </div>
-                    <h3 className="text-lg font-bold text-black">United States &amp; Canada</h3>
-                    <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                    <h3 className="font-headline-sm text-headline-sm text-black">United States &amp; Canada</h3>
+                    <p className="font-body-sm text-body-sm text-[#3d4947]">
                       Commercial Driver’s License (CDL Class A) with HazMat (H) and Tanker (N) Endorsements (X Combination) and TSA Security Clearance.
                     </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="px-2.5 py-1 rounded bg-[#e5e8ec] text-black text-xs font-semibold">
+                  <div className="pt-space-sm">
+                    <span className="px-2 py-1 rounded bg-[#e5e8ec] text-black font-label-sm text-label-sm">
                       Standard: TSA STA &amp; TWIC Card
                     </span>
                   </div>
                 </div>
 
                 {/* Jurisdiction 4: GCC & Middle East */}
-                <div className="p-6 rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex flex-col gap-2">
+                <div className="p-space-lg rounded-xl bg-[#f1f4f8] border border-[#e0e3e7] flex flex-col justify-between gap-space-md shadow-sm">
+                  <div className="flex flex-col gap-space-sm">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono text-[#3f5f8d] font-bold uppercase">GCC Industrial Corridors</span>
+                      <span className="font-label-sm text-label-sm font-mono text-[#3f5f8d] font-bold uppercase">GCC Industrial Corridors</span>
                       <span className="material-symbols-outlined text-[#3f5f8d]">verified</span>
                     </div>
-                    <h3 className="text-lg font-bold text-black">GCC &amp; Middle East</h3>
-                    <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                    <h3 className="font-headline-sm text-headline-sm text-black">GCC &amp; Middle East</h3>
+                    <p className="font-body-sm text-body-sm text-[#3d4947]">
                       Saudi Aramco Hazmat Driver Card &amp; Sabic Petrochemical Transport Permit, plus regional civil defense bulk liquid certifications.
                     </p>
                   </div>
-                  <div className="pt-2">
-                    <span className="px-2.5 py-1 rounded bg-[#e5e8ec] text-black text-xs font-semibold">
+                  <div className="pt-space-sm">
+                    <span className="px-2 py-1 rounded bg-[#e5e8ec] text-black font-label-sm text-label-sm">
                       Standard: Aramco &amp; Sabic Pass
                     </span>
                   </div>
@@ -516,81 +471,81 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Tanker Specializations & Cargo Types (4 cards) */}
-          <section className="w-full px-4 md:px-6 py-12 bg-[#f1f4f8] border-t border-[#e0e3e7]">
-            <div className="max-w-7xl mx-auto flex flex-col gap-6">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+          <section className="w-full px-gutter py-space-xl bg-[#f1f4f8]">
+            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
                 <div>
-                  <span className="text-xs text-[#00685f] uppercase font-bold tracking-wider">Specialized Cargo Protocols</span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-black">Tanker Specializations &amp; Cargo Types</h2>
+                  <span className="font-label-sm text-label-sm text-[#00685f] uppercase font-bold tracking-wider">Specialized Cargo Protocols</span>
+                  <h2 className="font-headline-lg text-headline-lg text-black">Tanker Specializations &amp; Cargo Types</h2>
                 </div>
-                <span className="text-xs sm:text-sm text-[#3d4947] font-semibold">3,180 Total Active Requisitions</span>
+                <span className="font-label-md text-label-md text-[#3d4947]">3,180 Total Active Requisitions</span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
                 {/* Spec Card 1 */}
-                <div className="p-6 rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-4 hover:shadow-md transition-shadow">
-                  <div className="flex flex-col gap-2.5">
-                    <div className="w-11 h-11 rounded-lg bg-[#00685f]/10 text-[#00685f] flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[24px]">water_drop</span>
+                <div className="p-space-lg rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-shadow">
+                  <div className="flex flex-col gap-space-sm">
+                    <div className="w-10 h-10 rounded-lg bg-[#00685f]/10 text-[#00685f] flex items-center justify-center">
+                      <span className="material-symbols-outlined">water_drop</span>
                     </div>
-                    <h3 className="text-lg font-bold text-black">Bulk Liquid Petrochemicals</h3>
-                    <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                    <h3 className="font-headline-sm text-headline-sm text-black">Bulk Liquid Petrochemicals</h3>
+                    <p className="font-body-sm text-body-sm text-[#3d4947]">
                       ADR Class 3 (Flammables) and Class 8 (Corrosives) in insulated 316L stainless single and multi-chamber tank barrels.
                     </p>
                   </div>
-                  <div className="flex items-center justify-between pt-2 text-xs sm:text-sm font-bold">
-                    <span className="text-[#00685f]">1,280 Roles Open</span>
+                  <div className="flex items-center justify-between pt-space-xs font-label-md text-label-md">
+                    <span className="text-[#00685f] font-bold">1,280 Roles Open</span>
                     <span className="material-symbols-outlined text-[#3d4947] text-[18px]">arrow_forward</span>
                   </div>
                 </div>
 
                 {/* Spec Card 2 */}
-                <div className="p-6 rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-4 hover:shadow-md transition-shadow">
-                  <div className="flex flex-col gap-2.5">
-                    <div className="w-11 h-11 rounded-lg bg-[#3f5f8d]/10 text-[#3f5f8d] flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[24px]">ac_unit</span>
+                <div className="p-space-lg rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-shadow">
+                  <div className="flex flex-col gap-space-sm">
+                    <div className="w-10 h-10 rounded-lg bg-[#3f5f8d]/10 text-[#3f5f8d] flex items-center justify-center">
+                      <span className="material-symbols-outlined">ac_unit</span>
                     </div>
-                    <h3 className="text-lg font-bold text-black">Cryogenic &amp; Industrial Gases</h3>
-                    <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                    <h3 className="font-headline-sm text-headline-sm text-black">Cryogenic &amp; Industrial Gases</h3>
+                    <p className="font-body-sm text-body-sm text-[#3d4947]">
                       ADR Class 2 specialized vacuum-insulated tanks carrying Liquid Nitrogen (LIN), Liquid Oxygen (LOX), Argon, and LNG.
                     </p>
                   </div>
-                  <div className="flex items-center justify-between pt-2 text-xs sm:text-sm font-bold">
-                    <span className="text-[#00685f]">820 Roles Open</span>
+                  <div className="flex items-center justify-between pt-space-xs font-label-md text-label-md">
+                    <span className="text-[#00685f] font-bold">820 Roles Open</span>
                     <span className="material-symbols-outlined text-[#3d4947] text-[18px]">arrow_forward</span>
                   </div>
                 </div>
 
                 {/* Spec Card 3 */}
-                <div className="p-6 rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-4 hover:shadow-md transition-shadow">
-                  <div className="flex flex-col gap-2.5">
-                    <div className="w-11 h-11 rounded-lg bg-[#00685f]/10 text-[#00685f] flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[24px]">science</span>
+                <div className="p-space-lg rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-shadow">
+                  <div className="flex flex-col gap-space-sm">
+                    <div className="w-10 h-10 rounded-lg bg-[#00685f]/10 text-[#00685f] flex items-center justify-center">
+                      <span className="material-symbols-outlined">science</span>
                     </div>
-                    <h3 className="text-lg font-bold text-black">Pharma &amp; Fine Intermediates</h3>
-                    <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                    <h3 className="font-headline-sm text-headline-sm text-black">Pharma &amp; Fine Intermediates</h3>
+                    <p className="font-body-sm text-body-sm text-[#3d4947]">
                       High-purity chemical intermediates, high-viscosity coatings, and sterile GMP bulk chemical transit requirements.
                     </p>
                   </div>
-                  <div className="flex items-center justify-between pt-2 text-xs sm:text-sm font-bold">
-                    <span className="text-[#00685f]">640 Roles Open</span>
+                  <div className="flex items-center justify-between pt-space-xs font-label-md text-label-md">
+                    <span className="text-[#00685f] font-bold">640 Roles Open</span>
                     <span className="material-symbols-outlined text-[#3d4947] text-[18px]">arrow_forward</span>
                   </div>
                 </div>
 
                 {/* Spec Card 4 */}
-                <div className="p-6 rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-4 hover:shadow-md transition-shadow">
-                  <div className="flex flex-col gap-2.5">
-                    <div className="w-11 h-11 rounded-lg bg-[#3f5f8d]/10 text-[#3f5f8d] flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[24px]">local_gas_station</span>
+                <div className="p-space-lg rounded-xl bg-white border border-[#e0e3e7] shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-shadow">
+                  <div className="flex flex-col gap-space-sm">
+                    <div className="w-10 h-10 rounded-lg bg-[#3f5f8d]/10 text-[#3f5f8d] flex items-center justify-center">
+                      <span className="material-symbols-outlined">local_gas_station</span>
                     </div>
-                    <h3 className="text-lg font-bold text-black">Compressed Gas &amp; Fuel Delivery</h3>
-                    <p className="text-xs sm:text-sm text-[#3d4947] leading-relaxed">
+                    <h3 className="font-headline-sm text-headline-sm text-black">Compressed Gas &amp; Fuel Delivery</h3>
+                    <p className="font-body-sm text-body-sm text-[#3d4947]">
                       High-pressure LPG bobtails, cryogenic methane distribution, and aviation kerosene multi-drop fleet logistics.
                     </p>
                   </div>
-                  <div className="flex items-center justify-between pt-2 text-xs sm:text-sm font-bold">
-                    <span className="text-[#00685f]">440 Roles Open</span>
+                  <div className="flex items-center justify-between pt-space-xs font-label-md text-label-md">
+                    <span className="text-[#00685f] font-bold">440 Roles Open</span>
                     <span className="material-symbols-outlined text-[#3d4947] text-[18px]">arrow_forward</span>
                   </div>
                 </div>
@@ -599,58 +554,46 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Master Service Agreement Partners Banner */}
-          <section className="w-full px-4 md:px-6 py-8 bg-[#f7fafe] border-b border-[#e0e3e7]">
-            <div className="max-w-7xl mx-auto flex flex-col gap-4">
-              <span className="text-xs text-[#3d4947] uppercase tracking-wider text-center font-bold">
+          <section className="w-full px-gutter py-space-lg bg-surface">
+            <div className="max-w-7xl mx-auto flex flex-col gap-space-md">
+              <span className="font-label-sm text-label-sm text-[#3d4947] uppercase tracking-wider text-center">
                 Verified Global Fleet Operators &amp; Petrochemical MSA Partners
               </span>
-              <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12 opacity-85">
-                <span className="text-lg sm:text-xl text-[#3f5f8d] font-extrabold tracking-tight">BASF Logistics</span>
-                <span className="text-lg sm:text-xl text-[#3f5f8d] font-extrabold tracking-tight">DSV Chemical</span>
-                <span className="text-lg sm:text-xl text-[#3f5f8d] font-extrabold tracking-tight">Bertschi AG</span>
-                <span className="text-lg sm:text-xl text-[#3f5f8d] font-extrabold tracking-tight">Hoyer Group</span>
-                <span className="text-lg sm:text-xl text-[#3f5f8d] font-extrabold tracking-tight">Den Hartogh</span>
+              <div className="flex flex-wrap items-center justify-center gap-space-lg sm:gap-space-xl opacity-80">
+                <span className="font-headline-sm text-headline-sm text-[#3f5f8d] font-bold tracking-tighter">BASF Logistics</span>
+                <span className="font-headline-sm text-headline-sm text-[#3f5f8d] font-bold tracking-tighter">DSV Chemical</span>
+                <span className="font-headline-sm text-headline-sm text-[#3f5f8d] font-bold tracking-tighter">Bertschi AG</span>
+                <span className="font-headline-sm text-headline-sm text-[#3f5f8d] font-bold tracking-tighter">Hoyer Group</span>
+                <span className="font-headline-sm text-headline-sm text-[#3f5f8d] font-bold tracking-tighter">Den Hartogh</span>
               </div>
             </div>
           </section>
 
           {/* Bottom Alert Subscription Box */}
-          <section className="w-full px-4 md:px-6 py-12 bg-white" id="subscribe-alerts">
-            <div className="max-w-7xl mx-auto p-8 sm:p-10 rounded-2xl bg-[#3f5f8d] text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
-              <div className="max-w-2xl flex flex-col gap-2 text-center lg:text-left">
-                <span className="text-xs text-[#d5e3ff] uppercase font-bold tracking-wider">Telematics &amp; Route Stream</span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+          <section className="w-full px-gutter py-space-xl bg-white">
+            <div className="max-w-7xl mx-auto p-space-xl rounded-2xl bg-[#3f5f8d] text-white shadow-lg flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+              <div className="max-w-2xl flex flex-col gap-space-sm text-center lg:text-left">
+                <span className="font-label-sm text-label-sm text-[#d5e3ff] uppercase font-bold tracking-wider">Telematics &amp; Route Stream</span>
+                <h2 className="font-headline-lg text-headline-lg text-white">
                   Get Instant Priority Alerts for ADR Tanker &amp; Petrochemical Routes
                 </h2>
-                <p className="text-sm sm:text-base text-white/85 leading-relaxed">
+                <p className="font-body-md text-body-md text-white/80">
                   Subscribe directly to encrypted dispatch updates across Antwerp, Rotterdam, Ludwigshafen, and North American energy corridors matching your ADR class licenses.
                 </p>
               </div>
 
-              <div className="w-full lg:w-auto flex flex-col sm:flex-row items-center gap-3 flex-shrink-0">
-                {alertSuccess ? (
-                  <div className="flex items-center gap-2 bg-[#00685f] text-white px-5 py-3 rounded-lg text-sm font-bold shadow-md">
-                    <span className="material-symbols-outlined text-[20px]">check_circle</span>
-                    <span>Alerts Activated! Encrypted dispatch stream linked.</span>
-                  </div>
-                ) : (
-                  <form onSubmit={handleAlertSubmit} className="flex flex-col sm:flex-row items-center gap-3 w-full">
-                    <input
-                      className="w-full sm:w-80 h-12 px-4 rounded-lg bg-white text-black text-sm focus:outline-none placeholder:text-gray-500 shadow-inner"
-                      placeholder="Enter driver dispatch email or ID"
-                      type="email"
-                      required
-                      value={emailAlert}
-                      onChange={(e) => setEmailAlert(e.target.value)}
-                    />
-                    <button
-                      className="w-full sm:w-auto h-12 px-6 rounded-lg bg-[#00685f] text-white text-sm font-bold hover:bg-[#008378] transition-colors shadow-md whitespace-nowrap cursor-pointer"
-                      type="submit"
-                    >
-                      Activate ADR Alerts
-                    </button>
-                  </form>
-                )}
+              <div className="w-full lg:w-auto flex flex-col sm:flex-row items-center gap-space-sm flex-shrink-0">
+                <input
+                  className="w-full sm:w-80 h-12 px-4 rounded-lg bg-white text-[#181c1f] font-body-sm text-body-sm focus:outline-none placeholder:text-[#3d4947]"
+                  placeholder="Enter driver dispatch email or ID"
+                  type="email"
+                />
+                <button
+                  className="w-full sm:w-auto h-12 px-space-lg rounded-lg bg-[#00685f] text-white font-label-lg text-label-lg hover:bg-[#008378] transition-colors shadow-md whitespace-nowrap cursor-pointer"
+                  type="button"
+                >
+                  Activate ADR Alerts
+                </button>
               </div>
             </div>
           </section>
