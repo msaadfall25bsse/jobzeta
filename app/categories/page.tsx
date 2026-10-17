@@ -34,7 +34,7 @@ export default function CategoriesPage() {
       tags: ["Long-haul Truck Drivers", "Delivery Couriers", "Taxi & Chauffeur", "Bus Operators", "Logistics"],
       meta: "CDL / Licensing",
       keywords: "driving transportation long-haul truck drivers delivery couriers taxi chauffeur bus operators logistics freight fleet cdl transit",
-      href: "/find-jobs",
+      href: "/categories/driving-and-transportation",
     },
     {
       id: "cat-3",
