@@ -212,165 +212,176 @@ export default function DangerousGoodsHazmatTankerPage() {
                 </div>
               </div>
 
-              {/* EXACTLY 1 Primary Job Card with Interactive Hover Text Reveal */}
-              <article className="group relative rounded-2xl bg-white shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-[#e0e3e7]">
-                <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px]">
-                  {/* Left Media Container (Image + Frosted Pills) */}
-                  <div className="relative lg:col-span-5 h-72 lg:h-auto overflow-hidden">
-                    <img
-                      alt="ADR certified chemical road tanker driver inspecting pressure valves and telematics in high-visibility protective gear at a petrochemical terminal in Port of Antwerp."
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCplvXiMgD4Xs15BHHLwEOqg381z309Dt0oA6EUxGVihXbuLbItqVf-fe2iVqYfRUof2mTtRaSH0JoAbKURRZ_zwwtxdynnC-CMPxqgLWqfXDZy5Vz6nF8qleRtCCqaHgJ0VGtE1chtRJ6u3-7OTF_dua6sJCDEZ7SLf7FPHt8TwaYBeLSdcspiFn6tuwmKXF9LjnIZS3f6gYX6UqqV0PoONKG1cnqsVmAOFkZ4o0m7poc5SZsVV2judA"
+              {/* Primary Requisition Card Styled exactly like Industrial Electrician Card */}
+              <article
+                aria-label="Senior ADR Tanker Driver - Petrochemical & Liquid Chemicals at DSV Road & Panalpina Tanker Division"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
+              >
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Industrial Visual Thumbnail Canvas */}
+                  <div className="relative w-full md:w-72 h-56 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[220px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCplvXiMgD4Xs15BHHLwEOqg381z309Dt0oA6EUxGVihXbuLbItqVf-fe2iVqYfRUof2mTtRaSH0JoAbKURRZ_zwwtxdynnC-CMPxqgLWqfXDZy5Vz6nF8qleRtCCqaHgJ0VGtE1chtRJ6u3-7OTF_dua6sJCDEZ7SLf7FPHt8TwaYBeLSdcspiFn6tuwmKXF9LjnIZS3f6gYX6UqqV0PoONKG1cnqsVmAOFkZ4o0m7poc5SZsVV2judA')`,
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#181c1f]/90 via-[#181c1f]/30 to-transparent"></div>
-                    
-                    {/* Frosted Meta Badges */}
-                    <div className="absolute top-4 left-4 right-4 flex flex-wrap gap-2">
-                      <span className="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-md text-black font-label-sm text-label-sm font-bold shadow-sm">
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+
+                    {/* Top Badges on Thumbnail */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 flex-wrap">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">
+                          local_fire_department
+                        </span>
                         ADR Chemical &amp; Petrochemical
-                      </span>
-                      <span className="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-md text-[#3d4947] font-mono font-label-sm text-label-sm shadow-sm">
-                        Ref: BY-ANT-HAZMAT-4412
                       </span>
                     </div>
 
-                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                      <span className="px-2.5 py-1 rounded-full bg-[#00685f] text-white font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
-                        <span className="material-symbols-outlined text-[14px]">local_fire_department</span>
-                        IMO-4 &amp; ADR Certified Tanker
+                    {/* Bookmark Action */}
+                    <button
+                      aria-label="Bookmark this role"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95"
+                      type="button"
+                    >
+                      <span className="material-symbols-outlined text-[17px]">
+                        bookmark
                       </span>
-                      <span className="text-white font-label-sm text-label-sm bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
-                        Updated 15m ago
+                    </button>
+
+                    {/* Subtle hover indicator */}
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">
+                        visibility
                       </span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
 
-                  {/* Right Content & Directives Container */}
-                  <div className="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between gap-space-md">
-                    {/* Header Meta */}
-                    <div className="flex flex-col gap-space-sm">
-                      <div className="flex flex-wrap items-center justify-between gap-space-sm">
-                        <div className="flex items-center gap-2">
-                          <span className="w-8 h-8 rounded-lg bg-[#3f5f8d] text-white flex items-center justify-center font-bold text-sm">DSV</span>
-                          <div>
-                            <h3 className="font-label-lg text-label-lg text-black font-bold">DSV Road &amp; Panalpina Tanker Division</h3>
-                            <p className="font-label-sm text-label-sm text-[#3d4947]">Tier-1 ADR Bulk Fleet Operations • Posted 2h ago</p>
-                          </div>
+                  {/* Main Card Body */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Default Information State */}
+                    <div className="flex flex-col gap-2">
+                      {/* Employer Brand & Metas */}
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            DSV Road &amp; Panalpina Tanker Division
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">
+                              verified
+                            </span>
+                            Verified Employer
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">
+                              schedule
+                            </span>
+                            Posted 2h ago
+                          </span>
                         </div>
-                        <span className="px-3 py-1 rounded-full bg-[#00685f]/10 text-[#00685f] font-label-sm text-label-sm font-bold flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[16px]">verified</span>
-                          Direct Carrier Requisition
-                        </span>
+
+                        {/* Salary Band Badge */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €58,000 – €88,000
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant">
+                            {" "}/ year base
+                          </span>
+                        </div>
                       </div>
 
-                      <h2 className="font-headline-md text-headline-md text-black font-bold group-hover:text-[#00685f] transition-colors">
+                      {/* Role Title */}
+                      <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
                         Senior ADR Tanker Driver - Petrochemical &amp; Liquid Chemicals (Bulk Stainless Steel Road Tanker)
-                      </h2>
+                      </h3>
 
-                      <div className="flex flex-wrap items-center gap-space-sm text-[#3d4947] font-body-sm text-body-sm">
-                        <span className="flex items-center gap-1 text-[#3f5f8d] font-bold">
-                          <span className="material-symbols-outlined text-[18px]">location_on</span>
+                      {/* Key Meta Row */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">
+                            location_on
+                          </span>
                           Port of Antwerp / Rotterdam Europort Hub (Trans-European Chemical Corridors)
                         </span>
-                        <span className="w-1 h-1 rounded-full bg-[#bcc9c6]"></span>
-                        <span className="flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[18px]">schedule</span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                           Full-Time Permanent
                         </span>
-                      </div>
-
-                      {/* Badges Strip */}
-                      <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black font-label-sm text-label-sm font-bold">
-                          ADR Tankers Class 3, 6.1, 8
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                          Tier-1 ADR Bulk Fleet
                         </span>
-                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black font-label-sm text-label-sm">
-                          Digital Tachograph Gen 2
-                        </span>
-                        <span className="px-2.5 py-1 rounded-full bg-[#e5e8ec] text-black font-label-sm text-label-sm">
-                          Euro VI Tanker Fleet
-                        </span>
-                        <span className="px-2.5 py-1 rounded-full bg-[#d5e3ff] text-[#001c3b] font-label-sm text-label-sm font-bold">
-                          Hazard Allowance Included
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">
+                            shield
+                          </span>
+                          Hazard Allowance Included (+ €55–€85/day)
                         </span>
                       </div>
                     </div>
 
-                    {/* Compensation Band Banner */}
-                    <div className="p-space-md rounded-xl bg-[#f1f4f8] flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm border border-[#e0e3e7]">
-                      <div>
-                        <span className="font-label-sm text-label-sm text-[#3d4947] uppercase tracking-wider block">Total Compensation Structure</span>
-                        <div className="font-headline-sm text-headline-sm text-[#00685f] font-bold">
-                          €58,000 – €88,000 <span className="font-body-sm text-body-sm text-[#3d4947] font-normal">/ year base</span>
-                        </div>
-                      </div>
-                      <div className="text-left sm:text-right font-label-md text-label-md text-[#3f5f8d]">
-                        <span className="block">+ €55–€85/day ADR danger allowance</span>
-                        <span className="text-[#00685f] font-bold block">+ €4,200 zero-spill safety bonus</span>
-                      </div>
+                    {/* Tags Row */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        ADR Tankers Class 3, 6.1, 8
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Digital Tachograph Gen 2
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Euro VI Tanker Fleet
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        IMO-4 Certified
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        SQAS Driver Audit
+                      </span>
                     </div>
 
-                    {/* Interactive Hover Text Reveal Box */}
-                    <div className="relative overflow-hidden rounded-xl bg-[#ebeef2] p-space-md transition-all duration-300 border border-[#e0e3e7]">
-                      {/* Default State Hint (Visible normally, fades out slightly on hover) */}
-                      <div className="flex items-center justify-between text-[#3d4947] transition-opacity duration-300 group-hover:hidden">
-                        <div className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-[#00685f] text-[20px] animate-pulse">info</span>
-                          <span className="font-label-md text-label-md font-bold text-black">Hover to reveal hazmat protocol &amp; technical directives</span>
+                    {/* Smooth Interactive Hover Reveal Accordion (from industrial electrician page) */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">
+                                insights
+                              </span>
+                              Operational Technical Directives &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Responsible for bulk chemical transport utilizing 3-compartment insulated 316L stainless steel pressure tankers (37,500L). Requires vapor recovery system (VRS) hookup protocols and closed-loop nitrogen purge loading at BASF Ludwigshafen, Dow Terneuzen, and Covestro Antwerp sites.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1"
+                              href="/jobs/senior-adr-tanker-driver-petrochemical"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">
+                                arrow_outward
+                              </span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1"
+                              href="/jobs/senior-adr-tanker-driver-petrochemical"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">
+                                send
+                              </span>
+                            </Link>
+                          </div>
                         </div>
-                        <span className="material-symbols-outlined text-[18px]">expand_more</span>
-                      </div>
-
-                      {/* Expanded Reveal State on Hover */}
-                      <div className="hidden group-hover:flex flex-col gap-space-sm transition-all duration-300">
-                        <div className="flex items-center gap-2 text-[#00685f] font-label-md text-label-md font-bold">
-                          <span className="material-symbols-outlined text-[20px]">security</span>
-                          <span>Operational Technical Directives &amp; Safety Mandate:</span>
-                        </div>
-                        <p className="font-body-sm text-body-sm text-black leading-relaxed">
-                          Responsible for bulk chemical transport utilizing 3-compartment insulated 316L stainless steel pressure tankers (37,500L). Requires vapor recovery system (VRS) hookup protocols and closed-loop nitrogen purge loading at BASF Ludwigshafen, Dow Terneuzen, and Covestro Antwerp sites.
-                        </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-xs text-black font-label-sm text-label-sm pt-1">
-                          <div className="flex items-center gap-1.5">
-                            <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
-                            <span>Class 8 Corrosives &amp; Class 3 Flammables</span>
-                          </div>
-                          <div className="flex items-center gap-1.5">
-                            <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
-                            <span>Compulsory Emergency Shower &amp; SCBA Drills</span>
-                          </div>
-                          <div className="flex items-center gap-1.5">
-                            <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
-                            <span>Pre-trip Valve &amp; Bursting Disc Inspection</span>
-                          </div>
-                          <div className="flex items-center gap-1.5">
-                            <span className="material-symbols-outlined text-[#00685f] text-[16px]">check_circle</span>
-                            <span>Automated Fleet Spill Control Telematics</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Action & Statutory Clearance Row */}
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs">
-                      <div className="flex flex-col">
-                        <span className="font-label-sm text-label-sm text-[#3d4947] uppercase tracking-wider">Statutory Clearance</span>
-                        <span className="font-label-md text-label-md text-black font-bold">ADR Tanker Class 2-9 + SQAS Driver Audit</span>
-                      </div>
-                      <div className="flex items-center gap-space-sm">
-                        <Link
-                          href="/jobs/senior-adr-tanker-driver-petrochemical"
-                          className="px-space-md py-2.5 rounded-lg bg-[#e5e8ec] text-black font-label-lg text-label-lg hover:bg-[#e0e3e7] transition-colors text-center"
-                        >
-                          View Route &amp; Technical Specs
-                        </Link>
-                        <Link
-                          href="/jobs/senior-adr-tanker-driver-petrochemical"
-                          className="px-space-lg py-2.5 rounded-lg bg-[#00685f] text-white font-label-lg text-label-lg hover:bg-[#008378] transition-colors shadow-sm flex items-center justify-center gap-1.5 text-center"
-                        >
-                          <span>Quick Dispatch Apply</span>
-                          <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                        </Link>
                       </div>
                     </div>
                   </div>
