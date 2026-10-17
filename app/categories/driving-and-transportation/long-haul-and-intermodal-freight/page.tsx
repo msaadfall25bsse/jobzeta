@@ -469,22 +469,20 @@ export default function LongHaulIntermodalFreightPage() {
                     </div>
 
                     <div className="flex flex-col gap-2 pt-space-sm">
-                      <button
-                        className="w-full py-3 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2 group-hover:translate-x-0.5 cursor-pointer"
-                        type="button"
-                        onClick={() => setApplyModalOpen(true)}
+                      <Link
+                        href="/jobs/senior-international-long-haul-ce-driver"
+                        className="w-full py-3 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2 group-hover:translate-x-0.5 cursor-pointer text-center"
                       >
                         <span>Quick Dispatch Apply</span>
                         <span className="material-symbols-outlined text-base">arrow_forward</span>
-                      </button>
-                      <button
-                        className="w-full py-2.5 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
-                        type="button"
-                        onClick={() => setIsHoveredScope(!isHoveredScope)}
+                      </Link>
+                      <Link
+                        href="/jobs/senior-international-long-haul-ce-driver"
+                        className="w-full py-2.5 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer text-center"
                       >
                         <span className="material-symbols-outlined text-base">route</span>
-                        <span>{isHoveredScope ? "Hide Route Specs" : "View Route & Technical Specs"}</span>
-                      </button>
+                        <span>View Route &amp; Technical Specs</span>
+                      </Link>
                     </div>
                   </div>
                 </div>
