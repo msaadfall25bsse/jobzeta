@@ -442,22 +442,22 @@ export default function PortRailIntermodalDrayagePage() {
                             </p>
                           </div>
                           <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
-                            <button
+                            <Link
                               className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-intermodal-port-drayage-operator"
                               onClick={(e) => e.stopPropagation()}
-                              type="button"
                             >
                               <span>View Details &amp; Specs</span>
                               <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
-                            </button>
-                            <button
+                            </Link>
+                            <Link
                               className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-all shadow-sm flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-intermodal-port-drayage-operator"
                               onClick={(e) => e.stopPropagation()}
-                              type="button"
                             >
                               <span>Quick Apply</span>
                               <span className="material-symbols-outlined text-[15px]">send</span>
-                            </button>
+                            </Link>
                           </div>
                         </div>
                       </div>
