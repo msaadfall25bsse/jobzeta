@@ -33,7 +33,7 @@ export default function DrivingAndTransportationPage() {
       title: "Dangerous Goods & Hazmat Tanker (ADR)",
       desc: "Petroleum, cryogenic gas, chemical bulk tankers with certified ADR tanks & Hazmat endorsement.",
       band: "€58,000 - €92,000",
-      href: "/find-jobs",
+      href: "/categories/driving-and-transportation/dangerous-goods-and-hazmat-tanker",
     },
     {
       icon: "directions_boat",
