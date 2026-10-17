@@ -80,7 +80,7 @@ export default function LongHaulIntermodalFreightPage() {
                       CROSS-BORDER COMMERCIAL TRANSPORT &amp; INTERMODAL REGISTRY
                     </span>
                   </div>
-                  <h1 className="font-headline-xl text-headline-xl text-[#173B67] tracking-tight">
+                  <h1 className="font-headline-xl text-headline-xl text-black tracking-tight">
                     International Long-Haul, Line-Haul &amp; Intermodal Freight (CDL A / CE)
                   </h1>
                   <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
@@ -273,7 +273,7 @@ export default function LongHaulIntermodalFreightPage() {
               {/* Section Title & Meta */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
                 <div className="flex items-center gap-space-sm">
-                  <h2 className="font-headline-lg text-headline-lg text-[#173B67] tracking-tight">
+                  <h2 className="font-headline-lg text-headline-lg text-black tracking-tight">
                     Featured Requisitions
                   </h2>
                   <span className="bg-secondary-fixed/50 text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
@@ -334,7 +334,7 @@ export default function LongHaulIntermodalFreightPage() {
                         <span className="text-outline-variant">•</span>
                         <span>Posted 2h ago</span>
                       </div>
-                      <h3 className="font-headline-md text-headline-md text-[#173B67] tracking-tight group-hover:text-primary transition-colors">
+                      <h3 className="font-headline-md text-headline-md text-black tracking-tight group-hover:text-primary transition-colors">
                         International Long-Haul CE Driver (Reefer &amp; High-Value European Corridors)
                       </h3>
                       <div className="flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-1.5">
@@ -499,7 +499,7 @@ export default function LongHaulIntermodalFreightPage() {
                 <span className="text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
                   Statutory Verification Framework
                 </span>
-                <h2 className="font-headline-lg text-headline-lg text-[#173B67] tracking-tight">
+                <h2 className="font-headline-lg text-headline-lg text-black tracking-tight">
                   Recognized Commercial Driver Certifications
                 </h2>
                 <p className="font-body-md text-body-md text-on-surface-variant">
@@ -599,7 +599,7 @@ export default function LongHaulIntermodalFreightPage() {
                   <span className="text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
                     Corridor Focus &amp; Equipment Types
                   </span>
-                  <h2 className="font-headline-lg text-headline-lg text-[#173B67] tracking-tight">
+                  <h2 className="font-headline-lg text-headline-lg text-black tracking-tight">
                     Explore Haulage Specializations
                   </h2>
                 </div>
@@ -707,7 +707,7 @@ export default function LongHaulIntermodalFreightPage() {
                 <span className="text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
                   Enterprise Carrier Network
                 </span>
-                <h2 className="font-headline-lg text-headline-lg text-[#173B67] tracking-tight">
+                <h2 className="font-headline-lg text-headline-lg text-black tracking-tight">
                   Direct Master Service Agreement Partners
                 </h2>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
