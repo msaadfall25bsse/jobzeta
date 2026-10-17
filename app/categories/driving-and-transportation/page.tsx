@@ -41,7 +41,7 @@ export default function DrivingAndTransportationPage() {
       title: "Port, Rail & Intermodal Drayage",
       desc: "Deep-sea container transport, twist-lock chassis operations, terminal drayage, and twist-lock rail transfer.",
       band: "€48,000 - €74,000",
-      href: "/find-jobs",
+      href: "/categories/driving-and-transportation/port-rail-intermodal-drayage",
     },
     {
       icon: "rv_hookup",
