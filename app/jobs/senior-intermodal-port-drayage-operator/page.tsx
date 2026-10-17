@@ -27,7 +27,11 @@ export default function SeniorIntermodalPortDrayageJobPage() {
                   Categories
                 </Link>
                 <span className="text-outline-variant">/</span>
-                <Link className="hover:text-primary transition-colors" data-path="categories" href="/categories/driving-and-transportation">
+                <Link
+                  className="hover:text-primary transition-colors"
+                  data-path="categories"
+                  href="/categories/driving-and-transportation"
+                >
                   Driving &amp; Transportation
                 </Link>
                 <span className="text-outline-variant">/</span>
@@ -93,73 +97,105 @@ export default function SeniorIntermodalPortDrayageJobPage() {
             </div>
           </div>
 
-          {/* Job Title & Tariff Header */}
-          <header className="w-full px-margin pt-space-lg pb-space-lg bg-surface">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-space-lg">
-                <div className="space-y-space-xs max-w-3xl">
-                  <div className="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
-                    <span className="material-symbols-outlined text-[18px]">anchor</span>
-                    Deep-Sea Port Terminal Drayage &amp; Intermodal Rail Shuttle
-                  </div>
-                  <h1 className="font-headline-xl text-headline-xl text-on-surface tracking-tight">
-                    Senior Intermodal Port Drayage &amp; Rail Container Operator
-                  </h1>
-                  <p className="font-body-lg text-body-lg text-on-surface-variant">
-                    Port of Rotterdam Maasvlakte (ECT Delta &amp; Euromax) / Port of Antwerp-Bruges • Full-Time (4-on/2-off or Standard Mon-Fri Shift) • Port Logistics Collective Agreement (CAO Havenvervoer) Tier 5
-                  </p>
-                </div>
-                {/* Tariff & Compensation Pill */}
-                <div className="flex-shrink-0 flex flex-col items-start lg:items-end bg-surface-container-low p-space-md rounded-xl shadow-sm border border-outline-variant/30 min-w-[280px]">
-                  <span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Base Annual Tariff Bracket</span>
-                  <div className="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">
-                    €48,000 – €72,000 <span className="font-body-md text-body-md text-on-surface-variant font-normal">/ yr</span>
-                  </div>
-                  <div className="mt-1 flex items-center gap-1 font-label-md text-label-md text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
-                    <span className="material-symbols-outlined text-[16px]">add_circle</span>
-                    <span>+ €55.00/day Night Gate Differential</span>
-                  </div>
-                  <span className="font-label-sm text-label-sm text-on-surface-variant mt-1">+ Terminal Turnaround Allowance &amp; Collective Pension</span>
-                </div>
-              </div>
-            </div>
-          </header>
-
           {/* Hero Showcase Photographic Container */}
-          <section className="w-full px-margin pb-space-xl">
+          <section className="w-full px-margin pb-space-xl pt-space-md">
             <div className="max-w-7xl mx-auto">
               <div className="relative w-full rounded-2xl overflow-hidden shadow-xl bg-on-secondary-fixed">
                 <img
-                  className="w-full h-[380px] md:h-[480px] object-cover mix-blend-luminosity opacity-90 brightness-95 contrast-105"
                   alt="Modern European container drayage Volvo FH truck with semi-trailer chassis standing in Port of Rotterdam container terminal with massive ship-to-shore gantry cranes and stacked ocean shipping containers in the background, with two safety-geared port logistics specialists reviewing dispatch manifests on a ruggedized tablet, crisp daylight lighting with industrial steel aesthetic, teal and deep navy highlights."
+                  className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-85 brightness-95 contrast-105"
                   src="/intermodal-drayage-hero.jpg"
                 />
-                {/* Overlay Gradient Scrim */}
-                <div className="absolute inset-0 bg-gradient-to-t from-on-secondary-fixed via-on-secondary-fixed/50 to-transparent"></div>
-                {/* Floating Badges Layer */}
-                <div className="absolute inset-x-0 bottom-0 p-space-lg md:p-space-xl flex flex-col justify-end gap-space-md">
-                  <div className="flex flex-wrap items-center gap-space-xs">
-                    <span className="px-space-md py-space-xs rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
-                      <span className="material-symbols-outlined text-primary text-[16px]">badge</span>
-                      Terminal Gate Endorsement: Alfapass &amp; Portbase
-                    </span>
-                    <span className="px-space-md py-space-xs rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
-                      <span className="material-symbols-outlined text-secondary text-[16px]">security</span>
-                      Safety Protocol: Terminal Operating System (TOS) Level 2
-                    </span>
-                    <span className="px-space-md py-space-xs rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
-                      <span className="material-symbols-outlined text-primary text-[16px]">local_shipping</span>
-                      Fleet Telematics: Volvo FH 460 LNG &amp; Smart Chassis RFID
-                    </span>
-                    <span className="px-space-md py-space-xs rounded-full bg-emerald-500 text-white font-label-md text-label-md flex items-center gap-1.5 shadow-md">
-                      <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
-                      Immediate Gate Placement Available
-                    </span>
+                <div className="absolute inset-0 bg-gradient-to-t from-on-secondary-fixed via-on-secondary-fixed/80 to-on-secondary-fixed/60 backdrop-blur-[1px]"></div>
+                <div className="relative z-10 p-space-lg md:p-space-xl flex flex-col justify-between gap-space-lg min-h-[440px]">
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-space-lg">
+                    <div className="space-y-space-sm max-w-3xl">
+                      <div className="flex flex-wrap items-center gap-space-xs">
+                        <span className="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-primary-fixed/30 text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold backdrop-blur-md border border-primary-fixed/20">
+                          <span className="material-symbols-outlined text-[16px]">anchor</span> Deep-Sea Port Terminal Drayage &amp; Intermodal Rail Shuttle
+                        </span>
+                        <span className="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface/10 text-white/90 font-label-sm text-label-sm backdrop-blur-md border border-white/10">
+                          <span className="material-symbols-outlined text-[14px] text-primary-fixed">hub</span> Port of Rotterdam Maasvlakte &amp; Antwerp-Bruges Intermodal Corridor
+                        </span>
+                      </div>
+                      <h1 className="font-headline-xl text-headline-xl text-white tracking-tight font-bold drop-shadow-sm">
+                        Senior Intermodal Port Drayage &amp; Rail Container Operator
+                      </h1>
+                      <p className="font-body-md text-body-md text-surface-container-high/90 max-w-2xl leading-relaxed drop-shadow">
+                        Port of Rotterdam Maasvlakte (ECT Delta &amp; Euromax) / Port of Antwerp-Bruges • Full-Time Permanent (4-on/2-off or Standard Mon-Fri Shift) • Port Logistics Collective Agreement (CAO Havenvervoer) Tier 5
+                      </p>
+                      <div className="flex flex-wrap items-center gap-space-xs pt-1">
+                        <span className="px-space-md py-space-xs rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+                          <span className="material-symbols-outlined text-primary text-[16px]">badge</span> Terminal Gate Endorsement: Alfapass &amp; Portbase
+                        </span>
+                        <span className="px-space-md py-space-xs rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+                          <span className="material-symbols-outlined text-secondary text-[16px]">security</span> Safety Protocol: Terminal Operating System (TOS) Level 2
+                        </span>
+                        <span className="px-space-md py-space-xs rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+                          <span className="material-symbols-outlined text-primary text-[16px]">local_shipping</span> Fleet Telematics: Volvo FH 460 LNG &amp; Smart Chassis RFID
+                        </span>
+                        <span className="px-space-md py-space-xs rounded-full bg-emerald-500 text-white font-label-md text-label-md flex items-center gap-1.5 shadow-md font-semibold">
+                          <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Immediate Gate Placement Available
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0 flex flex-col items-start bg-on-secondary-fixed/70 backdrop-blur-xl p-space-md rounded-2xl shadow-xl border border-white/15 min-w-[300px] max-w-sm text-white space-y-2">
+                      <div className="flex items-center justify-between w-full">
+                        <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed font-bold">
+                          Approved Port Drayage CAO Tariff
+                        </span>
+                        <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-white/10 text-white/90 border border-white/10">
+                          Tier A1 Rate
+                        </span>
+                      </div>
+                      <div className="font-headline-lg text-headline-lg text-white tracking-tight font-bold">
+                        €48,000 – €72,000 <span className="font-body-md text-body-md text-white/80 font-normal">/ year</span>
+                      </div>
+                      <div className="flex items-center gap-1 font-label-sm text-label-sm text-emerald-400 bg-emerald-950/60 px-2 py-1 rounded border border-emerald-500/30">
+                        <span className="material-symbols-outlined text-[16px]">add_circle</span>
+                        <span>+ €55.00/day Night Gate Differential</span>
+                      </div>
+                      <p className="font-body-sm text-body-sm text-surface-container-high/90">
+                        Terminal Turnaround Allowance &amp; Collective Pension Coverage
+                      </p>
+                      <div className="pt-1 border-t border-white/15 w-full flex items-center justify-between text-[11px] font-mono text-white/70">
+                        <span>Pay Scale: CAO Havenvervoer Schaal 5</span>
+                        <span className="text-primary-fixed">Guaranteed Baseline</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-white max-w-2xl hidden md:block">
-                    <p className="font-body-md text-body-md text-surface-container-high/90 drop-shadow">
-                      Direct Maasvlakte Pier to Inland Venlo &amp; Duisburg high-efficiency intermodal shuttle loops. Automated lane clearance, pre-reserved rail crane windows, and dedicated latest-generation LNG tractor units.
-                    </p>
+                  <div className="pt-space-md border-t border-white/10 flex flex-wrap items-center justify-between gap-space-md font-label-sm text-label-sm text-white/80">
+                    <div className="flex flex-wrap items-center gap-space-md font-mono">
+                      <span className="flex items-center gap-1.5">
+                        <span className="material-symbols-outlined text-primary-fixed text-[16px]">terminal</span> SPEC: ROT-PORT-DRAY-2025-V2
+                      </span>
+                      <span className="text-white/30 hidden sm:inline">•</span>
+                      <span className="flex items-center gap-1.5">
+                        <span className="material-symbols-outlined text-emerald-400 text-[16px]">verified</span> Verified Port Logistics Protocol
+                      </span>
+                      <span className="text-white/30 hidden sm:inline">•</span>
+                      <span className="flex items-center gap-1.5 text-primary-fixed">
+                        <span className="material-symbols-outlined text-[16px]">check_circle</span> Portbase Cleared
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-space-xs">
+                      <button
+                        className="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-white/10 hover:bg-white/20 text-white font-label-sm text-label-sm transition-colors border border-white/10 cursor-pointer"
+                        onClick={() => window.print()}
+                        type="button"
+                      >
+                        <span className="material-symbols-outlined text-[16px]">print</span>
+                        <span>Print Manifest</span>
+                      </button>
+                      <button
+                        className="inline-flex items-center gap-1 px-space-sm py-1 rounded-lg bg-white/10 hover:bg-white/20 text-white font-label-sm text-label-sm transition-colors border border-white/10 cursor-pointer"
+                        onClick={() => alert("Downloading PDF Copy...")}
+                        type="button"
+                      >
+                        <span className="material-symbols-outlined text-[16px]">download</span>
+                        <span>PDF Copy</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
