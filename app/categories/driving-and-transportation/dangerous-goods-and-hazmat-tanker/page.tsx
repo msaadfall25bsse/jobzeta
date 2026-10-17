@@ -402,13 +402,13 @@ export default function DangerousGoodsHazmatTankerPage() {
                       </div>
                       <div className="flex items-center gap-2.5">
                         <Link
-                          href="/jobs/senior-international-long-haul-ce-driver"
+                          href="/jobs/senior-adr-tanker-driver-petrochemical"
                           className="px-4 py-2.5 rounded-lg bg-[#e5e8ec] text-black text-sm font-semibold hover:bg-[#e0e3e7] transition-colors text-center"
                         >
                           View Route &amp; Technical Specs
                         </Link>
                         <Link
-                          href="/jobs/senior-international-long-haul-ce-driver"
+                          href="/jobs/senior-adr-tanker-driver-petrochemical"
                           className="px-5 py-2.5 rounded-lg bg-[#00685f] text-white text-sm font-bold hover:bg-[#008378] transition-colors shadow-sm flex items-center justify-center gap-1.5 text-center"
                         >
                           <span>Quick Dispatch Apply</span>
