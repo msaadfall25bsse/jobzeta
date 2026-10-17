@@ -25,6 +25,7 @@ export default function DrivingAndTransportationPage() {
       title: "Long-Haul & Intermodal Freight (CDL A / CE)",
       desc: "Cross-border heavy articulated trucks, reefer units, container line-haul, and multi-drop transport.",
       band: "€52,000 - €78,000",
+      href: "/categories/driving-and-transportation/long-haul-and-intermodal-freight",
     },
     {
       icon: "warning",
@@ -32,6 +33,7 @@ export default function DrivingAndTransportationPage() {
       title: "Dangerous Goods & Hazmat Tanker (ADR)",
       desc: "Petroleum, cryogenic gas, chemical bulk tankers with certified ADR tanks & Hazmat endorsement.",
       band: "€58,000 - €92,000",
+      href: "/find-jobs",
     },
     {
       icon: "directions_boat",
@@ -39,6 +41,7 @@ export default function DrivingAndTransportationPage() {
       title: "Port, Rail & Intermodal Drayage",
       desc: "Deep-sea container transport, twist-lock chassis operations, terminal drayage, and twist-lock rail transfer.",
       band: "€48,000 - €74,000",
+      href: "/find-jobs",
     },
     {
       icon: "rv_hookup",
@@ -46,6 +49,7 @@ export default function DrivingAndTransportationPage() {
       title: "Heavy Haulage & Oversized Abnormal Loads",
       desc: "Multi-axle low-loaders, pilot escort operations, turbine transport, and modular hydraulic platform steering.",
       band: "€62,000 - €96,000",
+      href: "/find-jobs",
     },
     {
       icon: "directions_bus",
@@ -53,6 +57,7 @@ export default function DrivingAndTransportationPage() {
       title: "Passenger Transport & Commercial Coach / Bus",
       desc: "Class D / PCV licensed international coach captains, municipal transit, and VIP private touring.",
       band: "€44,000 - €65,000",
+      href: "/find-jobs",
     },
     {
       icon: "local_shipping",
@@ -60,6 +65,7 @@ export default function DrivingAndTransportationPage() {
       title: "Last-Mile Delivery & Urban Fleet Operations",
       desc: "Multi-stop urban courier routes, refrigerated food distribution, sprinter van leads, and depot routing.",
       band: "€36,000 - €52,000",
+      href: "/find-jobs",
     },
     {
       icon: "forklift",
@@ -67,6 +73,7 @@ export default function DrivingAndTransportationPage() {
       title: "Warehouse Material Handling & Reach Forklift",
       desc: "VNA, reach truck, rough terrain counterbalance, and high-bay automated warehouse logistics.",
       band: "€38,000 - €54,000",
+      href: "/find-jobs",
     },
     {
       icon: "route",
@@ -74,6 +81,7 @@ export default function DrivingAndTransportationPage() {
       title: "Fleet Telematics, Safety & Dispatch Logistics",
       desc: "Tachograph compliance, route optimization, fleet safety superintendents, and CMR documentation.",
       band: "€55,000 - €82,000",
+      href: "/find-jobs",
     },
   ];
 
@@ -401,7 +409,7 @@ export default function DrivingAndTransportationPage() {
                       </div>
                       <Link
                         className="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold group-hover:translate-x-1 transition-transform"
-                        href="/find-jobs"
+                        href={item.href || "/find-jobs"}
                       >
                         <span>Explore Roles</span>
                         <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
