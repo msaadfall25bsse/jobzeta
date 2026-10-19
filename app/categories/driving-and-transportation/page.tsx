@@ -49,7 +49,7 @@ export default function DrivingAndTransportationPage() {
       title: "Heavy Haulage & Oversized Abnormal Loads",
       desc: "Multi-axle low-loaders, pilot escort operations, turbine transport, and modular hydraulic platform steering.",
       band: "€62,000 - €96,000",
-      href: "/find-jobs",
+      href: "/categories/driving-and-transportation/heavy-haulage-and-abnormal-loads",
     },
     {
       icon: "directions_bus",
@@ -57,7 +57,7 @@ export default function DrivingAndTransportationPage() {
       title: "Passenger Transport & Commercial Coach / Bus",
       desc: "Class D / PCV licensed international coach captains, municipal transit, and VIP private touring.",
       band: "€44,000 - €65,000",
-      href: "/find-jobs",
+      href: "/categories/driving-and-transportation/passenger-transport-and-commercial-coach",
     },
     {
       icon: "local_shipping",
@@ -65,7 +65,7 @@ export default function DrivingAndTransportationPage() {
       title: "Last-Mile Delivery & Urban Fleet Operations",
       desc: "Multi-stop urban courier routes, refrigerated food distribution, sprinter van leads, and depot routing.",
       band: "€36,000 - €52,000",
-      href: "/find-jobs",
+      href: "/categories/driving-and-transportation/last-mile-delivery-and-urban-fleet-operations",
     },
     {
       icon: "forklift",
@@ -73,7 +73,7 @@ export default function DrivingAndTransportationPage() {
       title: "Warehouse Material Handling & Reach Forklift",
       desc: "VNA, reach truck, rough terrain counterbalance, and high-bay automated warehouse logistics.",
       band: "€38,000 - €54,000",
-      href: "/find-jobs",
+      href: "/categories/driving-and-transportation/warehouse-material-handling-and-reach-forklift",
     },
     {
       icon: "route",
@@ -185,6 +185,7 @@ export default function DrivingAndTransportationPage() {
       footerLeft: "Hotel Accommodations • Roster Bonus",
       category: "Coach & Bus Class D",
       hasVisa: false,
+      href: "/categories/driving-and-transportation/passenger-transport-and-commercial-coach",
     },
     {
       id: 5,
@@ -395,9 +396,11 @@ export default function DrivingAndTransportationPage() {
                           {item.jobs}
                         </span>
                       </div>
-                      <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mt-space-xs">
-                        {item.title}
-                      </h3>
+                      <Link href={item.href || "/find-jobs"}>
+                        <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mt-space-xs">
+                          {item.title}
+                        </h3>
+                      </Link>
                       <p className="font-body-sm text-body-sm text-on-surface-variant">
                         {item.desc}
                       </p>
@@ -558,7 +561,7 @@ export default function DrivingAndTransportationPage() {
                       </span>
                       <Link
                         className="inline-flex items-center gap-1 bg-primary hover:bg-primary-container text-on-primary px-space-md py-1.5 rounded-lg font-label-sm text-label-sm transition-colors cursor-pointer"
-                        href="/find-jobs"
+                        href={job.href || "/find-jobs"}
                       >
                         <span>View Position</span>
                         <span className="material-symbols-outlined text-[16px]">chevron_right</span>
