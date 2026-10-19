@@ -58,8 +58,10 @@ export default function HorticultureAndCEAPage() {
       ],
       scope:
         "Requires certified Priva Connext or Hoogendoorn climate license with proven experience in 15+ hectare Venlo glasshouse automation, VPD curve balancing, and closed-loop fertigation.",
-      detailsLink: "#",
-      applyLink: "#",
+      detailsLink:
+        "/jobs/senior-high-tech-glasshouse-climate-and-cea-operations-manager",
+      applyLink:
+        "/jobs/senior-high-tech-glasshouse-climate-and-cea-operations-manager#intake-dossier",
     },
   ];
 
@@ -376,9 +378,11 @@ export default function HorticultureAndCEAPage() {
                             </div>
 
                             {/* Job Title */}
-                            <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
-                              {job.title}
-                            </h3>
+                            <Link href={job.detailsLink}>
+                              <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                                {job.title}
+                              </h3>
+                            </Link>
 
                             {/* Location & Tags Strip */}
                             <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
@@ -432,24 +436,26 @@ export default function HorticultureAndCEAPage() {
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
-                                  <button
+                                  <Link
                                     className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
-                                    type="button"
+                                    href={job.detailsLink}
+                                    onClick={(e) => e.stopPropagation()}
                                   >
                                     <span>View Details &amp; Specs</span>
                                     <span className="material-symbols-outlined text-[15px]">
                                       arrow_outward
                                     </span>
-                                  </button>
-                                  <button
+                                  </Link>
+                                  <Link
                                     className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
-                                    type="button"
+                                    href={job.applyLink}
+                                    onClick={(e) => e.stopPropagation()}
                                   >
                                     <span>Quick Apply</span>
                                     <span className="material-symbols-outlined text-[15px]">
                                       send
                                     </span>
-                                  </button>
+                                  </Link>
                                 </div>
                               </div>
                             </div>
