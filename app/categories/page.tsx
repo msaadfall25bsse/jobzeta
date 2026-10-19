@@ -46,7 +46,7 @@ export default function CategoriesPage() {
       tags: ["Field Workers", "Tractor Drivers", "Livestock Handlers", "Greenhouse Technicians"],
       meta: "Seasonal & Year-round",
       keywords: "agriculture farming field workers tractor drivers livestock handlers greenhouse technicians agritech harvest crops cattle dairy",
-      href: "/find-jobs",
+      href: "/categories/agriculture-and-farming",
     },
     {
       id: "cat-4",

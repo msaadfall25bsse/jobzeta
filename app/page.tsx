@@ -88,7 +88,7 @@ export default function Home() {
         "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1600&q=80",
       imageAlt:
         "Modern high-tech agricultural farm field with sustainable irrigation and tractors at golden hour",
-      link: "/find-jobs",
+      link: "/categories/agriculture-and-farming",
     },
     {
       id: "household-domestic",
