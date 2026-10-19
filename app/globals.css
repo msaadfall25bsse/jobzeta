@@ -81,7 +81,7 @@
   --spacing-space-xl: 2.5rem;
   --spacing-gutter: 1.5rem;
   --spacing-gutter-mobile: 1rem;
-  --spacing-margin: 2rem;
+  --spacing-margin: clamp(1rem, 3vw, 3rem);
   --spacing-margin-mobile: 1rem;
 
   --radius-DEFAULT: 0.25rem;
@@ -169,38 +169,38 @@
   font-weight: 700;
 }
 .text-display-lg-mobile {
-  font-size: 36px;
-  line-height: 44px;
+  font-size: clamp(28px, 6vw, 36px);
+  line-height: 1.2;
   letter-spacing: -0.01em;
   font-weight: 700;
 }
 .text-headline-xl {
-  font-size: 40px;
-  line-height: 48px;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
   letter-spacing: -0.02em;
   font-weight: 700;
 }
 .text-headline-sm {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: clamp(17px, 2.2vw, 20px);
+  line-height: 1.35;
   letter-spacing: 0em;
   font-weight: 600;
 }
 .text-headline-xl-mobile {
-  font-size: 28px;
-  line-height: 36px;
+  font-size: clamp(22px, 5vw, 28px);
+  line-height: 1.25;
   letter-spacing: -0.01em;
   font-weight: 700;
 }
 .text-display-lg {
-  font-size: 56px;
-  line-height: 64px;
+  font-size: clamp(34px, 5.5vw, 56px);
+  line-height: 1.15;
   letter-spacing: -0.02em;
   font-weight: 700;
 }
 .text-headline-lg {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: clamp(24px, 3.2vw, 32px);
+  line-height: 1.25;
   letter-spacing: -0.01em;
   font-weight: 600;
 }

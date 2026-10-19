@@ -73,52 +73,56 @@ export default function SeniorHighBayReachTruckAutomatedFulfillmentOperatorPage(
       <main className="w-full pt-20 bg-surface flex-1">
         <div className="flex flex-col w-full">
           {/* Top Progress & Critical Telemetry Ribbon */}
-          <div className="w-full bg-on-secondary-fixed text-on-secondary px-margin py-space-xs text-xs flex flex-wrap items-center justify-between gap-space-md border-none">
-            <div className="flex items-center gap-space-md">
-              <span className="inline-flex items-center gap-1.5 text-primary-fixed font-semibold tracking-wider uppercase font-label-sm text-label-sm">
-                <span className="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span> Live Node Dispatch
-              </span>
-              <span className="text-surface-variant font-body-sm text-body-sm">Facility ID: HH-BILL-09</span>
-              <span className="hidden md:inline-block text-outline-variant">•</span>
-              <span className="hidden md:inline-block text-surface-variant font-body-sm text-body-sm">
-                WMS Protocol: SAP EWM 9.5 / Zebra TC8300 Mesh
-              </span>
-            </div>
-            <div className="flex items-center gap-space-lg">
-              <span className="text-surface-variant font-label-sm text-label-sm">
-                Shift Quota: <strong className="text-on-secondary font-bold">140 Pallets/Shift</strong>
-              </span>
-              <span className="inline-flex items-center gap-1 text-primary-fixed font-label-sm text-label-sm">
-                <span className="material-symbols-outlined text-sm">lock</span> ISO 9001:2015 Verified Requisition
-              </span>
+          <div className="w-full bg-on-secondary-fixed text-on-secondary px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xs text-xs border-none">
+            <div className="w-full max-w-[1920px] mx-auto flex flex-wrap items-center justify-between gap-space-md">
+              <div className="flex items-center gap-space-md flex-wrap">
+                <span className="inline-flex items-center gap-1.5 text-primary-fixed font-semibold tracking-wider uppercase font-label-sm text-label-sm">
+                  <span className="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span> Live Node Dispatch
+                </span>
+                <span className="text-surface-variant font-body-sm text-body-sm">Facility ID: HH-BILL-09</span>
+                <span className="hidden md:inline-block text-outline-variant">•</span>
+                <span className="hidden md:inline-block text-surface-variant font-body-sm text-body-sm">
+                  WMS Protocol: SAP EWM 9.5 / Zebra TC8300 Mesh
+                </span>
+              </div>
+              <div className="flex items-center gap-space-lg flex-wrap">
+                <span className="text-surface-variant font-label-sm text-label-sm">
+                  Shift Quota: <strong className="text-on-secondary font-bold">140 Pallets/Shift</strong>
+                </span>
+                <span className="inline-flex items-center gap-1 text-primary-fixed font-label-sm text-label-sm">
+                  <span className="material-symbols-outlined text-sm">lock</span> ISO 9001:2015 Verified Requisition
+                </span>
+              </div>
             </div>
           </div>
 
           {/* Breadcrumb Navigation Bar */}
-          <div className="w-full bg-surface-container-low px-margin py-3">
-            <nav className="flex items-center flex-wrap gap-2 text-on-surface-variant font-label-sm text-label-sm">
-              <Link className="hover:text-primary transition-colors flex items-center gap-1" href="/">
-                <span className="material-symbols-outlined text-sm">home</span>
-                <span>Home</span>
-              </Link>
-              <span className="material-symbols-outlined text-xs">chevron_right</span>
-              <Link className="hover:text-primary transition-colors" href="/categories">
-                Categories
-              </Link>
-              <span className="material-symbols-outlined text-xs">chevron_right</span>
-              <Link className="hover:text-primary transition-colors" href="/categories/driving-and-transportation">
-                Driving &amp; Transportation
-              </Link>
-              <span className="material-symbols-outlined text-xs">chevron_right</span>
-              <Link
-                className="hover:text-primary transition-colors"
-                href="/categories/driving-and-transportation/warehouse-material-handling-and-reach-forklift"
-              >
-                Warehouse Material Handling &amp; Reach Forklift
-              </Link>
-              <span className="material-symbols-outlined text-xs">chevron_right</span>
-              <span className="text-on-surface font-semibold">Technical Specs</span>
-            </nav>
+          <div className="w-full bg-surface-container-low px-4 sm:px-6 lg:px-8 2xl:px-12 py-3">
+            <div className="w-full max-w-[1920px] mx-auto">
+              <nav className="flex items-center flex-wrap gap-2 text-on-surface-variant font-label-sm text-label-sm">
+                <Link className="hover:text-primary transition-colors flex items-center gap-1" href="/">
+                  <span className="material-symbols-outlined text-sm">home</span>
+                  <span>Home</span>
+                </Link>
+                <span className="material-symbols-outlined text-xs">chevron_right</span>
+                <Link className="hover:text-primary transition-colors" href="/categories">
+                  Categories
+                </Link>
+                <span className="material-symbols-outlined text-xs">chevron_right</span>
+                <Link className="hover:text-primary transition-colors" href="/categories/driving-and-transportation">
+                  Driving &amp; Transportation
+                </Link>
+                <span className="material-symbols-outlined text-xs">chevron_right</span>
+                <Link
+                  className="hover:text-primary transition-colors"
+                  href="/categories/driving-and-transportation/warehouse-material-handling-and-reach-forklift"
+                >
+                  Warehouse Material Handling &amp; Reach Forklift
+                </Link>
+                <span className="material-symbols-outlined text-xs">chevron_right</span>
+                <span className="text-on-surface font-semibold">Technical Specs</span>
+              </nav>
+            </div>
           </div>
 
           {/* Photographic Hero Banner with Direct Title Overlay */}
@@ -132,7 +136,7 @@ export default function SeniorHighBayReachTruckAutomatedFulfillmentOperatorPage(
             ></div>
             <div className="absolute inset-0 bg-gradient-to-r from-on-secondary-fixed via-on-secondary-fixed/90 to-transparent"></div>
             <div className="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
-            <div className="relative w-full px-margin py-space-xl flex flex-col gap-space-lg">
+            <div className="relative w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl flex flex-col gap-space-lg">
               {/* Status Badges Row */}
               <div className="flex flex-wrap items-center gap-space-sm">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase shadow-sm">
@@ -238,8 +242,8 @@ export default function SeniorHighBayReachTruckAutomatedFulfillmentOperatorPage(
           </section>
 
           {/* Main Body Content Grid */}
-          <div className="w-full px-margin py-space-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+          <div className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl">
+            <div className="w-full max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
               {/* LEFT COLUMN: 5 Core Operational Modules (8 cols) */}
               <div className="lg:col-span-8 flex flex-col gap-space-xl">
                 {/* MODULE 01: High-Bay Intralogistics Protocol */}
@@ -851,23 +855,25 @@ export default function SeniorHighBayReachTruckAutomatedFulfillmentOperatorPage(
           </div>
 
           {/* Technical Verification Network Bottom Bar */}
-          <section className="w-full bg-surface-container-high py-space-sm px-margin flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
-            <div className="flex items-center gap-space-md">
-              <span className="flex items-center gap-1">
-                <span className="material-symbols-outlined text-sm text-primary">security</span>
-                TLS 1.3 Certified Encrypted Dossier
-              </span>
-              <span className="hidden sm:inline-block">•</span>
-              <span className="hidden sm:inline-flex items-center gap-1">
-                <span className="material-symbols-outlined text-sm text-primary">verified</span>
-                Jobzeta Intralogistics Verification Network
-              </span>
-            </div>
-            <div className="flex items-center gap-space-md">
-              <span>
-                Requisition Ref: <strong>JZ-HAM-8842-ETV</strong>
-              </span>
-              <span className="text-primary font-semibold">Active Hiring Quota (4/6 Hired)</span>
+          <section className="w-full bg-surface-container-high py-space-sm px-4 sm:px-6 lg:px-8 2xl:px-12 text-on-surface-variant font-label-sm text-label-sm">
+            <div className="w-full max-w-[1920px] mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+              <div className="flex items-center gap-space-md flex-wrap">
+                <span className="flex items-center gap-1">
+                  <span className="material-symbols-outlined text-sm text-primary">security</span>
+                  TLS 1.3 Certified Encrypted Dossier
+                </span>
+                <span className="hidden sm:inline-block">•</span>
+                <span className="hidden sm:inline-flex items-center gap-1">
+                  <span className="material-symbols-outlined text-sm text-primary">verified</span>
+                  Jobzeta Intralogistics Verification Network
+                </span>
+              </div>
+              <div className="flex items-center gap-space-md flex-wrap">
+                <span>
+                  Requisition Ref: <strong>JZ-HAM-8842-ETV</strong>
+                </span>
+                <span className="text-primary font-semibold">Active Hiring Quota (4/6 Hired)</span>
+              </div>
             </div>
           </section>
         </div>

@@ -17,8 +17,8 @@ export default function DangerousGoodsHazmatTankerPage() {
       <main className="w-full pt-16 flex-1 bg-surface">
         <div className="flex flex-col w-full">
           {/* Status & Directory Meta Bar */}
-          <div className="w-full bg-[#f1f4f8] px-gutter py-2.5">
-            <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm text-[#3d4947] font-label-sm text-label-sm">
+          <div className="w-full bg-[#f1f4f8] px-4 sm:px-6 lg:px-8 2xl:px-12 py-2.5">
+            <div className="max-w-[1920px] mx-auto flex flex-wrap items-center justify-between gap-space-sm text-[#3d4947] font-label-sm text-label-sm">
               <div className="flex items-center gap-space-sm flex-wrap">
                 <span className="font-mono bg-[#e0e3e7] text-[#3f5f8d] px-2 py-0.5 rounded font-bold tracking-wider">
                   DT-HM-ADR-9140
@@ -43,8 +43,8 @@ export default function DangerousGoodsHazmatTankerPage() {
           </div>
 
           {/* Breadcrumbs & Category Hero Area */}
-          <section className="w-full bg-surface px-gutter pt-space-lg pb-space-xl">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <section className="w-full bg-surface px-4 sm:px-6 lg:px-8 2xl:px-12 pt-space-lg pb-space-xl">
+            <div className="max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               {/* Breadcrumb Navigation */}
               <nav aria-label="Breadcrumb" className="flex items-center gap-space-xs font-label-md text-label-md text-[#3d4947] flex-wrap">
                 <Link className="hover:text-[#00685f] transition-colors" href="/">Home</Link>
@@ -199,12 +199,12 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Featured Technical Requisition Section (Interactive Reveal Mechanism) */}
-          <section className="w-full px-gutter py-space-xl bg-[#f1f4f8]">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl bg-[#f1f4f8]">
+            <div className="max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
                 <div>
                   <span className="font-label-sm text-label-sm text-[#00685f] uppercase font-bold tracking-wider">Priority Enterprise Dispatch</span>
-                  <h2 className="font-headline-lg text-headline-lg text-black">Featured Primary Requisition</h2>
+                  <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-black">Featured Primary Requisition</h2>
                 </div>
                 <div className="flex items-center gap-2 text-[#3d4947] font-label-md text-label-md">
                   <span className="inline-block w-2.5 h-2.5 rounded-full bg-[#00685f]"></span>
@@ -391,11 +391,11 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Statutory Verification Framework — Hazardous Materials Licensing (4 Columns) */}
-          <section className="w-full px-gutter py-space-xl bg-surface">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl bg-surface">
+            <div className="max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               <div className="flex flex-col gap-space-xs">
                 <span className="font-label-sm text-label-sm text-[#00685f] uppercase font-bold tracking-wider">Global Regulatory Interoperability</span>
-                <h2 className="font-headline-lg text-headline-lg text-black">Statutory Verification Framework — Hazardous Materials Licensing</h2>
+                <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-black">Statutory Verification Framework — Hazardous Materials Licensing</h2>
                 <p className="font-body-md text-body-md text-[#3d4947] max-w-3xl">
                   Multi-jurisdiction driver verification protocols ensuring uninhibited cross-border passage across petrochemical transport networks.
                 </p>
@@ -482,12 +482,12 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Tanker Specializations & Cargo Types (4 cards) */}
-          <section className="w-full px-gutter py-space-xl bg-[#f1f4f8]">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl bg-[#f1f4f8]">
+            <div className="max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
                 <div>
                   <span className="font-label-sm text-label-sm text-[#00685f] uppercase font-bold tracking-wider">Specialized Cargo Protocols</span>
-                  <h2 className="font-headline-lg text-headline-lg text-black">Tanker Specializations &amp; Cargo Types</h2>
+                  <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-black">Tanker Specializations &amp; Cargo Types</h2>
                 </div>
                 <span className="font-label-md text-label-md text-[#3d4947]">3,180 Total Active Requisitions</span>
               </div>
@@ -565,8 +565,8 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Master Service Agreement Partners Banner */}
-          <section className="w-full px-gutter py-space-lg bg-surface">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-md">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-lg bg-surface">
+            <div className="max-w-[1920px] mx-auto flex flex-col gap-space-md">
               <span className="font-label-sm text-label-sm text-[#3d4947] uppercase tracking-wider text-center">
                 Verified Global Fleet Operators &amp; Petrochemical MSA Partners
               </span>
@@ -581,11 +581,11 @@ export default function DangerousGoodsHazmatTankerPage() {
           </section>
 
           {/* Bottom Alert Subscription Box */}
-          <section className="w-full px-gutter py-space-xl bg-white">
-            <div className="max-w-7xl mx-auto p-space-xl rounded-2xl bg-[#3f5f8d] text-white shadow-lg flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl bg-white">
+            <div className="max-w-[1920px] mx-auto p-space-md sm:p-space-xl rounded-2xl bg-[#3f5f8d] text-white shadow-lg flex flex-col lg:flex-row items-center justify-between gap-space-lg">
               <div className="max-w-2xl flex flex-col gap-space-sm text-center lg:text-left">
                 <span className="font-label-sm text-label-sm text-[#d5e3ff] uppercase font-bold tracking-wider">Telematics &amp; Route Stream</span>
-                <h2 className="font-headline-lg text-headline-lg text-white">
+                <h2 className="text-2xl sm:text-3xl lg:text-headline-lg font-headline-lg text-white">
                   Get Instant Priority Alerts for ADR Tanker &amp; Petrochemical Routes
                 </h2>
                 <p className="font-body-md text-body-md text-white/80">

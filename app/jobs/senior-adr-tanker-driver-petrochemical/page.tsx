@@ -15,8 +15,8 @@ export default function SeniorADRTankerDriverJobPage() {
       <main className="w-full pt-16 flex-1 bg-surface">
         <div className="flex flex-col w-full">
           {/* Top Bar & Breadcrumbs */}
-          <div className="w-full bg-surface-container-low py-space-sm px-gutter">
-            <div className="max-w-[1360px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+          <div className="w-full bg-surface-container-low py-space-sm px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="max-w-[1920px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
               <div className="flex items-center flex-wrap gap-2 text-on-surface-variant font-label-md text-label-md">
                 <Link className="hover:text-primary transition-colors" href="/">
                   Home
@@ -58,8 +58,8 @@ export default function SeniorADRTankerDriverJobPage() {
           </div>
 
           {/* Action Subheader */}
-          <div className="w-full bg-surface-container-lowest shadow-sm py-space-md px-gutter">
-            <div className="max-w-[1360px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+          <div className="w-full bg-surface-container-lowest shadow-sm py-space-md px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="max-w-[1920px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
               <Link
                 className="inline-flex items-center gap-2 font-label-lg text-label-lg text-secondary hover:text-primary transition-colors"
                 href="/categories/driving-and-transportation/dangerous-goods-and-hazmat-tanker"
@@ -67,16 +67,16 @@ export default function SeniorADRTankerDriverJobPage() {
                 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
                 Back to Hazmat Overview
               </Link>
-              <div className="flex items-center gap-space-sm">
+              <div className="flex items-center gap-space-sm flex-wrap w-full sm:w-auto">
                 <button
-                  className="inline-flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container font-label-lg text-label-lg text-on-surface hover:bg-surface-container-high transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-space-md py-2 rounded-lg bg-surface-container font-label-lg text-label-lg text-on-surface hover:bg-surface-container-high transition-colors flex-1 sm:flex-none"
                   type="button"
                 >
                   <span className="material-symbols-outlined text-[18px] text-secondary">bookmark</span>
                   Save Corridor Specs
                 </button>
                 <a
-                  className="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container shadow-sm transition-all hover:shadow-md"
+                  className="inline-flex items-center justify-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container shadow-sm transition-all hover:shadow-md flex-1 sm:flex-none text-center"
                   href="#application-form"
                 >
                   <span className="material-symbols-outlined text-[18px]">local_shipping</span>
@@ -87,8 +87,8 @@ export default function SeniorADRTankerDriverJobPage() {
           </div>
 
           {/* Showcase Hero Banner */}
-          <section className="w-full px-gutter py-space-md">
-            <div className="max-w-[1360px] mx-auto">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-md">
+            <div className="max-w-[1920px] mx-auto">
               {/* Immersive Photographic Hero Banner */}
               <div
                 className="relative w-full rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between p-space-md md:p-space-lg bg-cover bg-center min-h-[480px] md:min-h-[520px]"
@@ -228,8 +228,8 @@ export default function SeniorADRTankerDriverJobPage() {
           </section>
 
           {/* Main Content 2-Column Grid */}
-          <div className="w-full px-gutter pb-space-xl">
-            <div className="max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+          <div className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 pb-space-xl">
+            <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
               {/* Left Column: 8 Columns Width (Technical Modules) */}
               <div className="lg:col-span-8 space-y-space-lg">
                 {/* Module 01: Overview & Governance */}

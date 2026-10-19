@@ -91,8 +91,8 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
       <main className="w-full pt-20 bg-surface flex-1">
         <div className="flex flex-col w-full">
           {/* Sub-Discipline Breadcrumb Bar */}
-          <div className="w-full bg-surface-container-low px-margin py-space-sm shadow-sm">
-            <div className="max-w-7xl mx-auto flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+          <div className="w-full bg-surface-container-low px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-sm shadow-sm">
+            <div className="w-full max-w-[1920px] mx-auto flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
               <nav className="flex items-center gap-space-xs flex-wrap">
                 <Link className="hover:text-primary transition-colors flex items-center gap-1" href="/">
                   <span className="material-symbols-outlined text-base">home</span>
@@ -118,8 +118,8 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
           </div>
 
           {/* Hero Header & Technical Matrix */}
-          <section className="w-full bg-surface px-margin pt-space-xl pb-space-lg relative overflow-hidden">
-            <div className="max-w-7xl mx-auto relative z-10">
+          <section className="w-full bg-surface px-4 sm:px-6 lg:px-8 2xl:px-12 pt-space-xl pb-space-lg relative overflow-hidden">
+            <div className="w-full max-w-[1920px] mx-auto relative z-10">
               {/* Regulatory / Compliance Badges */}
               <div className="flex flex-wrap items-center gap-space-sm mb-space-md">
                 <span className="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold tracking-wider uppercase shadow-sm">
@@ -135,7 +135,7 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
               {/* Hero Grid with Asymmetric Metric Cluster */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
                 <div className="lg:col-span-8 flex flex-col">
-                  <h1 className="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight mb-space-sm leading-tight">
+                  <h1 className="font-headline-xl text-3xl sm:text-headline-xl text-on-surface font-bold tracking-tight mb-space-sm leading-tight">
                     Warehouse Material Handling, Reach Truck &amp; Automated Intralogistics
                   </h1>
                   <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
@@ -260,8 +260,8 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
           </section>
 
           {/* Section 1: Core Operational Disciplines (3 Pillar Cards) */}
-          <section className="w-full px-margin py-space-xl bg-surface-container-low">
-            <div className="max-w-7xl mx-auto">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl bg-surface-container-low">
+            <div className="w-full max-w-[1920px] mx-auto">
               <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
                 <div>
                   <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Specialized Machinery Categories</span>
@@ -422,8 +422,8 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
           </section>
 
           {/* Section 2: Featured Interactive Mission Card (With Exact Hover Expand Interaction) */}
-          <section className="w-full px-margin py-space-xl bg-surface">
-            <div className="max-w-7xl mx-auto">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl bg-surface">
+            <div className="w-full max-w-[1920px] mx-auto">
               <div className="flex items-center justify-between mb-space-md">
                 <div>
                   <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Priority Placement Engine</span>
@@ -449,7 +449,7 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                   {/* Left Photographic Column */}
-                  <div className="lg:col-span-5 relative min-h-[340px] lg:min-h-[440px] overflow-hidden">
+                  <div className="lg:col-span-5 relative min-h-[300px] sm:min-h-[340px] lg:min-h-[440px] overflow-hidden">
                     <img
                       alt="Professional European High-Bay Reach Truck and Warehouse Logistics Specialist"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -481,7 +481,7 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
                   </div>
 
                   {/* Right Content Column */}
-                  <div className="lg:col-span-7 p-space-lg flex flex-col justify-between">
+                  <div className="lg:col-span-7 p-4 sm:p-space-lg flex flex-col justify-between">
                     <div>
                       <div className="flex flex-wrap items-center justify-between gap-space-xs mb-space-sm">
                         <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">
@@ -492,11 +492,11 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
                         </span>
                       </div>
 
-                      <h3 className="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mb-1 group-hover:text-primary transition-colors">
+                      <h3 className="font-headline-lg text-xl sm:text-headline-lg text-on-surface font-bold tracking-tight mb-1 group-hover:text-primary transition-colors">
                         Senior High-Bay Reach Truck &amp; Automated Fulfillment Operator
                       </h3>
 
-                      <div className="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md">
+                      <div className="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md flex-wrap">
                         <span className="material-symbols-outlined text-base text-primary">domain</span>
                         <span className="font-semibold text-on-surface">EuroLogistics Hub SE</span>
                         <span>•</span>
@@ -606,8 +606,8 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
           </section>
 
           {/* Section 3: Intralogistics Standards & Compliance Matrix (4 Cards) */}
-          <section className="w-full px-margin py-space-xl bg-surface-container-low">
-            <div className="max-w-7xl mx-auto">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl bg-surface-container-low">
+            <div className="w-full max-w-[1920px] mx-auto">
               <div className="text-center max-w-2xl mx-auto mb-space-lg">
                 <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Standardized Safety Frameworks</span>
                 <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">Verification &amp; Compliance Matrix</h2>
@@ -693,8 +693,8 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
           </section>
 
           {/* Section 4: Accredited Intralogistics Operators & Employers */}
-          <section className="w-full px-margin py-space-lg bg-surface">
-            <div className="max-w-7xl mx-auto">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-lg bg-surface">
+            <div className="w-full max-w-[1920px] mx-auto">
               <div className="flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
                 <div className="flex flex-col">
                   <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Approved Employers</span>
@@ -714,16 +714,16 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
           </section>
 
           {/* Section 5: Intake CTA Banner for Certified Forklift Operators */}
-          <section className="w-full px-margin pb-space-xl pt-space-sm bg-surface">
-            <div className="max-w-7xl mx-auto">
-              <div className="bg-inverse-surface text-inverse-on-surface p-space-xl rounded-xl relative overflow-hidden shadow-lg">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 pb-space-xl pt-space-sm bg-surface">
+            <div className="w-full max-w-[1920px] mx-auto">
+              <div className="bg-inverse-surface text-inverse-on-surface p-6 sm:p-space-xl rounded-xl relative overflow-hidden shadow-lg">
                 <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-primary/20 to-transparent pointer-events-none"></div>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
                   <div className="lg:col-span-8 flex flex-col">
                     <span className="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold tracking-wider uppercase mb-space-sm w-fit">
                       <span className="material-symbols-outlined text-sm">verified</span> Verified Intake Channel
                     </span>
-                    <h2 className="font-headline-xl text-headline-xl font-bold tracking-tight mb-space-xs text-on-primary">
+                    <h2 className="font-headline-xl text-2xl sm:text-headline-xl font-bold tracking-tight mb-space-xs text-on-primary">
                       Hold a Forklift Certificate (Stufe 2) with Clean Record?
                     </h2>
                     <p className="font-body-md text-body-md text-outline-variant max-w-2xl leading-relaxed">

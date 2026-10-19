@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full bg-surface-container-low border-t border-surface-container-highest pt-space-xl pb-space-lg">
-      <div className="w-full px-margin">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-gutter mb-space-xl">
+      <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-gutter mb-space-xl">
           {/* Brand Info */}
-          <div className="lg:col-span-2 flex flex-col gap-space-sm pr-space-lg">
+          <div className="sm:col-span-2 md:col-span-3 lg:col-span-2 flex flex-col gap-space-sm pr-0 lg:pr-space-lg mb-4 lg:mb-0">
             <Link className="flex items-center gap-space-sm" href="/">
               <Image
                 alt="Jobzeta Vector Brand Logo"

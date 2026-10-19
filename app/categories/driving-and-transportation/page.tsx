@@ -253,8 +253,8 @@ export default function DrivingAndTransportationPage() {
         <div className="flex flex-col w-full">
           {/* Top Utility Sub-Header & Breadcrumb Bar */}
           <section className="w-full bg-surface-container-lowest shadow-sm">
-            <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
-              <nav aria-label="Breadcrumb" className="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+            <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+              <nav aria-label="Breadcrumb" className="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant flex-wrap">
                 <Link className="hover:text-primary transition-colors" href="/">
                   Home
                 </Link>
@@ -278,7 +278,7 @@ export default function DrivingAndTransportationPage() {
 
           {/* Hero & Discovery Command Section */}
           <section className="w-full relative overflow-hidden bg-surface-container-low py-space-xl">
-            <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin flex flex-col gap-space-lg relative z-10">
+            <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 flex flex-col gap-space-lg relative z-10">
               {/* Top Row Badges & Sector Status */}
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
                 <div className="inline-flex items-center gap-space-xs bg-primary/10 text-primary px-space-sm py-1 rounded-full w-fit">
@@ -299,7 +299,7 @@ export default function DrivingAndTransportationPage() {
 
               {/* Main Headline Block */}
               <div className="flex flex-col gap-space-xs max-w-4xl">
-                <h1 className="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+                <h1 className="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight">
                   Driving, Logistics &amp; Commercial Transportation Jobs &amp; Career Pathways
                 </h1>
                 <p className="font-body-lg text-body-lg text-on-surface-variant">
@@ -364,8 +364,8 @@ export default function DrivingAndTransportationPage() {
           </section>
 
           {/* Sub-Specialties & Vocational Categories (4x2 Grid) */}
-          <section className="w-full py-space-xl bg-surface">
-            <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin flex flex-col gap-space-lg">
+          <section className="w-full py-space-xl bg-surface px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
                 <div>
                   <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
@@ -425,8 +425,8 @@ export default function DrivingAndTransportationPage() {
           </section>
 
           {/* Live Dispatch Feed — Verified Openings in Driving & Transportation */}
-          <section className="w-full py-space-xl bg-surface-container-low">
-            <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin flex flex-col gap-space-lg">
+          <section className="w-full py-space-xl bg-surface-container-low px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               {/* Section Header with Meta & Counter */}
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
                 <div className="flex flex-col">
@@ -555,7 +555,7 @@ export default function DrivingAndTransportationPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between pt-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg">
+                    <div className="flex items-center justify-between pt-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg flex-wrap gap-2">
                       <span className="font-label-sm text-label-sm text-on-surface-variant">
                         {job.footerLeft}
                       </span>
@@ -585,8 +585,8 @@ export default function DrivingAndTransportationPage() {
           </section>
 
           {/* Global Commercial Driving License & Credential Equivalence (Dark Navy Banner) */}
-          <section className="w-full bg-[#11243E] text-on-primary py-space-xl">
-            <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin flex flex-col gap-space-xl">
+          <section className="w-full bg-[#11243E] text-on-primary py-space-xl px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-space-xl">
               {/* Banner Title Block */}
               <div className="flex flex-col gap-space-xs max-w-3xl">
                 <span className="font-label-sm text-label-sm text-primary-fixed tracking-wider uppercase font-bold">
@@ -709,8 +709,8 @@ export default function DrivingAndTransportationPage() {
           </section>
 
           {/* Top Hiring Employers in Commercial Transportation & Logistics */}
-          <section className="w-full py-space-xl bg-surface">
-            <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin flex flex-col gap-space-lg">
+          <section className="w-full py-space-xl bg-surface px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
                 <div>
                   <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
@@ -850,13 +850,13 @@ export default function DrivingAndTransportationPage() {
           </section>
 
           {/* Candidate FAQs & Driver Licensing Accordions */}
-          <section className="w-full py-space-xl bg-surface-container-low">
-            <div className="max-w-5xl mx-auto px-margin-mobile md:px-margin flex flex-col gap-space-lg">
+          <section className="w-full py-space-xl bg-surface-container-low px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="w-full max-w-5xl mx-auto flex flex-col gap-space-lg">
               <div className="flex flex-col items-center text-center gap-space-xs">
                 <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
                   Driver Career Guidance
                 </span>
-                <h2 className="font-headline-lg text-headline-lg text-on-surface">
+                <h2 className="font-headline-lg text-2xl sm:text-headline-lg text-on-surface">
                   Vocational FAQs &amp; Cross-Border Driving Regulations
                 </h2>
                 <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -867,8 +867,8 @@ export default function DrivingAndTransportationPage() {
               {/* Clean Expandable Accordions */}
               <div className="flex flex-col gap-space-sm w-full">
                 {/* Accordion 1 */}
-                <details className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm group" open>
-                  <summary className="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface cursor-pointer select-none list-none font-semibold">
+                <details className="bg-surface-container-lowest rounded-xl p-4 sm:p-space-md shadow-sm group" open>
+                  <summary className="flex items-center justify-between font-headline-sm text-base sm:text-headline-sm text-on-surface cursor-pointer select-none list-none font-semibold">
                     <span>How does Jobzeta verify international CDL licenses and Code 95 / CPC qualifications?</span>
                     <span className="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">
                       expand_more
@@ -880,8 +880,8 @@ export default function DrivingAndTransportationPage() {
                 </details>
 
                 {/* Accordion 2 */}
-                <details className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm group">
-                  <summary className="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface cursor-pointer select-none list-none font-semibold">
+                <details className="bg-surface-container-lowest rounded-xl p-4 sm:p-space-md shadow-sm group">
+                  <summary className="flex items-center justify-between font-headline-sm text-base sm:text-headline-sm text-on-surface cursor-pointer select-none list-none font-semibold">
                     <span>Can I secure an international long-haul truck driving position with employer visa sponsorship?</span>
                     <span className="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">
                       expand_more
@@ -893,8 +893,8 @@ export default function DrivingAndTransportationPage() {
                 </details>
 
                 {/* Accordion 3 */}
-                <details className="bg-surface-container-lowest rounded-xl p-space-md shadow-sm group">
-                  <summary className="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface cursor-pointer select-none list-none font-semibold">
+                <details className="bg-surface-container-lowest rounded-xl p-4 sm:p-space-md shadow-sm group">
+                  <summary className="flex items-center justify-between font-headline-sm text-base sm:text-headline-sm text-on-surface cursor-pointer select-none list-none font-semibold">
                     <span>What are the standard accommodation, rest periods, and equipment packages provided to drivers?</span>
                     <span className="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">
                       expand_more
@@ -909,8 +909,8 @@ export default function DrivingAndTransportationPage() {
           </section>
 
           {/* Employer Callout Banner */}
-          <section className="w-full py-space-xl bg-surface-container-high">
-            <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+          <section className="w-full py-space-xl bg-surface-container-high px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="w-full max-w-[1920px] mx-auto">
               <div className="bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-md flex flex-col lg:flex-row items-center justify-between gap-space-lg">
                 <div className="flex items-center gap-space-md">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">

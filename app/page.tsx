@@ -388,13 +388,13 @@ export default function Home() {
             {/* Subtle luminous background ambiance */}
             <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
             <div className="absolute top-1/2 -left-32 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
-            <div className="w-full px-margin max-w-7xl mx-auto relative z-10">
+            <div className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 max-w-[1920px] mx-auto relative z-10">
               <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-space-xl">
                 <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-primary/10 text-primary mb-space-md">
                   <span className="material-symbols-outlined text-[16px]">workspaces</span>
                   <span className="font-label-sm text-label-sm uppercase tracking-wider">Multi-Sector Global Exchange</span>
                 </div>
-                <h1 className="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight mb-space-md leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-headline-xl text-on-surface font-extrabold tracking-tight mb-space-md leading-tight">
                   Find the Right Job. <span className="block mt-space-xs text-primary">Build Your Future.</span>
                 </h1>
                 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
@@ -503,7 +503,7 @@ export default function Home() {
           {/* 3. DYNAMIC ANIMATED CATEGORIES CAROUSEL SECTION                */}
           {/* ============================================================== */}
           <section className="w-full bg-surface-container-low py-space-xl border-y border-surface-container-highest" id="categories-carousel-section">
-            <div className="w-full px-margin max-w-7xl mx-auto">
+            <div className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 max-w-[1920px] mx-auto">
               {/* Header Bar with Controls */}
               <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-space-lg gap-space-md">
                 <div>
@@ -511,7 +511,7 @@ export default function Home() {
                     <span className="material-symbols-outlined text-[16px]">explore</span>
                     <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold">Explore by Sector</span>
                   </div>
-                  <h2 className="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+                  <h2 className="text-2xl sm:text-3xl lg:text-headline-lg font-headline-lg text-on-surface font-extrabold tracking-tight">
                     Featured Career Sectors &amp; Disciplines
                   </h2>
                   <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">
@@ -770,13 +770,13 @@ export default function Home() {
           {/* 4. LATEST & FEATURED JOBS SECTION                              */}
           {/* ============================================================== */}
           <section className="w-full bg-surface py-space-xl">
-            <div className="w-full px-margin max-w-7xl mx-auto">
+            <div className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 max-w-[1920px] mx-auto">
               <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-space-lg">
                 <div>
                   <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-space-xs">
                     Current Openings
                   </span>
-                  <h2 className="font-headline-lg text-headline-lg text-on-surface">
+                  <h2 className="text-2xl sm:text-3xl lg:text-headline-lg font-headline-lg text-on-surface">
                     Latest &amp; Featured Opportunities
                   </h2>
                 </div>
@@ -1045,8 +1045,8 @@ export default function Home() {
           {/* ============================================================== */}
           {/* 5. REMOTE & FLEXIBLE WORK SPOTLIGHT                            */}
           {/* ============================================================== */}
-          <section className="w-full bg-surface px-margin pb-space-xl">
-            <div className="max-w-7xl mx-auto rounded-xl bg-on-secondary-fixed text-on-secondary p-space-lg md:p-space-xl relative overflow-hidden shadow-xl">
+          <section className="w-full bg-surface px-4 sm:px-6 lg:px-8 2xl:px-12 pb-space-xl">
+            <div className="max-w-[1920px] mx-auto rounded-xl bg-on-secondary-fixed text-on-secondary p-space-lg md:p-space-xl relative overflow-hidden shadow-xl">
               <div className="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
               <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
                 <div className="max-w-2xl">
@@ -1054,16 +1054,16 @@ export default function Home() {
                     <span className="material-symbols-outlined text-[16px]">devices</span>
                     <span className="font-label-sm text-label-sm uppercase tracking-wider">Borderless Mobility</span>
                   </div>
-                  <h2 className="font-headline-lg text-headline-lg text-on-secondary mb-space-sm font-bold">
+                  <h2 className="text-2xl sm:text-3xl lg:text-headline-lg font-headline-lg text-on-secondary mb-space-sm font-bold">
                     Work From Anywhere, On Your Terms
                   </h2>
                   <p className="font-body-md text-body-md text-surface-container-highest max-w-xl">
                     Discover thousands of remote, part-time, freelance, and flexible contractor openings across tech, administration, healthcare consulting, and distributed operations.
                   </p>
                 </div>
-                <div className="shrink-0">
+                <div className="shrink-0 w-full sm:w-auto">
                   <Link
-                    className="inline-flex items-center gap-space-sm px-space-lg py-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md transition-all cursor-pointer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md transition-all cursor-pointer"
                     href="/find-jobs"
                   >
                     <span className="material-symbols-outlined text-[20px]">explore</span>
@@ -1078,12 +1078,12 @@ export default function Home() {
           {/* 6. BROWSE BY LOCATION (GLOBAL SCOPE)                           */}
           {/* ============================================================== */}
           <section className="w-full bg-surface-container-low py-space-xl">
-            <div className="w-full px-margin max-w-7xl mx-auto">
+            <div className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 max-w-[1920px] mx-auto">
               <div className="mb-space-lg">
                 <span className="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-space-xs">
                   Jurisdiction Search
                 </span>
-                <h2 className="font-headline-lg text-headline-lg text-on-surface">
+                <h2 className="text-2xl sm:text-3xl lg:text-headline-lg font-headline-lg text-on-surface">
                   Explore Opportunities Worldwide
                 </h2>
               </div>
@@ -1168,11 +1168,11 @@ export default function Home() {
           {/* 7. JOB ALERT PROMOTIONAL BANNER                                */}
           {/* ============================================================== */}
           <section className="w-full bg-surface py-space-xl">
-            <div className="w-full px-margin max-w-7xl mx-auto">
+            <div className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 max-w-[1920px] mx-auto">
               <div className="bg-surface-container rounded-xl p-space-lg md:p-space-xl shadow-sm">
                 <div className="max-w-3xl mx-auto text-center mb-space-lg">
                   <span className="material-symbols-outlined text-primary text-[36px] mb-space-xs">notifications_active</span>
-                  <h2 className="font-headline-lg text-headline-lg text-on-surface mb-space-xs">
+                  <h2 className="text-2xl sm:text-3xl lg:text-headline-lg font-headline-lg text-on-surface mb-space-xs">
                     Don&apos;t Miss Your Next Opportunity
                   </h2>
                   <p className="font-body-lg text-body-lg text-on-surface-variant">
@@ -1215,14 +1215,14 @@ export default function Home() {
           {/* 8. EMPLOYER HIRING BANNER                                      */}
           {/* ============================================================== */}
           <section className="w-full bg-surface-container-lowest py-space-xl">
-            <div className="w-full px-margin max-w-7xl mx-auto">
+            <div className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 max-w-[1920px] mx-auto">
               <div className="rounded-xl bg-surface-container-low p-space-lg md:p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-sm">
                 <div className="flex items-start gap-space-md max-w-2xl">
                   <div className="w-12 h-12 rounded-xl bg-on-secondary-fixed text-on-secondary flex items-center justify-center shrink-0">
                     <span className="material-symbols-outlined text-[28px]">domain_add</span>
                   </div>
                   <div>
-                    <h2 className="font-headline-lg text-headline-lg text-on-surface mb-space-xs font-bold">
+                    <h2 className="text-2xl sm:text-3xl lg:text-headline-lg font-headline-lg text-on-surface mb-space-xs font-bold">
                       Find the Right People for Your Team
                     </h2>
                     <p className="font-body-md text-body-md text-on-surface-variant">
@@ -1230,9 +1230,9 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="shrink-0 flex items-center gap-space-sm">
+                <div className="shrink-0 flex items-center gap-space-sm w-full md:w-auto">
                   <Link
-                    className="px-space-xl py-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md transition-all cursor-pointer flex items-center gap-space-xs"
+                    className="w-full md:w-auto px-space-xl py-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md transition-all cursor-pointer flex items-center justify-center gap-space-xs"
                     href="#"
                   >
                     <span className="material-symbols-outlined text-[20px]">post_add</span>

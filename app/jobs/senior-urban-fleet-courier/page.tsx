@@ -76,8 +76,8 @@ export default function SeniorUrbanFleetCourierTechnicalSpecsPage() {
       <main className="w-full pt-16 bg-surface flex-1">
         <div className="flex flex-col w-full">
           {/* Top Breadcrumbs Navigation */}
-          <section className="w-full bg-surface-container-low py-space-sm px-margin">
-            <div className="max-w-7xl mx-auto flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant flex-wrap">
+          <section className="w-full bg-surface-container-low py-space-sm px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="w-full max-w-[1920px] mx-auto flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant flex-wrap">
               <Link className="hover:text-primary transition-colors" href="/">
                 Home
               </Link>
@@ -119,7 +119,7 @@ export default function SeniorUrbanFleetCourierTechnicalSpecsPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#001c3b]/95 via-[#0e1c2c]/90 to-[#00201d]/80 mix-blend-multiply"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-[#0e1c2c] via-transparent to-black/40"></div>
             
-            <div className="relative max-w-7xl mx-auto px-margin py-space-xl min-h-[460px] flex flex-col justify-end">
+            <div className="relative w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl min-h-[460px] flex flex-col justify-end">
               {/* Top Meta Chips */}
               <div className="flex items-center gap-space-sm flex-wrap mb-space-md">
                 <span className="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-primary/20 backdrop-blur-md text-primary-fixed font-label-sm text-label-sm border border-primary/30">
@@ -207,7 +207,7 @@ export default function SeniorUrbanFleetCourierTechnicalSpecsPage() {
           </section>
 
           {/* Main Operational Grid: 8-Col Modules / 4-Col Interactive Sidebar */}
-          <div className="w-full max-w-7xl mx-auto px-margin py-space-xl">
+          <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
               {/* Left Column: 5 Structured Technical Modules */}
               <div className="lg:col-span-8 flex flex-col gap-space-xl">
@@ -668,15 +668,15 @@ export default function SeniorUrbanFleetCourierTechnicalSpecsPage() {
           </div>
 
           {/* Bottom Institutional Verification Bar */}
-          <section className="w-full bg-surface-container-high py-space-md px-margin">
-            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left">
-              <div className="flex items-center gap-space-xs">
+          <section className="w-full bg-surface-container-high py-space-md px-4 sm:px-6 lg:px-8 2xl:px-12">
+            <div className="w-full max-w-[1920px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left">
+              <div className="flex items-center gap-space-xs flex-wrap justify-center sm:justify-start">
                 <span className="material-symbols-outlined text-[20px] text-primary">verified_user</span>
                 <span className="font-label-sm text-label-sm text-on-surface font-semibold">
                   Jobzeta International Verification Network • Verified Courier Requisition ID: #DE-BER-4921-EV
                 </span>
               </div>
-              <div className="flex items-center gap-space-md text-[12px] font-label-sm text-on-surface-variant">
+              <div className="flex items-center gap-space-md text-[12px] font-label-sm text-on-surface-variant flex-wrap justify-center sm:justify-end">
                 <span>TLS 1.3 Encrypted Data Port</span>
                 <span>Equal Opportunity Transport Employer</span>
               </div>

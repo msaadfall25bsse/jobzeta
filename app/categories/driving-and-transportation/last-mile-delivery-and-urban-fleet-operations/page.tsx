@@ -209,8 +209,8 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
       <main className="w-full pt-16 bg-surface flex-1">
         <div className="flex flex-col w-full">
           {/* Top Meta & Category Header Hero */}
-          <section className="w-full bg-surface-container-low px-margin py-space-xl">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <section className="w-full bg-surface-container-low px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl">
+            <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               {/* Breadcrumbs and Compliance Micro-Badges */}
               <div className="flex flex-wrap items-center justify-between gap-space-sm">
                 <nav aria-label="Breadcrumbs" className="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant flex-wrap">
@@ -247,7 +247,7 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
                       High-Density Urban Logistics Node
                     </span>
                   </div>
-                  <h1 className="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+                  <h1 className="font-headline-xl text-3xl sm:text-headline-xl text-on-surface font-bold tracking-tight">
                     Last-Mile Delivery, Urban Fleet Operations &amp; EV Commercial Van Logistics
                   </h1>
                   <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
@@ -410,14 +410,14 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
           </section>
 
           {/* Core Specialized Last-Mile Disciplines */}
-          <section className="w-full px-margin py-space-lg">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-lg">
+            <div className="max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
                 <div>
                   <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
                     Specialized Dispatch Tracks
                   </span>
-                  <h2 className="font-headline-lg text-headline-lg text-on-surface font-semibold">
+                  <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-on-surface font-semibold">
                     Operational Roles by Fleet Specialization
                   </h2>
                 </div>
@@ -425,7 +425,7 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
                   Active roster across 18 European micro-fulfillment &amp; sorting terminals
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md">
                 {/* Discipline 1 */}
                 <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
                   <div className="flex flex-col gap-space-sm">
@@ -559,14 +559,14 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
           </section>
 
           {/* Spotlight Featured Job Card with Interactive Smooth Hover-Reveal Effect */}
-          <section className="w-full px-margin py-space-xl">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-md">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl">
+            <div className="max-w-[1920px] mx-auto flex flex-col gap-space-md">
               <div className="flex items-center justify-between">
                 <div>
                   <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
                     Priority European Requisition
                   </span>
-                  <h2 className="font-headline-lg text-headline-lg text-on-surface font-semibold">
+                  <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-on-surface font-semibold">
                     Featured Fleet Mission
                   </h2>
                 </div>
@@ -731,13 +731,13 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
           </section>
 
           {/* Urban Standards & Compliance Matrix */}
-          <section className="w-full bg-surface-container-low px-margin py-space-xl">
-            <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
+          <section className="w-full bg-surface-container-low px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl">
+            <div className="max-w-[1920px] mx-auto flex flex-col gap-space-lg">
               <div className="flex flex-col gap-1 max-w-2xl">
                 <span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">
                   Standardized Framework
                 </span>
-                <h2 className="font-headline-lg text-headline-lg text-on-surface font-semibold">
+                <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-on-surface font-semibold">
                   Urban Standards &amp; Compliance Matrix
                 </h2>
                 <p className="font-body-md text-body-md text-on-surface-variant">
@@ -810,8 +810,8 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
           </section>
 
           {/* Partner Carrier Consortiums */}
-          <section className="w-full px-margin py-space-xl">
-            <div className="max-w-7xl mx-auto flex flex-col items-center gap-space-lg text-center">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 py-space-xl">
+            <div className="max-w-[1920px] mx-auto flex flex-col items-center gap-space-lg text-center">
               <div className="flex flex-col gap-1">
                 <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">
                   Logistics Exchange Ecosystem
@@ -844,8 +844,8 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
           </section>
 
           {/* Bottom Conversion Callout Banner */}
-          <section className="w-full px-margin pb-space-xl">
-            <div className="max-w-7xl mx-auto">
+          <section className="w-full px-4 sm:px-6 lg:px-8 2xl:px-12 pb-space-xl">
+            <div className="max-w-[1920px] mx-auto">
               <div className="bg-primary text-on-primary rounded-2xl p-space-lg lg:p-space-xl shadow-xl flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg relative overflow-hidden">
                 {/* Background decorative ambient accent */}
                 <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary-container/40 blur-3xl pointer-events-none"></div>
@@ -853,7 +853,7 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider w-max">
                     <span className="material-symbols-outlined text-[14px]">local_police</span> Verified Driver Intake
                   </span>
-                  <h2 className="font-headline-xl text-headline-xl font-bold tracking-tight text-on-primary">
+                  <h2 className="text-2xl sm:text-3xl lg:text-headline-xl font-headline-xl font-bold tracking-tight text-on-primary">
                     Hold a Category B or C1 Driver&apos;s License with Clean Points?
                   </h2>
                   <p className="font-body-md text-body-md text-on-primary-container/90 leading-relaxed">
