@@ -401,9 +401,11 @@ export default function MachineryAndCombineOperatorsPage() {
                         </span>
                       </div>
 
-                      <h3 className="font-headline-md text-headline-md text-secondary group-hover:text-primary transition-colors tracking-tight font-bold cursor-pointer">
-                        Senior Autonomous Combine &amp; Precision Farming Specialist
-                      </h3>
+                      <Link href="/jobs/senior-autonomous-combine-and-precision-farming-specialist">
+                        <h3 className="font-headline-md text-headline-md text-secondary group-hover:text-primary transition-colors tracking-tight font-bold cursor-pointer">
+                          Senior Autonomous Combine &amp; Precision Farming Specialist
+                        </h3>
+                      </Link>
 
                       <div className="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-body-sm text-body-sm">
                         <span className="flex items-center gap-1">
@@ -459,22 +461,20 @@ export default function MachineryAndCombineOperatorsPage() {
                     </div>
 
                     <div className="flex items-center gap-space-sm mt-space-md">
-                      <button
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary font-label-lg text-label-lg font-semibold border border-outline-variant transition-colors cursor-pointer"
-                        onClick={() => alert("Job Specifications: Model CLAAS Lexion 8900 / John Deere S790, Dual-Rotor, 12.2m Draper Header, RTK sub-2.5cm.")}
-                        type="button"
+                      <Link
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary font-label-lg text-label-lg font-semibold border border-outline-variant transition-colors cursor-pointer text-center"
+                        href="/jobs/senior-autonomous-combine-and-precision-farming-specialist"
                       >
                         <span className="material-symbols-outlined text-[18px]">visibility</span>
                         <span>View Position</span>
-                      </button>
-                      <button
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-sm transition-all cursor-pointer"
-                        onClick={() => alert("Quick Apply initiated for Senior Autonomous Combine & Precision Farming Specialist (ForwardFarming SE). Dispatch team notified.")}
-                        type="button"
+                      </Link>
+                      <Link
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-sm transition-all cursor-pointer text-center"
+                        href="/jobs/senior-autonomous-combine-and-precision-farming-specialist#fast-track-form"
                       >
                         <span>Quick Apply</span>
                         <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
