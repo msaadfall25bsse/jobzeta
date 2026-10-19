@@ -484,13 +484,13 @@ export default function AviationCargoAndAirportRampPage() {
                           </div>
                           <div className="flex items-center gap-space-sm flex-wrap w-full sm:w-auto">
                             <Link
-                              href="/find-jobs"
+                              href="/jobs/senior-airport-ramp-cargo-tug-and-widebody-high-loader-specialist#requisition-form"
                               className="px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors flex-1 sm:flex-none text-center"
                             >
                               Fast-Track Dispatch Apply
                             </Link>
                             <Link
-                              href="/find-jobs"
+                              href="/jobs/senior-airport-ramp-cargo-tug-and-widebody-high-loader-specialist"
                               className="px-space-md py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-1 shadow-sm flex-1 sm:flex-none text-center"
                             >
                               <span>View Full Instructions &amp; Technical Specs</span>
