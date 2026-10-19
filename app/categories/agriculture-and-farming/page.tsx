@@ -295,7 +295,10 @@ export default function AgricultureAndFarmingCategoryPage() {
               {/* 8 Grid Cards (2 rows of 4) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
                 {/* Card 1 */}
-                <div className="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/60">
+                <Link
+                  className="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/60 cursor-pointer block"
+                  href="/categories/agriculture-and-farming/machinery-and-combine-operators"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-space-md">
                       <div className="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
@@ -321,7 +324,7 @@ export default function AgricultureAndFarmingCategoryPage() {
                       chevron_right
                     </span>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 2 */}
                 <div className="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/60">
