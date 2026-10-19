@@ -360,161 +360,146 @@ export default function AviationCargoAndAirportRampPage() {
                 </div>
               </div>
 
-              {/* Main Mission Card with Hover & Click Interaction */}
-              <div
-                onClick={() => setMobileDrawerOpen(!mobileDrawerOpen)}
-                className="mission-hover-card bg-surface-container-lowest rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-surface-container-high/60"
+              {/* PRIMARY FEATURED JOB CARD */}
+              <article
+                aria-label="Senior Airport Ramp Cargo Tug & Widebody High-Loader Specialist requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-                  {/* Left Hero Photo with Real-world Details */}
-                  <div className="lg:col-span-5 relative min-h-[340px] lg:min-h-[460px] overflow-hidden">
-                    <img
-                      alt="Aviation cargo ramp specialist standing in high-visibility safety clothing with headset next to a yellow Trepel electric tow tractor and widebody cargo freight airplane on Amsterdam Schiphol wet apron tarmac at dusk"
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTurpMbPydb1FmosxTUq2i55GMq0RIDsKpNfRCsXHx6hKM7ZpjJy90GFedqE0gYtBi7Ixuhjv3wOrHWT8dyskvlRcCy2E9bZD8XSemBHnQMH9KWqPg3qsE-E25mOU_C6kyhcWirguJrRZ9hpKz4_4tXn9EksKXUNdL7cZcHBxRuAOdUI8eViK8BZkOKEskMu9yzD09kBncUwm2mtxYpbh6nmoR3HTzX9DAPoshyAb-Ag4jHVm3XLyljA"
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Media Column */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTurpMbPydb1FmosxTUq2i55GMq0RIDsKpNfRCsXHx6hKM7ZpjJy90GFedqE0gYtBi7Ixuhjv3wOrHWT8dyskvlRcCy2E9bZD8XSemBHnQMH9KWqPg3qsE-E25mOU_C6kyhcWirguJrRZ9hpKz4_4tXn9EksKXUNdL7cZcHBxRuAOdUI8eViK8BZkOKEskMu9yzD09kBncUwm2mtxYpbh6nmoR3HTzX9DAPoshyAb-Ag4jHVm3XLyljA')`,
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-on-secondary-fixed/90 via-on-secondary-fixed/30 to-transparent"></div>
-                    {/* Badges Floating Over Image */}
-                    <div className="absolute top-4 left-4 flex flex-col gap-2">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-md">
-                        <span className="material-symbols-outlined text-[14px]">flag</span>
-                        FEATURED AIRSIDE MISSION
-                      </span>
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
-                        Tier-1 Ground Handler
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">flight</span>
+                        Airport Cargo &amp; Ramp GSE
                       </span>
                     </div>
-                    {/* Airport Stamp Bottom */}
-                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
-                      <div>
-                        <p className="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">
-                          Amsterdam Schiphol Airport (AMS)
-                        </p>
-                        <p className="font-headline-sm text-headline-sm font-bold">Cargo Apron Stand C32</p>
-                        <p className="font-body-sm text-body-sm opacity-85">Swissport / KLM Cargo Partner Ramp Operations</p>
-                      </div>
-                      <div className="w-10 h-10 rounded-full bg-primary/20 backdrop-blur-md flex items-center justify-center border border-primary-fixed/40">
-                        <span className="material-symbols-outlined text-primary-fixed text-headline-sm">flight</span>
-                      </div>
+                    <button
+                      aria-label="Bookmark this role"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                      }}
+                    >
+                      <span className="material-symbols-outlined text-[17px]">bookmark</span>
+                    </button>
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
 
-                  {/* Right Details Container */}
-                  <div className="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between">
-                    <div className="flex flex-col gap-space-sm">
-                      <div className="flex items-center justify-between flex-wrap gap-2">
-                        <span className="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">
-                          REQ #AMS-9140-AV • ACTIVE AIRSIDE DISPATCH
+                  {/* Right Requisition Column */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            Swissport International AG
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Carrier
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                            Posted Today
+                          </span>
+                        </div>
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €42,500 – €56,800
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
+                      </div>
+
+                      <Link href="/jobs/senior-airport-ramp-cargo-tug-and-widebody-high-loader-specialist">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior Airport Ramp Cargo Tug &amp; Widebody High-Loader Specialist
+                        </h3>
+                      </Link>
+
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                          Amsterdam Airport Schiphol (AMS) Freight Terminal 3
                         </span>
-                        <span className="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                           Full-Time Shift Schedule
                         </span>
-                      </div>
-                      <h3 className="text-xl sm:text-2xl lg:text-headline-lg font-headline-lg text-on-surface font-bold tracking-tight">
-                        Senior Airport Ramp Cargo Tug &amp; Widebody High-Loader Specialist
-                      </h3>
-                      <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
-                        <span className="material-symbols-outlined text-primary text-body-lg">apartment</span>
-                        <span className="font-semibold text-on-surface">Swissport International AG</span>
-                        <span>•</span>
-                        <span>Amsterdam Airport Schiphol (AMS) Freight Terminal 3</span>
-                      </div>
-                      {/* Badges Array */}
-                      <div className="flex flex-wrap items-center gap-1.5 pt-space-xs">
-                        <span className="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                          Tier-1 Ground Handler
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">shield</span>
                           Airside Driver Permit (ADP Tier 3)
                         </span>
-                        <span className="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
-                          Trepel Champ 140 &amp; Electric Tug
-                        </span>
-                        <span className="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
-                          IATA Cargo DGR Certified
-                        </span>
-                        <span className="px-2.5 py-1 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm font-bold">
-                          Aviation Security Screening Checked
-                        </span>
-                      </div>
-                      {/* Compensation Matrix */}
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-space-sm bg-surface-container-low rounded-xl p-space-md">
-                        <div>
-                          <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Approved Tariff</span>
-                          <div className="font-headline-sm text-headline-sm font-bold text-on-surface">€42,500 – €56,800</div>
-                          <span className="font-label-sm text-label-sm text-on-surface-variant">Annual Base (CLA Parity)</span>
-                        </div>
-                        <div>
-                          <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Shift Premiums</span>
-                          <div className="font-headline-sm text-headline-sm font-bold text-primary">+ €18.50 / day</div>
-                          <span className="font-label-sm text-label-sm text-on-surface-variant">Late &amp; night apron differential</span>
-                        </div>
-                        <div>
-                          <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Safety Incentive</span>
-                          <div className="font-headline-sm text-headline-sm font-bold text-secondary">+ €300 / mo</div>
-                          <span className="font-label-sm text-label-sm text-on-surface-variant">Zero-aircraft-contact bonus</span>
-                        </div>
                       </div>
                     </div>
 
-                    {/* Expandable Hover-Reveal Drawer */}
-                    <div className={`mission-drawer mt-space-md ${mobileDrawerOpen ? "max-h-[500px]! opacity-100!" : ""}`}>
-                      <div className="pt-space-md flex flex-col gap-space-md">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
-                          <div className="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm border border-surface-container-high/60">
-                            <span className="font-label-sm text-label-sm font-bold text-primary flex items-center gap-1 mb-1">
-                              <span className="material-symbols-outlined text-label-md">straighten</span>
-                              Airside Geometry &amp; Apron Corridor
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Trepel Champ 140 Loader
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Electric Cargo Tug
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        IATA DGR Certified
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Security Screening Checked
+                      </span>
+                    </div>
+
+                    {/* Accordion Reveal */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
                             </span>
-                            <p className="font-body-sm text-body-sm text-on-surface-variant">
-                              AMS Schiphol Cargo Apron Zone C • 180 ULD Containers / Shift • High-speed apron roadway protocol (max 25 km/h, aircraft stand 5 km/h) &amp; geofenced tug routing.
+                            <p className="text-body-sm text-on-surface-variant">
+                              Apron Cargo Stand C32 widebody ULD operations (B777F / B747-8F / A350F). Trepel Champ 140 maindeck loading &amp; heavy electric tow tractor transit under strict IATA AHM 910 safety standards.
                             </p>
                           </div>
-                          <div className="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm border border-surface-container-high/60">
-                            <span className="font-label-sm text-label-sm font-bold text-secondary flex items-center gap-1 mb-1">
-                              <span className="material-symbols-outlined text-label-md">health_and_safety</span>
-                              Safety &amp; IATA Clearance Mandate
-                            </span>
-                            <p className="font-body-sm text-body-sm text-on-surface-variant">
-                              ICAO Annex 14 &amp; EASA Ramp Directives • Zero aircraft fuselage contact tolerance, FOD walkdown compliance &amp; acoustic pushback warning systems active.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between gap-space-md pt-space-xs flex-wrap">
-                          <div className="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
-                            <span className="material-symbols-outlined text-primary text-body-md">schedule</span>
-                            <span>Shift: 4 Days On (05:30-14:30 / 14:00-23:00) / 2 Days Off</span>
-                          </div>
-                          <div className="flex items-center gap-space-sm flex-wrap w-full sm:w-auto">
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
                             <Link
-                              href="/jobs/senior-airport-ramp-cargo-tug-and-widebody-high-loader-specialist#requisition-form"
-                              className="px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors flex-1 sm:flex-none text-center"
-                            >
-                              Fast-Track Dispatch Apply
-                            </Link>
-                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
                               href="/jobs/senior-airport-ramp-cargo-tug-and-widebody-high-loader-specialist"
-                              className="px-space-md py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-1 shadow-sm flex-1 sm:flex-none text-center"
                             >
-                              <span>View Full Instructions &amp; Technical Specs</span>
-                              <span className="material-symbols-outlined text-body-md arrow-rotate transition-transform">arrow_forward</span>
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-airport-ramp-cargo-tug-and-widebody-high-loader-specialist"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
                             </Link>
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    {/* Hint on non-hovered state */}
-                    <div className="pt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
-                      <span className="flex items-center gap-1">
-                        <span className="material-symbols-outlined text-body-sm text-primary">mouse</span>
-                        <span>Hover over card to inspect operational apron parameters &amp; apply directly</span>
-                      </span>
-                      <span className="font-bold text-primary flex items-center gap-0.5">
-                        <span>Details &amp; Clearance Protocol</span>
-                        <span className="material-symbols-outlined text-label-md">expand_more</span>
-                      </span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           </section>
 

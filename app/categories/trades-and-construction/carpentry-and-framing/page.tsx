@@ -247,165 +247,162 @@ export default function CarpentryAndFramingPage() {
                 </div>
               </div>
 
-              {/* EXACTLY 1 PRIMARY FEATURED JOB CARD */}
-              <div className="bg-surface-container-lowest rounded-2xl p-space-lg lg:p-space-xl shadow-md border border-surface-container-highest hover:border-primary transition-all">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
-                  {/* Left/Center Content Column */}
-                  <div className="lg:col-span-8 flex flex-col gap-space-md">
-                    {/* Thumbnail & Organization Meta */}
-                    <div className="flex flex-col sm:flex-row gap-space-md items-start sm:items-center">
-                      <div className="relative w-full sm:w-44 h-32 rounded-xl overflow-hidden shrink-0 group">
-                        <img
-                          alt="Senior mass timber carpenter working on CLT structure"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRR4oQoHb_RBE2KZDk2R9SIsD3ptoMOMLnRz0yR5Vu6H1IJC6_G6Ijlcl_N6XHIkP75UA3JBwtqAcEsZ1nUFYfe-gtCDEjJfsoZwKHqxro9KCm_3_yfPJeznSUHM55zPvrQLJmf69B1UYOcD-_PcCd0AcPqVna9X8dTm8LtWfpqCOxmJBZ0EfCQ2FaSYywYdigmQ11vrCkkjIX6HrE0yTLWbZ0fkdXheZK1aM9Ib177wmYsms8qnzR0A"
-                        />
-                        <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur text-primary text-[10px] font-bold uppercase tracking-wider">
-                          Mass Timber &amp; Heavy Joinery
-                        </span>
-                        <span className="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface text-[9px] font-medium">
-                          Hover for scope
-                        </span>
-                      </div>
-                      <div className="flex flex-col gap-1 w-full">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <span className="font-label-lg text-label-lg font-bold text-on-surface">
-                              Züblin Timber &amp; Stora Enso JV
-                            </span>
-                            <span
-                              className="material-symbols-outlined text-primary text-[18px]"
-                              title="Verified Employer"
-                            >
-                              verified
-                            </span>
-                          </div>
-                          <button
-                            onClick={() => setBookmarked(!bookmarked)}
-                            className="p-1.5 rounded-lg hover:bg-surface-container text-tertiary hover:text-primary transition-colors"
-                            aria-label="Bookmark position"
-                          >
-                            <span className="material-symbols-outlined text-[20px]">
-                              {bookmarked ? "bookmark_added" : "bookmark"}
-                            </span>
-                          </button>
-                        </div>
-                        <h3 className="font-headline-sm text-headline-sm text-on-surface font-bold hover:text-primary transition-colors cursor-pointer">
-                          Senior Mass Timber (CLT/Glulam) &amp; Structural Carpenter Lead
-                        </h3>
-                        <div className="flex flex-wrap items-center gap-y-1 gap-x-space-md text-body-sm font-body-sm text-on-surface-variant">
-                          <span className="flex items-center gap-1">
-                            <span className="material-symbols-outlined text-[16px] text-tertiary">
-                              location_on
-                            </span>
-                            Munich, Germany (On-Site • High-Rise Hybrid Mass Timber Project)
+              {/* PRIMARY FEATURED JOB CARD */}
+              <article
+                aria-label="Senior Mass Timber (CLT/Glulam) & Structural Carpenter Lead requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
+              >
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Column: Visual Media & Badges */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRR4oQoHb_RBE2KZDk2R9SIsD3ptoMOMLnRz0yR5Vu6H1IJC6_G6Ijlcl_N6XHIkP75UA3JBwtqAcEsZ1nUFYfe-gtCDEjJfsoZwKHqxro9KCm_3_yfPJeznSUHM55zPvrQLJmf69B1UYOcD-_PcCd0AcPqVna9X8dTm8LtWfpqCOxmJBZ0EfCQ2FaSYywYdigmQ11vrCkkjIX6HrE0yTLWbZ0fkdXheZK1aM9Ib177wmYsms8qnzR0A')`,
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    
+                    {/* Floating pill tags on media */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">carpenter</span>
+                        Mass Timber &amp; Heavy Joinery
+                      </span>
+                    </div>
+
+                    <button
+                      aria-label="Bookmark position"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        setBookmarked(!bookmarked);
+                      }}
+                    >
+                      <span className="material-symbols-outlined text-[17px]">
+                        {bookmarked ? "bookmark_added" : "bookmark"}
+                      </span>
+                    </button>
+
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Requisition Content & Interactive Reveal */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Top row: Employer, Post Age, Verified & Compensation */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            Züblin Timber &amp; Stora Enso JV
                           </span>
-                          <span className="flex items-center gap-1">
-                            <span className="material-symbols-outlined text-[16px] text-tertiary">
-                              schedule
-                            </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Employer
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
                             Posted 2h ago
                           </span>
                         </div>
+
+                        {/* Salary Highlight */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €62,000 – €79,000
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
+                      </div>
+
+                      {/* Main Job Title */}
+                      <Link href="/jobs/senior-mass-timber-carpenter">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior Mass Timber (CLT/Glulam) &amp; Structural Carpenter Lead
+                        </h3>
+                      </Link>
+
+                      {/* Meta Tags: Location, Shift, Type, Clearance */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                          Munich, Germany (On-Site • High-Rise Hybrid Mass Timber Project)
+                        </span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                          Full-Time Permanent
+                        </span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                          Tier-1 Architectural Timber
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">shield</span>
+                          EU Blue Card &amp; Relocation Support
+                        </span>
                       </div>
                     </div>
 
-                    {/* Badges Bar */}
-                    <div className="flex flex-wrap items-center gap-space-xs">
-                      <span className="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
-                        Full-Time Permanent
-                      </span>
-                      <span className="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-medium">
-                        Tier-1 Architectural Timber
-                      </span>
-                      <span className="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
-                        EU Blue Card &amp; Relocation Support
-                      </span>
-                    </div>
-
-                    {/* Technical Skills Multi-Tags */}
-                    <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                      <span className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                    {/* Skill Tags / Systems */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         Cross-Laminated Timber (CLT)
                       </span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         Glulam Beam Erection
                       </span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         Doka / Peri Formwork Systems
                       </span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         Eurocode 5 (DIN EN 1995)
                       </span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         Hilti Anchor &amp; Rothoblaas Fasteners
                       </span>
                     </div>
 
-                    {/* Base Compensation & Allowances */}
-                    <div className="pt-space-xs flex flex-col sm:flex-row sm:items-baseline gap-2">
-                      <span className="font-headline-md text-headline-md text-primary font-extrabold">
-                        €62,000 – €79,000
-                      </span>
-                      <span className="font-body-sm text-body-sm text-on-surface-variant">
-                        / yr base + 20% Assembly &amp; Height Shift Multiplier + Per Diem Lodge
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Right Facility & Scope Specification Card */}
-                  <div className="lg:col-span-4 bg-surface-container-low rounded-xl p-space-md border border-surface-container-highest flex flex-col justify-between gap-space-md">
-                    <div className="flex flex-col gap-space-sm">
-                      <div className="flex items-center justify-between">
-                        <span className="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wide">
-                          Tier-1 Complex
-                        </span>
-                        <span className="flex items-center gap-1 text-label-sm font-label-sm text-primary font-bold">
-                          <span className="material-symbols-outlined text-[16px]">
-                            task_alt
-                          </span>
-                          Validated
-                        </span>
-                      </div>
-                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                        Requires verified Zimmermann Gesellenbrief, Red Seal, or NVQ Level 3 with proven mass timber high-rise joinery and laser station alignment proficiency.
-                      </p>
-                      <div className="flex flex-col gap-1 text-[12px] text-tertiary">
-                        <div className="flex items-center justify-between">
-                          <span>Site Clearance:</span>
-                          <span className="font-semibold text-on-surface">
-                            DIN EN 1995 Massivholz
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span>Crane Rigging Coord:</span>
-                          <span className="font-semibold text-on-surface">
-                            Included in Scope
-                          </span>
+                    {/* Accordion Reveal Section on Group Hover */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Requires verified Zimmermann Gesellenbrief, Red Seal, or NVQ Level 3 with proven mass timber high-rise joinery and laser station alignment proficiency. Site Clearance: DIN EN 1995 Massivholz. Crane Rigging Coord: Included in Scope.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-mass-timber-carpenter"
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-mass-timber-carpenter"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
+                            </Link>
+                          </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                      <Link
-                        href="/jobs/senior-mass-timber-carpenter"
-                        className="w-full py-2.5 px-4 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
-                      >
-                        Quick Apply
-                        <span className="material-symbols-outlined text-[16px]">
-                          arrow_forward
-                        </span>
-                      </Link>
-                      <Link
-                        href="/jobs/senior-mass-timber-carpenter"
-                        className="w-full py-2 px-4 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-lg text-label-lg rounded-lg border border-surface-container-highest transition-all flex items-center justify-center cursor-pointer"
-                      >
-                        View Position
-                      </Link>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Pagination Counter */}
               <div className="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs text-body-sm font-body-sm text-on-surface-variant">

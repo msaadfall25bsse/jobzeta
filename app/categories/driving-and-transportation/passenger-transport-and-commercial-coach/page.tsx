@@ -584,150 +584,162 @@ export default function PassengerTransportCommercialCoachPage() {
                 <span className="font-label-md text-label-md text-on-surface-variant">Direct Operator Requisition · Priority Dispatch</span>
               </div>
 
-              {/* THE INTERACTIVE CARD */}
-              <div
-                className="group relative bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden cursor-pointer"
-                id="interactive-coach-card"
-                onClick={() => setMobileExpanded(!mobileExpanded)}
+              {/* PRIMARY FEATURED JOB CARD */}
+              <article
+                aria-label="Senior International Touring Coach Captain (EU Trans-Corridor) requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
               >
-                <div className="p-space-lg flex flex-col lg:flex-row gap-space-lg">
-                  <div className="w-full lg:w-80 flex-shrink-0 flex flex-col justify-between relative rounded-xl overflow-hidden bg-surface-container min-h-[260px]">
-                    <img
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      data-alt="A professional European coach captain in a crisp navy uniform standing proudly in front of a modern white high-capacity Setra touring coach at the Berlin Central Bus Terminal. The atmosphere is professional and energetic with bright overcast daylight illuminating the pristine vehicle and terminal tarmac."
-                      alt="A professional European coach captain in a crisp navy uniform standing proudly in front of a modern white high-capacity Setra touring coach at the Berlin Central Bus Terminal. The atmosphere is professional and energetic with bright overcast daylight illuminating the pristine vehicle and terminal tarmac."
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLS3aRr7-3fDwQ_o0zYPKHpW5_O_WEJyrGXOuimZKBK-eNfR5lXT5VvwhDYfB_wy6o8eHI3xPDtH1yP0-5aMB4jlz3haRL2B5fZoaiF3BYuH3QUNN83f6iB-eIK68eJABJOCTWoMtR7UGAqdVm-1QqZ6mNe8WpCyuIgBiSdfgZBllATHKgE_S2Cdo9pMCGfqmvReHJEHknUYLZoGWw05R34M_lNQaCAS4Xaiv4hVPiUPX422X_mdGXRA"
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Column: Visual Media & Badges */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLS3aRr7-3fDwQ_o0zYPKHpW5_O_WEJyrGXOuimZKBK-eNfR5lXT5VvwhDYfB_wy6o8eHI3xPDtH1yP0-5aMB4jlz3haRL2B5fZoaiF3BYuH3QUNN83f6iB-eIK68eJABJOCTWoMtR7UGAqdVm-1QqZ6mNe8WpCyuIgBiSdfgZBllATHKgE_S2Cdo9pMCGfqmvReHJEHknUYLZoGWw05R34M_lNQaCAS4Xaiv4hVPiUPX422X_mdGXRA')`,
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/30 to-transparent"></div>
-                    <div className="relative z-10 p-3 flex flex-wrap gap-1.5">
-                      <span className="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm">
-                        FEATURED TRANSIT REQUISITION
-                      </span>
-                      <span className="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 text-on-surface font-label-sm text-label-sm font-semibold backdrop-blur-sm">
-                        FLIXBUS / DEUTSCHE BAHN PARTNER
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    
+                    {/* Floating pill tags on media */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">airport_shuttle</span>
+                        Commercial Coach &amp; Transit
                       </span>
                     </div>
-                    <div className="relative z-10 p-3 text-on-primary">
-                      <span className="font-label-sm text-label-sm opacity-90 block">Departure Base</span>
-                      <span className="font-headline-sm text-headline-sm font-bold">Berlin HBF / ZOB Central</span>
+
+                    <button
+                      aria-label="Bookmark this role"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        handleBookmarkToggle(e);
+                      }}
+                    >
+                      <span className={`material-symbols-outlined text-[17px] ${isBookmarked ? "text-primary" : ""}`}>
+                        {isBookmarked ? "bookmark" : "bookmark_border"}
+                      </span>
+                    </button>
+
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
-                  <div className="flex-1 flex flex-col justify-between gap-space-md">
-                    <div>
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <div className="flex items-center gap-2">
-                          <span className="px-2.5 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">
-                            Req #TX-8924-EU
+
+                  {/* Right Column: Requisition Content & Interactive Reveal */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Top row: Employer, Post Age, Verified & Compensation */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            EuroTrans Express Lines GmbH
                           </span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
-                          <span className="font-label-sm text-label-sm text-primary font-bold">Active Rotation</span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Carrier
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                            Posted Today
+                          </span>
                         </div>
-                        <button
-                          onClick={handleBookmarkToggle}
-                          className="text-outline hover:text-primary transition-colors p-1 cursor-pointer"
-                          title={isBookmarked ? "Remove from bookmarks" : "Save Job"}
-                        >
-                          <span className={`material-symbols-outlined text-[22px] ${isBookmarked ? "text-primary" : ""}`}>
-                            {isBookmarked ? "bookmark" : "bookmark_border"}
+
+                        {/* Salary Highlight */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €46,000 – €64,000
                           </span>
-                        </button>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
                       </div>
-                      <h3 className="font-headline-lg text-headline-lg text-on-surface mt-space-xs group-hover:text-primary transition-colors">
-                        Senior International Touring Coach Captain (EU Trans-Corridor)
-                      </h3>
-                      <p className="font-body-md text-body-md text-secondary font-medium mt-0.5 flex items-center gap-1.5">
-                        <span className="material-symbols-outlined text-[18px]">corporate_fare</span>
-                        EuroTrans Express Lines GmbH • Frankfurt / Berlin / Prague Hub
-                      </p>
-                      <div className="flex flex-wrap gap-space-xs mt-space-md">
-                        <span className="px-3 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[14px]">id_card</span>
-                          EU Category D + Code 95
+
+                      {/* Main Job Title */}
+                      <Link href="/jobs/senior-touring-coach-captain">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior International Touring Coach Captain (EU Trans-Corridor)
+                        </h3>
+                      </Link>
+
+                      {/* Meta Tags: Location, Shift, Type, Clearance */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                          Berlin HBF / ZOB Central (Frankfurt / Berlin / Prague Hub)
                         </span>
-                        <span className="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
-                          Mercedes Tourismo 16 RHD / Setra 516 HD
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                          Full-Time Permanent
                         </span>
-                        <span className="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
-                          Digital Tachograph Gen 2
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                          Tier-1 Intercity Coach
                         </span>
-                        <span className="px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-medium">
-                          Cross-Border Schengen Rotation
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">shield</span>
+                          EU Category D + Code 95 Active
                         </span>
                       </div>
                     </div>
-                    <div className="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
-                      <div>
-                        <span className="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wide">
-                          Standard Base &amp; Allowances
-                        </span>
-                        <div className="font-headline-md text-headline-md text-on-surface font-bold">
-                          €46,000 – €64,000 <span className="font-body-sm text-body-sm text-on-surface-variant font-normal">/ year</span>
+
+                    {/* Skill Tags / Systems */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Mercedes Tourismo 16 RHD
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Setra 516 HD
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Digital Tachograph Gen 2
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        EC 561/2006 Protocol
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Dual Captain Crew Rotations
+                      </span>
+                    </div>
+
+                    {/* Accordion Reveal Section on Group Hover */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Berlin ZOB ⇄ Prague Florenc ⇄ Vienna Erdberg (680 km scheduled passenger leg, 2 drivers crew rotation, strict 4.5h EC 561/2006 compliance). Mercedes Tourismo / Setra TopClass S 516 HD with 53+ passenger manifest sync.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-touring-coach-captain"
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-touring-coach-captain"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
+                            </Link>
+                          </div>
                         </div>
-                      </div>
-                      <div className="sm:text-right font-body-sm text-body-sm text-on-surface-variant">
-                        <span className="font-semibold text-primary block">+ €45.00/day tax-free passenger meal per diem</span>
-                        <span>+ €350/mo punctuality &amp; fuel efficiency bonus</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  className={`transition-all duration-500 ease-in-out bg-surface-container overflow-hidden ${
-                    mobileExpanded
-                      ? "max-h-[600px] opacity-100"
-                      : "max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100"
-                  }`}
-                >
-                  <div className="p-space-lg flex flex-col gap-space-md">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-                      <div className="bg-surface-container-lowest p-space-md rounded-xl flex items-start gap-space-sm shadow-sm">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
-                          <span className="material-symbols-outlined text-[20px]">directions_bus_filled</span>
-                        </div>
-                        <div>
-                          <span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide">
-                            Passenger Transit &amp; Route Mandate
-                          </span>
-                          <p className="font-body-sm text-body-sm text-on-surface mt-1">
-                            Mercedes Tourismo / Setra TopClass S 516 HD, EC 561/2006 tachograph compliance, active 53+ passenger manifest sync, dual-captain rotation protocol.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="bg-surface-container-lowest p-space-md rounded-xl flex items-start gap-space-sm shadow-sm">
-                        <div className="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
-                          <span className="material-symbols-outlined text-[20px]">alt_route</span>
-                        </div>
-                        <div>
-                          <span className="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wide">
-                            Corridor &amp; Schedule Rotation
-                          </span>
-                          <p className="font-body-sm text-body-sm text-on-surface mt-1">
-                            Berlin ZOB ⇄ Prague Florenc ⇄ Vienna Erdberg (680 km scheduled passenger leg, 2 drivers crew rotation, strict 4.5h EC 561/2006 compliance).
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex flex-col sm:flex-row items-center justify-end gap-space-sm pt-space-xs">
-                      <Link
-                        href="/jobs/senior-touring-coach-captain"
-                        onClick={(e) => e.stopPropagation()}
-                        className="w-full sm:w-auto px-space-md py-2.5 rounded-lg bg-surface-container-highest text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
-                      >
-                        <span className="material-symbols-outlined text-[18px]">bolt</span>
-                        <span>Fast-Track Dispatch Apply</span>
-                      </Link>
-                      <Link
-                        href="/jobs/senior-touring-coach-captain"
-                        onClick={(e) => e.stopPropagation()}
-                        className="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
-                      >
-                        <span className="material-symbols-outlined text-[18px]">verified</span>
-                        <span>View Full Instructions &amp; Technical Specs</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </article>
             </div>
           </section>
 

@@ -264,134 +264,154 @@ export default function HeavyPlantAndCranesPage() {
               </div>
 
               {/* PRIMARY FEATURED JOB CARD */}
-              <article className="group relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 border border-surface-container-highest">
-                <div className="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
-                  {/* Column 1: Image & Badge */}
-                  <div className="xl:col-span-3 flex flex-col gap-space-xs">
-                    <div className="relative w-full h-52 rounded-lg overflow-hidden bg-surface-container-low shadow-inner">
-                      <img
-                        alt="Experienced crane operator in high-visibility safety coveralls and protective white helmet operating high above an expansive urban construction site."
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK8lbCa0yGivQc9xFiRUgmop1SFa0uiwHTyvX4AAkB2sxHPs_seng8Qp4FWErt9lcCMuHtiJ_j9EVXPOH6mYAPOuop7zAFieK_mE6PBujKQm5Vsji_3_v5B1Whvb9cHYrICHmBO3U19RKf0qdb3xVD8S1GAViTpbwArqV4n2si9vi4THi_bdNrAAtG9NX1eWlt5jkvWb9LiJxw_Qf7DvZGXNEMZstQ7TkipDInbpAD6j71HTisSzPNfg"
-                      />
-                      <span className="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-label-sm text-label-sm font-semibold">
+              <article
+                aria-label="Senior Heavy Lift Tower Crane & High-Capacity Luffing Jib Operator requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
+              >
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Column: Visual Media & Badges */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCK8lbCa0yGivQc9xFiRUgmop1SFa0uiwHTyvX4AAkB2sxHPs_seng8Qp4FWErt9lcCMuHtiJ_j9EVXPOH6mYAPOuop7zAFieK_mE6PBujKQm5Vsji_3_v5B1Whvb9cHYrICHmBO3U19RKf0qdb3xVD8S1GAViTpbwArqV4n2si9vi4THi_bdNrAAtG9NX1eWlt5jkvWb9LiJxw_Qf7DvZGXNEMZstQ7TkipDInbpAD6j71HTisSzPNfg')`,
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    
+                    {/* Floating pill tags on media */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">precision_manufacturing</span>
                         Tower Crane &amp; Heavy Rigging
                       </span>
-                      <span className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm flex items-center gap-1 font-medium">
-                        <span className="material-symbols-outlined text-[12px] text-primary">
-                          visibility
-                        </span>
-                        <span>Hover for scope</span>
-                      </span>
                     </div>
-                    <div className="flex items-center justify-between text-tertiary font-label-sm text-label-sm px-1">
-                      <span>Ref: BY-MUC-TC-9102</span>
-                      <span>Updated 2h ago</span>
+
+                    <button
+                      aria-label="Bookmark"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                      }}
+                    >
+                      <span className="material-symbols-outlined text-[17px]">bookmark</span>
+                    </button>
+
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
 
-                  {/* Column 2: Job Overview & Specs */}
-                  <div className="xl:col-span-6 flex flex-col gap-space-xs">
-                    {/* Company & Verification */}
-                    <div className="flex items-center gap-space-xs">
-                      <span className="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">
-                        BAM &amp; Hochtief Infrastructure JV
-                      </span>
-                      <span
-                        className="inline-flex items-center gap-0.5 text-primary text-[14px]"
-                        title="Verified Employer"
-                      >
-                        <span className="material-symbols-outlined text-[16px]">verified</span>
-                      </span>
-                      <span className="text-tertiary font-label-md text-label-md">• Posted 2h ago</span>
+                  {/* Right Column: Requisition Content & Interactive Reveal */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Top row: Employer, Post Age, Verified & Compensation */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            BAM &amp; Hochtief Infrastructure JV
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Employer
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                            Posted 2h ago
+                          </span>
+                        </div>
+
+                        {/* Salary Highlight */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €72,000 – €94,000
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
+                      </div>
+
+                      {/* Main Job Title */}
+                      <Link href="/jobs/senior-crane-operator">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior Heavy Lift Tower Crane &amp; High-Capacity Luffing Jib Operator
+                        </h3>
+                      </Link>
+
+                      {/* Meta Tags: Location, Shift, Type, Clearance */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                          Munich, Germany (On-Site • High-Speed Rail &amp; Tunnel Mega-Project)
+                        </span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                          Full-Time Permanent
+                        </span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                          Tier-1 Civil Infrastructure
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">shield</span>
+                          EU Blue Card &amp; Relocation Support
+                        </span>
+                      </div>
                     </div>
 
-                    {/* Job Title */}
-                    <Link
-                      className="font-headline-md text-headline-md text-on-surface hover:text-primary transition-colors font-bold"
-                      href="/jobs/senior-crane-operator"
-                    >
-                      Senior Heavy Lift Tower Crane &amp; High-Capacity Luffing Jib Operator
-                    </Link>
-
-                    {/* Badges Bar */}
-                    <div className="flex flex-wrap items-center gap-space-xs pt-1">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
-                        <span className="material-symbols-outlined text-[14px]">location_on</span>
-                        Munich, Germany (On-Site • High-Speed Rail &amp; Tunnel Mega-Project)
-                      </span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">
-                        Full-Time Permanent
-                      </span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
-                        Tier-1 Civil Infrastructure
-                      </span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
-                        EU Blue Card &amp; Relocation Support
-                      </span>
-                    </div>
-
-                    {/* Technical Tags */}
-                    <div className="flex flex-wrap items-center gap-1.5 pt-2">
-                      <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+                    {/* Skill Tags / Systems */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         Liebherr 710 HC-L Luffing Jib
                       </span>
-                      <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         Potain MDT 389
                       </span>
-                      <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         Tandem Blind Lift Protocol
                       </span>
-                      <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         CPCS Blue / TÜV Stufe 3
                       </span>
-                      <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
                         EN 13000 SLI/LMI
                       </span>
                     </div>
 
-                    {/* Wage highlight */}
-                    <div className="flex items-baseline gap-2 pt-2">
-                      <span className="font-headline-sm text-headline-sm text-primary font-bold">
-                        €72,000 – €94,000
-                      </span>
-                      <span className="font-body-sm text-body-sm text-on-surface-variant">
-                        / yr base + 22% Night/Weekend Shift Multiplier + Per Diem Lodge
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Column 3: Facility Spec Card & Actions */}
-                  <div className="xl:col-span-3 flex flex-col justify-between h-full bg-surface-container-low p-space-md rounded-xl border border-surface-container-high">
-                    <div className="flex flex-col gap-space-xs">
-                      <div className="flex items-center justify-between">
-                        <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">
-                          Facility Specification
-                        </span>
-                        <span className="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
-                          Tier-1 Complex
-                        </span>
+                    {/* Accordion Reveal Section on Group Hover */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Requires certified CPCS Blue Card or TÜV Stufe 3 heavy tower crane license with proven experience in dense urban tandem lifts and deep caisson shaft clearance. Safety Clearance: BGG 921 / OSHA 1926 Subpart CC. Shift Model: 4x10 Rotating Operational.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-crane-operator"
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-crane-operator"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
+                            </Link>
+                          </div>
+                        </div>
                       </div>
-                      <p className="font-body-sm text-body-sm text-on-surface-variant line-clamp-4 leading-snug">
-                        Requires certified CPCS Blue Card or TÜV Stufe 3 heavy tower crane license with
-                        proven experience in dense urban tandem lifts and deep caisson shaft
-                        clearance. Safety Clearance: BGG 921 / OSHA 1926 Subpart CC. Shift Model: 4x10
-                        Rotating Operational.
-                      </p>
-                    </div>
-                    <div className="flex flex-col sm:flex-row xl:flex-col gap-space-xs pt-space-md">
-                      <Link
-                        className="w-full py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg text-center transition-all shadow-sm font-semibold"
-                        href="/jobs/senior-crane-operator"
-                      >
-                        Quick Apply
-                      </Link>
-                      <Link
-                        className="w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg text-center transition-all font-medium border border-surface-container-highest"
-                        href="/jobs/senior-crane-operator"
-                      >
-                        View Position
-                      </Link>
                     </div>
                   </div>
                 </div>

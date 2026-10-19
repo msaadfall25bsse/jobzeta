@@ -261,159 +261,162 @@ export default function ScaffoldingRiggingAndIndustrialAccessPage() {
               </div>
             </div>
 
-            {/* PRIMARY FEATURED CARD (EXACT 3-COLUMN ARCHITECTURE) */}
-            <div className="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
-                {/* COLUMN 1: Image Container & Reference Code */}
-                <div className="lg:col-span-4 flex flex-col gap-space-sm">
-                  <div className="relative w-full h-64 lg:h-72 rounded-xl overflow-hidden shadow-sm group">
-                    <img
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      alt="Certified high-angle industrial scaffolder standing securely on modular steel scaffolding framework with harness, lanyard, and tool belt overlooking industrial urban docklands and suspension bridge towers under clear skies, daylight structural engineering work."
-                      src="/scaffolding-rigging-lead.jpg"
-                    />
-                    {/* Top-left frosted badge */}
-                    <div className="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
-                      <span className="w-2 h-2 rounded-full bg-primary"></span>
+            {/* PRIMARY FEATURED JOB CARD */}
+            <article
+              aria-label="Senior Industrial Scaffolding Superintendent & Lead Rigging Engineer requisition"
+              className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+              tabIndex={0}
+            >
+              <div className="flex flex-col md:flex-row items-stretch">
+                {/* Left Column: Visual Media & Badges */}
+                <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                  <div
+                    className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                    style={{
+                      backgroundImage: `url('/scaffolding-rigging-lead.jpg')`,
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                  
+                  {/* Floating pill tags on media */}
+                  <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                      <span className="material-symbols-outlined text-primary text-[13px]">construction</span>
                       Heavy Scaffolding &amp; Rigging
-                    </div>
-                    {/* Bottom-right floating pill */}
-                    <div className="absolute bottom-3 right-3 px-space-sm py-1 rounded-full bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
-                      <span className="material-symbols-outlined text-[14px] text-inverse-primary">
-                        visibility
-                      </span>
-                      Hover for Scope
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between font-label-sm text-label-sm text-tertiary px-1">
-                    <span className="font-mono">Ref: BY-HAM-RIG-7712</span>
-                    <span className="flex items-center gap-1">
-                      <span className="material-symbols-outlined text-[14px]">schedule</span>
-                      Updated 45m ago
                     </span>
+                  </div>
+
+                  <button
+                    aria-label="Bookmark"
+                    className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      e.preventDefault();
+                    }}
+                  >
+                    <span className="material-symbols-outlined text-[17px]">bookmark</span>
+                  </button>
+
+                  <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                    <span className="material-symbols-outlined text-[13px]">visibility</span>
+                    <span>Hover for scope</span>
                   </div>
                 </div>
 
-                {/* COLUMN 2: Central Position Core & Compensation */}
-                <div className="lg:col-span-5 flex flex-col justify-between h-full">
-                  <div>
-                    <div className="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-xs">
-                      <span className="font-semibold text-secondary">
-                        Bilfinger Industrial Services &amp; Altrad Group JV
-                      </span>
-                      <span>•</span>
-                      <span className="text-tertiary">Posted 2h ago</span>
+                {/* Right Column: Requisition Content & Interactive Reveal */}
+                <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                  {/* Top row: Employer, Post Age, Verified & Compensation */}
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                          Bilfinger Industrial Services &amp; Altrad Group JV
+                        </span>
+                        <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                        <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                          <span className="material-symbols-outlined text-[14px]">verified</span>
+                          Verified Employer
+                        </span>
+                        <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                        <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                          Posted 2h ago
+                        </span>
+                      </div>
+
+                      {/* Salary Highlight */}
+                      <div className="text-right">
+                        <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                          €64,000 – €88,000
+                        </span>
+                        <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                      </div>
                     </div>
-                    <h3 className="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors cursor-pointer mb-space-xs">
-                      Senior Industrial Scaffolding Superintendent &amp; Lead Rigging Engineer
-                    </h3>
-                    <div className="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm mb-space-md">
-                      <span className="material-symbols-outlined text-tertiary text-[18px]">
-                        location_on
-                      </span>
-                      <span>
+
+                    {/* Main Job Title */}
+                    <Link href="/jobs/senior-scaffolding-superintendent">
+                      <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                        Senior Industrial Scaffolding Superintendent &amp; Lead Rigging Engineer
+                      </h3>
+                    </Link>
+
+                    {/* Meta Tags: Location, Shift, Type, Clearance */}
+                    <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                      <span className="flex items-center gap-1">
+                        <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
                         Hamburg Port Mega-Terminal &amp; Petrochemical Complex (On-Site • High-Risk Access &amp; Overwater Erection)
                       </span>
-                    </div>
-                    {/* Badges */}
-                    <div className="flex flex-wrap items-center gap-space-xs mb-space-md">
-                      <span className="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                         Full-Time Permanent
                       </span>
-                      <span className="px-space-sm py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
                         Tier-1 Industrial Access
                       </span>
-                      <span className="px-space-sm py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                        <span className="material-symbols-outlined text-[14px]">shield</span>
                         EU Blue Card &amp; Height Differential Package
                       </span>
                     </div>
-                    {/* Tech / Standard Chips */}
-                    <div className="flex flex-wrap items-center gap-1.5 mb-space-md">
-                      <span className="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-low text-on-surface">
-                        Layher Allround Modular Scaffolding
-                      </span>
-                      <span className="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-low text-on-surface">
-                        DIN EN 12810 / 12811
-                      </span>
-                      <span className="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-low text-on-surface">
-                        DGUV Information 201-011
-                      </span>
-                      <span className="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-low text-on-surface">
-                        CISRS Advanced Scaffolder
-                      </span>
-                      <span className="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-low text-on-surface">
-                        Heavy Tandem Chain Hoist (50t+)
-                      </span>
-                      <span className="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-low text-on-surface">
-                        IRATA Level 3 Rescue
-                      </span>
-                    </div>
                   </div>
-                  {/* Total Compensation Structure Box */}
-                  <div className="p-space-md bg-surface-container-low rounded-xl">
-                    <div className="flex items-baseline gap-space-xs">
-                      <span className="font-headline-md text-headline-md font-bold text-secondary">
-                        €64,000 – €88,000
-                      </span>
-                      <span className="font-body-sm text-body-sm text-on-surface-variant">/ yr base</span>
-                    </div>
-                    <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                      + 20% Extreme Height &amp; Confined Space Multiplier + Per Diem Lodge &amp; Transnational Mobility Retainer
-                    </p>
-                  </div>
-                </div>
 
-                {/* COLUMN 3: Right Column - Site Vetting & Direct Actions */}
-                <div className="lg:col-span-3 flex flex-col justify-between h-full bg-surface-container-low rounded-xl p-space-md">
-                  <div className="flex flex-col gap-space-sm">
-                    <div className="flex items-center justify-between">
-                      <span className="font-label-sm text-label-sm tracking-wide uppercase text-tertiary">
-                        Site Vetting
-                      </span>
-                      <span className="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-primary">
-                        <span className="material-symbols-outlined text-[16px]">verified</span>
-                        Tier-1 Complex
-                      </span>
-                    </div>
-                    <div className="bg-surface-container-lowest rounded-lg p-space-sm text-on-surface-variant font-body-sm text-body-sm">
-                      <p className="font-label-sm text-label-sm font-semibold text-secondary mb-1">
-                        Supervisory Mandate:
-                      </p>
-                      Requires verified CISRS Advanced or German Gerüstbauermeister / Geselle with minimum 8+ years demonstrated zero-harm record on complex modular tube/system scaffolding exceeding 50m free-standing elevation.
-                    </div>
-                    <div className="flex flex-col gap-1.5 pt-space-xs font-label-sm text-label-sm text-tertiary">
-                      <div className="flex items-center justify-between">
-                        <span>Site Clearance:</span>
-                        <span className="font-semibold text-on-surface">DIN EN 12810 &amp; ISO 45001 Active</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span>Working Height:</span>
-                        <span className="font-semibold text-on-surface">Up to +82m Maritime Piers</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span>Workforce Crew:</span>
-                        <span className="font-semibold text-on-surface">18 Scaffolders &amp; Riggers</span>
-                      </div>
-                    </div>
+                  {/* Skill Tags / Systems */}
+                  <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                    <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                      Layher Allround Modular Scaffolding
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                      DIN EN 12810 / 12811
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                      DGUV Information 201-011
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                      CISRS Advanced Scaffolder
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                      Heavy Tandem Chain Hoist (50t+)
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                      IRATA Level 3 Rescue
+                    </span>
                   </div>
-                  <div className="flex flex-col gap-space-xs mt-space-md">
-                    <Link
-                      href="/jobs/senior-scaffolding-superintendent"
-                      className="w-full h-11 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm flex items-center justify-center gap-space-xs transition-colors cursor-pointer"
-                    >
-                      Quick Apply
-                      <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                    </Link>
-                    <Link
-                      className="w-full h-11 bg-surface-container-lowest hover:bg-surface-container text-secondary font-label-lg text-label-lg rounded-lg transition-colors flex items-center justify-center cursor-pointer"
-                      href="/jobs/senior-scaffolding-superintendent"
-                    >
-                      View Position
-                    </Link>
+
+                  {/* Accordion Reveal Section on Group Hover */}
+                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                    <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                      <div className="w-full h-px bg-surface-container-high" />
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                        <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                          <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[15px]">insights</span>
+                            Operational Scope &amp; Mission Brief
+                          </span>
+                          <p className="text-body-sm text-on-surface-variant">
+                            Requires verified CISRS Advanced or German Gerüstbauermeister / Geselle with minimum 8+ years demonstrated zero-harm record on complex modular tube/system scaffolding exceeding 50m free-standing elevation. Working Height: Up to +82m Maritime Piers. Crew: 18 Scaffolders &amp; Riggers.
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                          <Link
+                            className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                            href="/jobs/senior-scaffolding-superintendent"
+                          >
+                            <span>View Details &amp; Specs</span>
+                            <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                          </Link>
+                          <Link
+                            className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                            href="/jobs/senior-scaffolding-superintendent"
+                          >
+                            <span>Quick Apply</span>
+                            <span className="material-symbols-outlined text-[15px]">send</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           </section>
 
           {/* CORE RECOGNIZED TECHNICAL CREDENTIALS MATRIX */}

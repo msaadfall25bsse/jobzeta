@@ -255,156 +255,183 @@ export default function WeldingAndFabricationPage() {
               </div>
 
               {/* EXACTLY 1 FEATURED JOB CARD WITH INTERACTIVE SUMMARY & HOVER ACTIONS */}
-              <div className="group relative w-full bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/40">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
-                  {/* Column 1: Visual Icon & Main Job Specs */}
-                  <div className="lg:col-span-8 flex flex-col sm:flex-row items-start gap-space-md">
-                    {/* Visual Graphic / Shield Indicator */}
-                    <div className="relative w-full sm:w-52 md:w-56 h-40 sm:h-auto shrink-0 overflow-hidden rounded-xl bg-surface-container shadow-sm group/thumb">
-                      <img
-                        alt="Professional industrial TIG pipe welding with bright electric arc glow"
-                        className="w-full h-full min-h-[170px] object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCscUQ45RAHRHmtQGxBV5z-EaNAyCfMMROwHLYimacIX8rn-j_PPQYrtQwUfk8-_iiUOUBWsRKM4q1exHzfF8IKNPcMK1XvAMkMqOMtQVFaFcxRJJds1nhU8h3Rq_9CPvEU2LjsRwpN6TTzcpozVuFT3cmtxB8TBxpMvorauCscqwDR0SgD3_Em9V_vfipakAsSDFFvgCii0Rk9JR-tY_DFjSdYoGOy7j2MsJZbI2sW6jqLpVEeb2DeAQ"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30 pointer-events-none" />
-                      <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
-                          <span className="material-symbols-outlined text-primary text-[13px]">
-                            mode_heat
-                          </span>
-                          TIG &amp; Pipe Welding
+              <article
+                aria-label="Senior ASME IX & 6G Orbital TIG Pipe Welder at Nordic Metalworks & Marine Fab"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
+              >
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Visual Thumbnail Canvas */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCscUQ45RAHRHmtQGxBV5z-EaNAyCfMMROwHLYimacIX8rn-j_PPQYrtQwUfk8-_iiUOUBWsRKM4q1exHzfF8IKNPcMK1XvAMkMqOMtQVFaFcxRJJds1nhU8h3Rq_9CPvEU2LjsRwpN6TTzcpozVuFT3cmtxB8TBxpMvorauCscqwDR0SgD3_Em9V_vfipakAsSDFFvgCii0Rk9JR-tY_DFjSdYoGOy7j2MsJZbI2sW6jqLpVEeb2DeAQ')`,
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+
+                    {/* Top Badges on Thumbnail */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">
+                          mode_heat
                         </span>
-                      </div>
-                      <button
-                        aria-label="Bookmark this role"
-                        className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md hover:bg-surface-container-lowest text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95"
-                        onClick={toggleBookmark}
-                        type="button"
-                      >
-                        <span
-                          className={`material-symbols-outlined text-[17px] ${
-                            isBookmarked ? "text-primary" : ""
-                          }`}
-                        >
-                          bookmark
-                        </span>
-                      </button>
-                      <div className="absolute bottom-2 left-2.5 hidden sm:flex items-center gap-1 text-[11px] font-label-sm text-on-primary bg-on-background/60 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
-                        <span className="material-symbols-outlined text-[13px]">
-                          visibility
-                        </span>
-                        <span>Hover for scope</span>
-                      </div>
+                        TIG &amp; Pipe Welding
+                      </span>
                     </div>
 
-                    {/* Job Core Info */}
-                    <div className="flex flex-col gap-1.5 min-w-0">
-                      <div className="flex flex-wrap items-center gap-space-xs">
-                        <span className="font-label-sm text-label-sm text-on-surface-variant font-medium">
-                          Nordic Metalworks &amp; Marine Fab
-                        </span>
-                        <span className="inline-flex items-center gap-0.5 text-[11px] font-bold text-primary bg-primary-fixed px-2 py-0.5 rounded-full">
-                          <span className="material-symbols-outlined text-[12px]">
-                            verified
+                    {/* Bookmark Action */}
+                    <button
+                      aria-label="Bookmark this role"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95"
+                      onClick={toggleBookmark}
+                      type="button"
+                    >
+                      <span
+                        className={`material-symbols-outlined text-[17px] ${
+                          isBookmarked ? "text-primary" : ""
+                        }`}
+                      >
+                        bookmark
+                      </span>
+                    </button>
+
+                    {/* Subtle hover indicator */}
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">
+                        visibility
+                      </span>
+                      <span>Hover for scope</span>
+                    </div>
+                  </div>
+
+                  {/* Main Card Body */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Default Information State */}
+                    <div className="flex flex-col gap-2">
+                      {/* Employer Brand & Metas */}
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            Nordic Metalworks &amp; Marine Fab
                           </span>
-                          Verified Employer
-                        </span>
-                        <span className="text-tertiary text-xs">•</span>
-                        <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[14px]">
-                            schedule
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">
+                              verified
+                            </span>
+                            Verified Employer
                           </span>
-                          Posted 4h ago
-                        </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">
+                              schedule
+                            </span>
+                            Posted 4h ago
+                          </span>
+                        </div>
+
+                        {/* Salary Band Badge */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            Kr 420,000 – 480,000
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant">
+                            {" "}
+                            / yr (€42k - €48k eq.)
+                          </span>
+                        </div>
                       </div>
-                      <h3 className="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors tracking-tight font-bold">
-                        Senior ASME IX &amp; 6G Orbital TIG Pipe Welder
-                      </h3>
-                      <div className="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-body-sm text-body-sm">
+
+                      {/* Role Title */}
+                      <Link href="/jobs/senior-welder">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior ASME IX &amp; 6G Orbital TIG Pipe Welder
+                        </h3>
+                      </Link>
+
+                      {/* Key Meta Row */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
                         <span className="flex items-center gap-1">
                           <span className="material-symbols-outlined text-[16px] text-outline">
                             location_on
                           </span>
                           Gothenburg, Sweden (On-Site • Shipyard / Industrial)
                         </span>
-                        <span className="flex items-center gap-1 text-primary font-semibold">
-                          <span className="material-symbols-outlined text-[16px]">
-                            payments
-                          </span>
-                          Kr 420,000 – 480,000 / yr (€42k - €48k eq.)
-                        </span>
-                      </div>
-
-                      {/* Badges Tier */}
-                      <div className="flex flex-wrap items-center gap-1.5 mt-2">
-                        <span className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                           Full-Time Permanent
                         </span>
-                        <span className="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
                           Shipyard On-Site
                         </span>
-                        <span className="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">
+                            shield
+                          </span>
                           Relocation &amp; Visa Supported
                         </span>
-                        <span className="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
-                          TIG 6G (GTAW)
-                        </span>
-                        <span className="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
-                          ASME Section IX
-                        </span>
-                        <span className="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
-                          ISO 9606-1
-                        </span>
-                        <span className="px-2.5 py-0.5 rounded-full bg-primary-fixed-dim/40 text-on-surface font-label-sm text-label-sm">
-                          Duplex &amp; Titanium Piping
-                        </span>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Column 2: Interactive Technical Deep-Dive & CTA Trigger */}
-                  <div className="lg:col-span-4 flex flex-col justify-between h-full bg-surface-container-low p-space-md rounded-xl border border-outline-variant/30">
-                    <div className="flex flex-col gap-2">
-                      <div className="flex items-center justify-between">
-                        <span className="font-label-sm text-label-sm text-tertiary uppercase font-bold tracking-wider">
-                          Welding WPS Specification
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-xs text-primary font-semibold bg-surface-container-lowest px-2 py-0.5 rounded border border-outline-variant/20">
-                          <span className="material-symbols-outlined text-[14px]">
-                            military_tech
+                    {/* Tags Row */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      {["TIG 6G (GTAW)", "ASME Section IX", "ISO 9606-1", "Duplex & Titanium Piping"].map(
+                        (skill, sIdx) => (
+                          <span
+                            key={sIdx}
+                            className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium"
+                          >
+                            {skill}
                           </span>
-                          Grade A Class
-                        </span>
-                      </div>
-                      <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                        Requires 100% X-ray / Radiographic quality standard on pressurized super duplex piping. Must pass immediate 6G coupon test in Gothenburg test rig.
-                      </p>
+                        )
+                      )}
                     </div>
 
-                    {/* Action Buttons */}
-                    <div className="flex items-center gap-space-sm mt-space-md">
-                      <Link
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors border border-outline-variant/30 font-medium"
-                        href="/jobs/senior-welder"
-                      >
-                        <span className="material-symbols-outlined text-[18px]">
-                          visibility
-                        </span>
-                        <span>View Position</span>
-                      </Link>
-                      <Link
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm transition-all font-semibold"
-                        href="/jobs/senior-welder"
-                      >
-                        <span>Quick Apply</span>
-                        <span className="material-symbols-outlined text-[18px]">
-                          arrow_forward
-                        </span>
-                      </Link>
+                    {/* Smooth Interactive Hover Reveal Accordion */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">
+                                insights
+                              </span>
+                              Operational Scope &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Requires 100% X-ray / Radiographic quality standard on pressurized super duplex piping. Must pass immediate 6G coupon test in Gothenburg test rig.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-welder"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">
+                                arrow_outward
+                              </span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-welder"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">
+                                send
+                              </span>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
 
               {/* Pagination & Secondary Discovery Hint */}
               <div className="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-sm text-on-surface-variant font-label-sm text-label-sm">

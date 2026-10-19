@@ -575,158 +575,162 @@ export default function LastMileDeliveryUrbanFleetOperationsPage() {
                 </span>
               </div>
 
-              {/* Interactive Reveal Card */}
-              <div
-                className="group relative w-full bg-surface-container-lowest rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ease-out cursor-pointer"
-                id="featured-mission-card"
-                onClick={() => setMobileExpanded(!mobileExpanded)}
+              {/* PRIMARY FEATURED JOB CARD */}
+              <article
+                aria-label="Senior Urban Fleet Courier & EV Multi-Drop Specialist (High-Density Hub) requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
               >
-                <div className="p-space-lg flex flex-col lg:flex-row gap-space-lg">
-                  <div className="w-full lg:w-80 flex-shrink-0 flex flex-col justify-between relative rounded-xl overflow-hidden bg-surface-container min-h-[260px]">
-                    <img
-                      alt="Parcel delivery specialists standing beside an electric logistics van at a European distribution center"
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnEqiaOdX7wXJA6p4Jjut9MLYP_VxXFBGa8AFxVShivbbiMYwwggOrxaDnWww6cMNFMGiG3RXmw-5FnHGOPsy7D42980pQZSNTeBh9bm8E6TmtS7NGrbO4__ypYrsOZg6uIQfqnBR2PXL02LOozLxiU43OK8lXzisBZZK7irZFRpf_wV7kHWhQs_j4vDB48vXE8Nui6MY-ma3X4HRiioBjdbv5kzHHLaMOeElXAjrlX2PAUr3L4WH_8Q"
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Column: Visual Media & Badges */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnEqiaOdX7wXJA6p4Jjut9MLYP_VxXFBGa8AFxVShivbbiMYwwggOrxaDnWww6cMNFMGiG3RXmw-5FnHGOPsy7D42980pQZSNTeBh9bm8E6TmtS7NGrbO4__ypYrsOZg6uIQfqnBR2PXL02LOozLxiU43OK8lXzisBZZK7irZFRpf_wV7kHWhQs_j4vDB48vXE8Nui6MY-ma3X4HRiioBjdbv5kzHHLaMOeElXAjrlX2PAUr3L4WH_8Q')`,
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10"></div>
-                    <div className="relative z-10 p-3 flex flex-wrap gap-1.5">
-                      <span className="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold uppercase tracking-wider shadow-sm">
-                        Featured Urban Dispatch
-                      </span>
-                      <span className="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold">
-                        DHL Express / DPD Logistics Hub Partner
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    
+                    {/* Floating pill tags on media */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">electric_car</span>
+                        Urban Fleet &amp; EV Courier
                       </span>
                     </div>
-                    <div className="relative z-10 p-3 text-white">
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-primary-fixed">
-                        <span className="material-symbols-outlined text-[16px]">pin_drop</span>
-                        Berlin-Mitte Hub &amp; Urban Corridors
-                      </div>
-                      <p className="text-sm font-medium opacity-90 mt-0.5">
-                        Paketzentrum 04 • High-speed Depot Sort &amp; e-Mobility Terminal
-                      </p>
+
+                    <button
+                      aria-label="Bookmark Requisition"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        handleBookmarkToggle(e);
+                      }}
+                    >
+                      <span className={`material-symbols-outlined text-[17px] ${isBookmarked ? "text-primary" : ""}`}>
+                        {isBookmarked ? "bookmark" : "bookmark_border"}
+                      </span>
+                    </button>
+
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
-                  <div className="flex-1 flex flex-col justify-between gap-space-md">
-                    <div>
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <div className="flex items-center gap-2">
-                          <span className="px-2.5 py-0.5 rounded bg-surface-container font-mono text-on-surface-variant font-semibold text-label-sm">
-                            Req #LM-5820-DE
+
+                  {/* Right Column: Requisition Content & Interactive Reveal */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Top row: Employer, Post Age, Verified & Compensation */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            EuroParcel TransLogistics SE
                           </span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
-                          <span className="font-label-sm text-label-sm text-primary font-bold">Active Dispatch</span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Carrier
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                            Posted Today
+                          </span>
                         </div>
-                        <button
-                          onClick={handleBookmarkToggle}
-                          aria-label="Bookmark Requisition"
-                          className="text-outline hover:text-primary transition-colors p-1 cursor-pointer"
-                          title={isBookmarked ? "Remove bookmark" : "Save Job"}
-                        >
-                          <span className={`material-symbols-outlined text-[22px] ${isBookmarked ? "text-primary" : ""}`}>
-                            {isBookmarked ? "bookmark" : "bookmark_border"}
+
+                        {/* Salary Highlight */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €38,500 – €52,000
                           </span>
-                        </button>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
                       </div>
-                      <h3 className="font-headline-lg text-headline-lg text-on-surface font-bold mt-space-xs group-hover:text-primary transition-colors">
-                        Senior Urban Fleet Courier &amp; EV Multi-Drop Specialist (High-Density Hub)
-                      </h3>
-                      <p className="font-body-md text-body-md text-secondary font-medium mt-0.5 flex items-center gap-1.5">
-                        <span className="material-symbols-outlined text-[18px]">corporate_fare</span>
-                        EuroParcel TransLogistics SE • Berlin Metropolitan Hub / Potsdam Ring
-                      </p>
-                      <div className="flex flex-wrap gap-space-xs mt-space-md">
-                        <span className="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[14px] text-primary">directions_car</span>
-                          EU Category B / C1 License
+
+                      {/* Main Job Title */}
+                      <Link href="/jobs/senior-urban-fleet-courier">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior Urban Fleet Courier &amp; EV Multi-Drop Specialist (High-Density Hub)
+                        </h3>
+                      </Link>
+
+                      {/* Meta Tags: Location, Shift, Type, Clearance */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                          Berlin Metropolitan Hub / Potsdam Ring (Paketzentrum 04)
                         </span>
-                        <span className="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[14px] text-primary">electric_car</span>
-                          Mercedes-Benz eSprinter / MAN eTGE
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                          Full-Time Permanent
                         </span>
-                        <span className="px-3 py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface font-medium flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[14px] text-secondary">phonelink_ring</span>
-                          Zebra TC57 Handheld PDA
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                          Tier-1 Urban Parcel
                         </span>
-                        <span className="px-3 py-1 rounded-full bg-primary-fixed/40 font-label-sm text-label-sm text-on-primary-fixed-variant font-medium flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[14px] text-primary">eco</span>
-                          Zero-Emission LEZ Badge
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">eco</span>
+                          Zero-Emission LEZ Cleared
                         </span>
                       </div>
                     </div>
-                    <div className="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-sm">
-                      <div>
-                        <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">
-                          Approved Collective Tariff
-                        </span>
-                        <div className="font-headline-md text-headline-md text-on-surface font-bold">
-                          €38,500 – €52,000 <span className="font-body-sm text-body-sm text-on-surface-variant font-normal">/ year</span>
+
+                    {/* Skill Tags / Systems */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        EU Category B / C1 License
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Mercedes-Benz eSprinter / MAN eTGE
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Zebra TC57 Handheld PDA
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        High-Density Drop Sequence
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Optical OCR POD
+                      </span>
+                    </div>
+
+                    {/* Accordion Reveal Section on Group Hover */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Berlin-Mitte Hub ⇄ Prenzlauer Berg (110–140 stops/shift), geofenced courier parcel sequence, high-density drop dispatch. Pedestrian Zone Safe Speed (≤15 km/h) • Zebra TC57 Optical OCR POD, 100% engine/motor switch-off, contactless photo scan.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-urban-fleet-courier"
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-urban-fleet-courier"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
+                            </Link>
+                          </div>
                         </div>
-                      </div>
-                      <div className="sm:text-right font-body-sm text-body-sm text-on-surface-variant">
-                        <span className="font-semibold text-primary block">+ €18.50/day tax-free delivery stipend</span>
-                        <span>+ €280/mo attendance &amp; zero-damage eco bonus</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  className={`transition-all duration-500 ease-in-out bg-surface-container overflow-hidden ${
-                    mobileExpanded
-                      ? "max-h-[500px] opacity-100"
-                      : "max-h-0 opacity-0 group-hover:max-h-96 group-hover:opacity-100"
-                  }`}
-                >
-                  <div className="p-space-lg flex flex-col gap-space-md">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-                      <div className="bg-surface-container-lowest p-space-md rounded-xl flex items-start gap-space-sm shadow-sm">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
-                          <span className="material-symbols-outlined text-[20px]">route</span>
-                        </div>
-                        <div>
-                          <span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide">
-                            Route Corridor &amp; Cadence
-                          </span>
-                          <p className="font-body-sm text-body-sm text-on-surface mt-1">
-                            Berlin-Mitte Hub ⇄ Prenzlauer Berg (110–140 stops/shift), geofenced courier parcel sequence, high-density drop dispatch.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="bg-surface-container-lowest p-space-md rounded-xl flex items-start gap-space-sm shadow-sm">
-                        <div className="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
-                          <span className="material-symbols-outlined text-[20px]">verified_user</span>
-                        </div>
-                        <div>
-                          <span className="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wide">
-                            Safety Protocol &amp; Scanner
-                          </span>
-                          <p className="font-body-sm text-body-sm text-on-surface mt-1">
-                            Pedestrian Zone Safe Speed (≤15 km/h) • Zebra TC57 Optical OCR POD, 100% engine/motor switch-off, contactless photo scan.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex flex-col sm:flex-row items-center justify-end gap-space-sm pt-space-xs">
-                      <Link
-                        href="/jobs/senior-urban-fleet-courier"
-                        onClick={(e) => e.stopPropagation()}
-                        className="w-full sm:w-auto px-space-md py-2.5 rounded-lg bg-surface-container-highest text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5 shadow-sm font-semibold cursor-pointer"
-                      >
-                        <span className="material-symbols-outlined text-[18px]">bolt</span>
-                        <span>Fast-Track Dispatch Apply</span>
-                      </Link>
-                      <Link
-                        href="/jobs/senior-urban-fleet-courier"
-                        onClick={(e) => e.stopPropagation()}
-                        className="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-1.5 shadow-sm font-semibold cursor-pointer"
-                      >
-                        <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                        <span>View Full Instructions &amp; Technical Specs</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </article>
             </div>
           </section>
 

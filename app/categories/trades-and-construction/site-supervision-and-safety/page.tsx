@@ -245,178 +245,162 @@ export default function SiteSupervisionAndSafetyPage() {
                 </div>
               </div>
 
-              {/* Master Featured Job Card */}
-              <div className="bg-surface-container-lowest rounded-xl shadow-[0_1px_3px_0_rgba(23,59,103,0.06)] hover:shadow-[0_10px_15px_-3px_rgba(23,59,103,0.08)] transition-all p-space-lg">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
-                  {/* Column 1: Left Landscape Photo with Badges */}
-                  <div className="lg:col-span-4 flex flex-col justify-between relative rounded-xl overflow-hidden bg-surface-container min-h-[300px]">
+              {/* PRIMARY FEATURED JOB CARD */}
+              <article
+                aria-label="Senior Civil Construction Superintendent & Lead Site HSE Safety Director requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
+              >
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Column: Visual Media & Badges */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
                     <div
-                      className="absolute inset-0 bg-cover bg-center"
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
                       style={{
-                        backgroundImage:
-                          "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgl5g2dD1mpwjC9KotMp1ZrToIK0oz2Td92eu8FftIDusMG7TwSPBFRn1Ntix9cG5Dr69KDtCiUAt0F1rsoFLiMvxeCdIpNaqt3IWtERPjmrtSmzBZmoXtRiD-Cxxqp1M-_A0TgCYrj-2L8chVFeydcVNWAQGHDNu_VzI0oWV-YKvB17vNF1RQIZq2xLiXl68PddmAspMiKQvvim9C6Mn25vllHmmluhl6V9QRowypJRPQC0tt5Btz6g')",
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgl5g2dD1mpwjC9KotMp1ZrToIK0oz2Td92eu8FftIDusMG7TwSPBFRn1Ntix9cG5Dr69KDtCiUAt0F1rsoFLiMvxeCdIpNaqt3IWtERPjmrtSmzBZmoXtRiD-Cxxqp1M-_A0TgCYrj-2L8chVFeydcVNWAQGHDNu_VzI0oWV-YKvB17vNF1RQIZq2xLiXl68PddmAspMiKQvvim9C6Mn25vllHmmluhl6V9QRowypJRPQC0tt5Btz6g')`,
                       }}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40"></div>
-                    </div>
-                    {/* Top Left Floating Badge */}
-                    <div className="relative z-10 p-space-md flex items-start justify-between">
-                      <span className="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-black/60 backdrop-blur-md text-white font-label-sm text-label-sm font-semibold tracking-wide">
-                        <span className="material-symbols-outlined text-primary-fixed text-[14px]">
-                          shield
-                        </span>
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    
+                    {/* Floating pill tags on media */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">shield</span>
                         Site Superintendence &amp; HSE
                       </span>
-                      <button
-                        onClick={() => setBookmarked(!bookmarked)}
-                        className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/40 flex items-center justify-center text-white transition-colors cursor-pointer"
-                        title="Bookmark Requisition"
-                      >
-                        <span className="material-symbols-outlined text-[18px]">
-                          {bookmarked ? "bookmark" : "bookmark_border"}
-                        </span>
-                      </button>
                     </div>
-                    {/* Bottom Floating Pill & Reference Bar */}
-                    <div className="relative z-10 p-space-md flex flex-col gap-space-xs">
-                      <div className="self-end">
-                        <span className="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-secondary font-label-sm text-label-sm font-bold shadow-sm">
-                          <span className="material-symbols-outlined text-primary text-[14px]">
-                            visibility
-                          </span>
-                          Hover for scope
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-between text-white/90 font-label-sm text-label-sm pt-space-xs border-t border-white/20">
-                        <span>Ref: BY-FRK-HSE-9044</span>
-                        <span className="flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[13px] text-primary-fixed">
-                            schedule
-                          </span>
-                          Updated 1h ago
-                        </span>
-                      </div>
+
+                    <button
+                      aria-label="Bookmark Requisition"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        setBookmarked(!bookmarked);
+                      }}
+                    >
+                      <span className="material-symbols-outlined text-[17px]">
+                        {bookmarked ? "bookmark" : "bookmark_border"}
+                      </span>
+                    </button>
+
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
 
-                  {/* Column 2: Center Scope & Position Spec */}
-                  <div className="lg:col-span-5 flex flex-col justify-between gap-space-md py-1">
-                    <div className="flex flex-col gap-space-sm">
-                      <div className="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-bold">
-                        <span className="material-symbols-outlined text-primary text-[18px]">
-                          verified
-                        </span>
-                        <span>Hochtief Civil &amp; Bouygues Construction JV</span>
-                        <span className="text-tertiary font-normal">• Posted 3h ago</span>
+                  {/* Right Column: Requisition Content & Interactive Reveal */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Top row: Employer, Post Age, Verified & Compensation */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            Hochtief Civil &amp; Bouygues Construction JV
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Employer
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                            Posted 3h ago
+                          </span>
+                        </div>
+
+                        {/* Salary Highlight */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €74,000 – €98,000
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
                       </div>
-                      <h3 className="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight hover:text-primary transition-colors cursor-pointer">
-                        Senior Civil Construction Superintendent &amp; Lead Site HSE Safety Director
-                      </h3>
-                      <div className="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
-                        <span className="material-symbols-outlined text-[18px] text-secondary">
-                          location_on
-                        </span>
-                        <span>
+
+                      {/* Main Job Title */}
+                      <Link href="/jobs/senior-civil-superintendent-hse">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior Civil Construction Superintendent &amp; Lead Site HSE Safety Director
+                        </h3>
+                      </Link>
+
+                      {/* Meta Tags: Location, Shift, Type, Clearance */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
                           Frankfurt am Main, Germany (On-Site • High-Rise Financial Hub Mega-Project)
                         </span>
-                      </div>
-                      {/* Pill Badges */}
-                      <div className="flex flex-wrap items-center gap-space-xs pt-1">
-                        <span className="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-semibold">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                           Full-Time Permanent
                         </span>
-                        <span className="px-space-sm py-0.5 rounded-full bg-secondary-fixed/40 font-label-sm text-label-sm text-secondary font-semibold">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
                           Tier-1 General Contracting
                         </span>
-                        <span className="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
-                          <span className="material-symbols-outlined text-[14px]">flight_takeoff</span>
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">shield</span>
                           EU Blue Card &amp; Relocation Package
                         </span>
                       </div>
-                      {/* Tech Compliance Tags */}
-                      <div className="flex flex-wrap items-center gap-1.5 pt-space-xs">
-                        <span className="px-space-sm py-0.5 rounded bg-surface font-label-sm text-label-sm text-on-surface-variant">
-                          DIN 4107 / BaustellV SiGeKo
-                        </span>
-                        <span className="px-space-sm py-0.5 rounded bg-surface font-label-sm text-label-sm text-on-surface-variant">
-                          NEBOSH Construction Diploma
-                        </span>
-                        <span className="px-space-sm py-0.5 rounded bg-surface font-label-sm text-label-sm text-on-surface-variant">
-                          OSHA 30 Construction
-                        </span>
-                        <span className="px-space-sm py-0.5 rounded bg-surface font-label-sm text-label-sm text-on-surface-variant">
-                          Digital BIM 360 Field / Solibri
-                        </span>
-                        <span className="px-space-sm py-0.5 rounded bg-surface font-label-sm text-label-sm text-on-surface-variant">
-                          Zero-Incident HSE Protocols
-                        </span>
-                      </div>
                     </div>
-                    {/* Wage Display */}
-                    <div className="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-0.5">
-                      <span className="font-label-sm text-label-sm text-tertiary uppercase tracking-wide font-bold">
-                        Total Compensation Structure
-                      </span>
-                      <div className="flex flex-wrap items-baseline gap-space-xs">
-                        <span className="font-headline-md text-headline-md font-bold text-primary">
-                          €74,000 – €98,000
-                        </span>
-                        <span className="font-body-sm text-body-sm text-on-surface-variant">
-                          / yr base + 18% Project HSE Safety Completion Bonus + Per Diem Lodge
-                        </span>
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Column 3: Right Compliance Assessment Box */}
-                  <div className="lg:col-span-3 bg-surface-container p-space-md rounded-xl flex flex-col justify-between gap-space-md">
-                    <div className="flex flex-col gap-space-sm">
-                      <div className="flex items-center justify-between">
-                        <span className="font-label-sm text-label-sm uppercase tracking-wider font-bold text-tertiary">
-                          Site Vetting
-                        </span>
-                        <div className="flex items-center gap-1 bg-surface-container-lowest px-space-sm py-0.5 rounded-full text-secondary font-label-sm text-label-sm shadow-xs">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                          Tier-1 Complex
-                        </div>
-                      </div>
-                      <div className="p-space-sm bg-surface-container-lowest rounded-lg">
-                        <span className="font-label-sm text-label-sm font-bold text-on-surface block mb-1">
-                          Supervisory Mandate:
-                        </span>
-                        <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                          Requires verified SiGeKo (BaustellV) certification or NEBOSH International Diploma with minimum 8+ years demonstrated zero-incident site governance on high-rise or major infrastructure builds.
-                        </p>
-                      </div>
-                      <div className="flex flex-col gap-1 text-on-surface-variant font-label-sm text-label-sm pt-1">
-                        <div className="flex items-center justify-between">
-                          <span className="text-tertiary">Site Clearance:</span>
-                          <span className="font-semibold text-secondary">DIN 4107 &amp; ISO 45001 Active</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-tertiary">Regulatory Scope:</span>
-                          <span className="font-semibold text-secondary">Total Site HSE &amp; Subcontractor Audit</span>
-                        </div>
-                      </div>
+                    {/* Skill Tags / Systems */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        DIN 4107 / BaustellV SiGeKo
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        NEBOSH Construction Diploma
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        OSHA 30 Construction
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Digital BIM 360 Field / Solibri
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Zero-Incident HSE Protocols
+                      </span>
                     </div>
-                    {/* Action CTAs */}
-                    <div className="flex flex-col gap-space-xs">
-                      <Link
-                        className="w-full h-11 inline-flex items-center justify-center font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-lg shadow-sm transition-colors cursor-pointer"
-                        href="/jobs/senior-civil-superintendent-hse"
-                      >
-                        Quick Apply →
-                      </Link>
-                      <Link
-                        className="w-full h-11 inline-flex items-center justify-center font-label-lg text-label-lg text-secondary bg-surface-container-lowest hover:bg-surface-container-high rounded-lg shadow-xs transition-colors cursor-pointer"
-                        href="/jobs/senior-civil-superintendent-hse"
-                      >
-                        View Position
-                      </Link>
+
+                    {/* Accordion Reveal Section on Group Hover */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Requires verified SiGeKo (BaustellV) certification or NEBOSH International Diploma with minimum 8+ years demonstrated zero-incident site governance on high-rise or major infrastructure builds. Clearance: DIN 4107 &amp; ISO 45001 Active.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-civil-superintendent-hse"
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-civil-superintendent-hse"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
 
             {/* Core Technical Credentials Recognized Matrix (4 Cards) */}

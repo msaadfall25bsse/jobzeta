@@ -248,171 +248,187 @@ export default function PlumbingAndHVACPage() {
             </div>
 
             {/* SINGLE Featured Job Card */}
-            <div className="w-full rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-300 p-space-lg flex flex-col lg:flex-row gap-space-lg group border border-surface-container-highest">
-              {/* Left Thumbnail */}
-              <div className="lg:w-72 xl:w-80 shrink-0 h-52 lg:h-auto rounded-xl relative overflow-hidden bg-surface-container">
-                <img
-                  alt="Industrial refrigeration technician in high-visibility safety orange and navy workwear inspecting a massive industrial cascade chiller plant with pressure gauges and copper manifolds inside a modern mechanical room."
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-tjEIS0ElVtRpdm7WzWu8VzzXntR8jw5_Y6xXiJNFn5EHj8StP_rS37C64M4MCa4g7g9pVqWI4L636RCZV7lUQ5iIwxrEsQN9YaSW9UGPuqFyJIk4qApxVeaHSiqJ_ZngKbXUSW58mB-OFibGAtdQ6beKuxqZZu0giL01y3Wo5D9T-mFxmKfD7iTc5SeL6NQbnWc2KLyCOxfbREjVd_3UxonLIbQaJSzN9f7_DWT-YL016dufjrUvpw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-black/20"></div>
-                <div className="absolute top-3 left-3">
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm shadow-sm font-semibold">
-                    <span className="material-symbols-outlined text-[14px] text-primary">
-                      ac_unit
-                    </span>
-                    Industrial Chiller &amp; VRF
-                  </span>
-                </div>
-                <button
-                  aria-label="Bookmark position"
-                  className={`absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center transition-colors ${
-                    isBookmarked ? "text-primary" : "text-on-surface-variant hover:text-primary"
-                  }`}
-                  type="button"
-                  onClick={toggleBookmark}
-                >
-                  <span className="material-symbols-outlined text-[18px]">
-                    {isBookmarked ? "bookmark_added" : "bookmark"}
-                  </span>
-                </button>
-                <div className="absolute bottom-3 left-3">
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-on-surface-variant font-label-sm text-label-sm">
-                    <span className="material-symbols-outlined text-[12px]">visibility</span>
-                    Hover for scope
-                  </span>
-                </div>
-              </div>
+            <article
+              aria-label="Senior Commercial Chiller & Industrial HVAC Lead Technician at CARRIER COMMERCIAL HVAC & REFRIGERATION"
+              className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+              tabIndex={0}
+            >
+              <div className="flex flex-col md:flex-row items-stretch">
+                {/* Visual Thumbnail Canvas */}
+                <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                  <div
+                    className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                    style={{
+                      backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-tjEIS0ElVtRpdm7WzWu8VzzXntR8jw5_Y6xXiJNFn5EHj8StP_rS37C64M4MCa4g7g9pVqWI4L636RCZV7lUQ5iIwxrEsQN9YaSW9UGPuqFyJIk4qApxVeaHSiqJ_ZngKbXUSW58mB-OFibGAtdQ6beKuxqZZu0giL01y3Wo5D9T-mFxmKfD7iTc5SeL6NQbnWc2KLyCOxfbREjVd_3UxonLIbQaJSzN9f7_DWT-YL016dufjrUvpw')`,
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
 
-              {/* Job Content */}
-              <div className="flex-1 flex flex-col justify-between">
-                <div>
-                  <div className="flex flex-wrap items-center justify-between gap-space-sm mb-space-xs">
-                    <div className="flex items-center gap-2">
-                      <span className="font-label-md text-label-md text-secondary uppercase tracking-wider font-bold">
-                        CARRIER COMMERCIAL HVAC &amp; REFRIGERATION
+                  {/* Top Badges on Thumbnail */}
+                  <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                      <span className="material-symbols-outlined text-primary text-[13px]">
+                        ac_unit
                       </span>
-                      <span className="inline-flex items-center text-primary" title="Verified Plant Operator">
-                        <span className="material-symbols-outlined text-[16px]">verified</span>
-                      </span>
-                    </div>
-                    <span className="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
-                      <span className="material-symbols-outlined text-[14px]">schedule</span>
-                      Posted 3h ago
+                      Industrial Chiller &amp; VRF
                     </span>
                   </div>
-                  <h3 className="font-headline-md text-headline-md text-on-surface tracking-tight mb-space-sm group-hover:text-primary transition-colors font-bold">
-                    Senior Commercial Chiller &amp; Industrial HVAC Lead Technician
-                  </h3>
-                  <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-on-surface-variant font-body-sm text-body-sm mb-space-md">
-                    <span className="flex items-center gap-1">
-                      <span className="material-symbols-outlined text-[18px] text-primary">
-                        location_on
-                      </span>
-                      Frankfurt am Main, Germany (On-Site • Hyperscale Data Center Campus)
-                    </span>
-                    <span className="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
-                    <span className="flex items-center gap-1">
-                      <span className="material-symbols-outlined text-[18px] text-tertiary">
-                        work
-                      </span>
-                      Full-Time Permanent
-                    </span>
-                    <span className="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
-                    <span className="flex items-center gap-1">
-                      <span className="material-symbols-outlined text-[18px] text-secondary">
-                        domain
-                      </span>
-                      Tier-3 Facility
-                    </span>
-                    <span className="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
-                    <span className="flex items-center gap-1 text-primary font-medium">
-                      <span className="material-symbols-outlined text-[18px]">badge</span>
-                      EU Blue Card Sponsorship
-                    </span>
-                  </div>
-                  {/* Technical Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-space-md">
-                    <span className="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">
-                      Ammonia (NH3) &amp; CO2 Subcritical
-                    </span>
-                    <span className="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">
-                      Carrier AquaEdge Centrifugal
-                    </span>
-                    <span className="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">
-                      Trane Tracer SC+ BMS
-                    </span>
-                    <span className="px-2.5 py-1 rounded-md bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
-                      F-Gas Cat 1 (EN 378)
-                    </span>
-                    <span className="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm">
-                      VDI 6022
-                    </span>
-                  </div>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-space-sm pt-space-sm">
-                  <div>
-                    <span className="font-label-sm text-label-sm text-tertiary block font-semibold">
-                      Base Compensation Range
-                    </span>
-                    <span className="font-headline-md text-headline-md font-bold text-primary">
-                      €68,000 – €88,000{" "}
-                      <span className="font-label-md text-label-md text-on-surface-variant font-normal">
-                        / yr
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
 
-              {/* Right Specification & Direct Actions Panel */}
-              <div className="lg:w-80 shrink-0 p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between border border-surface-container-high">
-                <div>
-                  <div className="flex items-center gap-1.5 mb-space-xs text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
-                    <span className="material-symbols-outlined text-[16px]">security</span>
-                    FACILITY SPECIFICATION: Grade Tier-3 Campus
-                  </div>
-                  <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
-                    Requires certified F-Gas Category 1 or EPA Universal license with proven
-                    large-tonnage centrifugal chiller maintenance and glycol loop commissioning.
-                  </p>
-                  <div className="space-y-1.5 mb-space-md">
-                    <div className="flex items-center justify-between text-body-sm">
-                      <span className="text-tertiary font-label-sm text-label-sm font-medium">
-                        Safety Clearance:
-                      </span>
-                      <span className="font-medium text-on-surface font-label-sm text-label-sm">
-                        BGI 5036 / OSHA 30
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between text-body-sm">
-                      <span className="text-tertiary font-label-sm text-label-sm font-medium">
-                        Shift Model:
-                      </span>
-                      <span className="font-medium text-on-surface font-label-sm text-label-sm">
-                        4x10 Rotating Operational
-                      </span>
-                    </div>
+                  {/* Bookmark Action */}
+                  <button
+                    aria-label="Bookmark position"
+                    className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                    onClick={toggleBookmark}
+                    type="button"
+                  >
+                    <span
+                      className={`material-symbols-outlined text-[17px] ${
+                        isBookmarked ? "text-primary" : ""
+                      }`}
+                    >
+                      bookmark
+                    </span>
+                  </button>
+
+                  {/* Subtle hover indicator */}
+                  <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                    <span className="material-symbols-outlined text-[13px]">
+                      visibility
+                    </span>
+                    <span>Hover for scope</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-space-sm pt-space-sm">
-                  <Link
-                    className="flex-1 py-2.5 px-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface text-center font-label-lg text-label-lg shadow-sm transition-colors border border-surface-container-highest font-medium"
-                    href="/jobs/senior-hvac-technician"
-                  >
-                    View Position
-                  </Link>
-                  <Link
-                    className="flex-1 py-2.5 px-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary text-center font-label-lg text-label-lg flex items-center justify-center gap-1 shadow-sm transition-colors font-semibold"
-                    href="/jobs/senior-hvac-technician"
-                  >
-                    <span>Quick Apply</span>
-                    <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                  </Link>
+
+                {/* Main Card Body */}
+                <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                  {/* Default Information State */}
+                  <div className="flex flex-col gap-2">
+                    {/* Employer Brand & Metas */}
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                          CARRIER COMMERCIAL HVAC &amp; REFRIGERATION
+                        </span>
+                        <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                        <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                          <span className="material-symbols-outlined text-[14px]">
+                            verified
+                          </span>
+                          Verified Employer
+                        </span>
+                        <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                        <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[14px] text-outline">
+                            schedule
+                          </span>
+                          Posted 3h ago
+                        </span>
+                      </div>
+
+                      {/* Salary Band Badge */}
+                      <div className="text-right">
+                        <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                          €68,000 – €88,000
+                        </span>
+                        <span className="font-label-sm text-label-sm text-on-surface-variant">
+                          {" "}
+                          / yr
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Role Title */}
+                    <Link href="/jobs/senior-hvac-technician">
+                      <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                        Senior Commercial Chiller &amp; Industrial HVAC Lead Technician
+                      </h3>
+                    </Link>
+
+                    {/* Key Meta Row */}
+                    <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                      <span className="flex items-center gap-1">
+                        <span className="material-symbols-outlined text-[16px] text-outline">
+                          location_on
+                        </span>
+                        Frankfurt am Main, Germany (On-Site • Hyperscale Data Center Campus)
+                      </span>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                        Full-Time Permanent
+                      </span>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                        Tier-3 Facility
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                        <span className="material-symbols-outlined text-[14px]">
+                          shield
+                        </span>
+                        EU Blue Card Sponsorship
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Tags Row */}
+                  <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                    {[
+                      "Ammonia (NH3) & CO2 Subcritical",
+                      "Carrier AquaEdge Centrifugal",
+                      "Trane Tracer SC+ BMS",
+                      "F-Gas Cat 1 (EN 378)",
+                      "VDI 6022",
+                    ].map((skill, sIdx) => (
+                      <span
+                        key={sIdx}
+                        className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Smooth Interactive Hover Reveal Accordion */}
+                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                    <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                      <div className="w-full h-px bg-surface-container-high" />
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                        <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                          <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[15px]">
+                              insights
+                            </span>
+                            FACILITY SPECIFICATION: Grade Tier-3 Campus
+                          </span>
+                          <p className="text-body-sm text-on-surface-variant">
+                            Requires certified F-Gas Category 1 or EPA Universal license with proven large-tonnage centrifugal chiller maintenance and glycol loop commissioning.
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                          <Link
+                            className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                            href="/jobs/senior-hvac-technician"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <span>View Details &amp; Specs</span>
+                            <span className="material-symbols-outlined text-[15px]">
+                              arrow_outward
+                            </span>
+                          </Link>
+                          <Link
+                            className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                            href="/jobs/senior-hvac-technician"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <span>Quick Apply</span>
+                            <span className="material-symbols-outlined text-[15px]">
+                              send
+                            </span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </article>
 
             {/* Bottom Counter */}
             <div className="mt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md text-on-surface-variant font-body-sm text-body-sm">

@@ -288,205 +288,159 @@ export default function LongHaulIntermodalFreightPage() {
                 </div>
               </div>
 
-              {/* PRIMARY RICH REQUISITION CARD WITH DUAL-STATE HOVER EXPANSION */}
-              <div
-                className="group bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 p-space-lg relative overflow-hidden"
-                onMouseEnter={() => setIsHoveredScope(true)}
-                onMouseLeave={() => setIsHoveredScope(false)}
+              {/* PRIMARY FEATURED JOB CARD */}
+              <article
+                aria-label="International Long-Haul CE Driver requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
-                  {/* Column 1: Rig & Port Haulage Photography */}
-                  <div className="lg:col-span-4 flex flex-col gap-space-xs">
-                    <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container shadow-inner">
-                      <img
-                        alt="A heavy white European Scania long-haul tractor truck parked beside a refrigerated freight trailer at an intermodal rail and sea port terminal with shipping containers and gantry cranes in the background under clear daylight, with transport dispatchers in safety vests standing alongside inspecting telematics digital tablets."
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                        src="/scania-longhaul-hero.jpg"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent pointer-events-none"></div>
-                      {/* Badges on image */}
-                      <div className="absolute top-3 left-3 flex flex-wrap gap-1">
-                        <span className="bg-primary/95 text-on-primary font-label-sm text-label-sm font-semibold px-2.5 py-1 rounded-full shadow-sm backdrop-blur-sm">
-                          Reefer &amp; High-Value Freight
-                        </span>
-                      </div>
-                      <div className="absolute bottom-3 left-3 text-on-primary font-mono text-label-sm tracking-wide">
-                        Ref: BY-ROT-FREIGHT-9821
-                      </div>
-                      <div className="absolute bottom-3 right-3 bg-on-background/80 text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded backdrop-blur-sm">
-                        Updated 30m ago
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant px-1 pt-1">
-                      <span className="flex items-center gap-1 text-primary font-semibold">
-                        <span className="material-symbols-outlined text-sm">hub</span> Direct Carrier Contract
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Column: Visual Media & Badges */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('/scania-longhaul-hero.jpg')`,
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    
+                    {/* Floating pill tags on media */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">local_shipping</span>
+                        Reefer &amp; High-Value Freight
                       </span>
-                      <span>Euro VI Step-E Fleet</span>
+                    </div>
+
+                    <button
+                      aria-label="Bookmark"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                      }}
+                    >
+                      <span className="material-symbols-outlined text-[17px]">bookmark</span>
+                    </button>
+
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
 
-                  {/* Column 2: Job Overview & Dynamic Interactive Expanding Details */}
-                  <div className="lg:col-span-5 flex flex-col justify-between gap-space-md">
-                    <div>
-                      <div className="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant mb-1">
-                        <span className="material-symbols-outlined text-sm text-primary">domain</span>
-                        <span className="font-bold text-on-surface">DHL Global Forwarding &amp; Freja Transport JV</span>
-                        <span className="text-outline-variant">•</span>
-                        <span>Posted 2h ago</span>
-                      </div>
-                      <h3 className="font-headline-md text-headline-md text-black tracking-tight group-hover:text-primary transition-colors">
-                        International Long-Haul CE Driver (Reefer &amp; High-Value European Corridors)
-                      </h3>
-                      <div className="flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-1.5">
-                        <span className="material-symbols-outlined text-base text-primary">distance</span>
-                        <span className="font-medium text-on-surface">Rotterdam Maasvlakte, Netherlands</span>
-                        <span className="text-on-surface-variant font-normal">
-                          (Rotterdam ⇄ Scandinavia ⇄ Ruhr Valley Hubs)
-                        </span>
-                      </div>
-                      {/* Badges / Spec chips */}
-                      <div className="flex flex-wrap gap-1.5 my-space-md">
-                        <span className="bg-surface-container text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full font-medium">
-                          Full-Time Permanent
-                        </span>
-                        <span className="bg-secondary-fixed/40 text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-medium">
-                          Tier-1 Cross-Border Logistics
-                        </span>
-                        <span className="bg-primary-fixed/30 text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
-                          EU Blue Card &amp; Driver Visa Package
-                        </span>
-                        <span className="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full">
-                          Code 95 Certified
-                        </span>
-                        <span className="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full">
-                          Digital Tachograph Gen 2
-                        </span>
-                        <span className="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full">
-                          Dedicated Modern Scania V8 Rig
-                        </span>
-                      </div>
-
-                      {/* INTERACTIVE HOVER CONTAINER: Reveals comprehensive operational directives on card hover */}
-                      <div
-                        className={`bg-surface-container-low rounded-xl p-space-md transition-all duration-300 border ${
-                          isHoveredScope ? "border-primary/20" : "border-transparent"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between text-label-sm font-label-sm text-primary font-bold uppercase tracking-wider mb-1">
-                          <span>Route Directive &amp; Transit Protocol</span>
-                          <span className="text-on-surface-variant font-normal normal-case flex items-center gap-1">
-                            <span className="material-symbols-outlined text-xs">info</span>
-                            <span className={isHoveredScope ? "hidden" : "inline"}>
-                              Hover to reveal dispatch details &amp; route specifications
-                            </span>
-                            <span className={isHoveredScope ? "inline font-semibold text-primary" : "hidden"}>
-                              Expanded Scope Active
-                            </span>
+                  {/* Right Column: Requisition Content & Interactive Reveal */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Top row: Employer, Post Age, Verified & Compensation */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            DHL Global Forwarding &amp; Freja Transport JV
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Employer
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                            Posted 2h ago
                           </span>
                         </div>
-                        <div
-                          className={`transition-all duration-300 ease-in-out ${
-                            isHoveredScope
-                              ? "max-h-[500px] opacity-100"
-                              : "max-h-0 opacity-0 overflow-hidden"
-                          }`}
-                        >
-                          <p className="font-body-sm text-body-sm text-on-surface leading-relaxed pt-1.5">
-                            Scheduled international long-haul temperature-controlled transit across Benelux, Germany, and Scandinavia. Operates high-spec Scania V8 with advanced telematics, 3/1 roster, and guaranteed home rest cycles.
-                          </p>
-                          <div className="mt-space-sm pt-space-sm border-t border-surface-container-high flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
-                            <div className="flex items-start gap-2">
-                              <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
-                              <span>
-                                <strong>Full Scope:</strong> Includes GDP pharmaceutical temp-logging verification, ferry boarding coordination (Rotterdam-Gothenburg), automated toll EETS telemetry, zero-idle bonus metrics.
-                              </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                              <span className="material-symbols-outlined text-primary text-sm mt-0.5">hotel</span>
-                              <span>
-                                <strong>EU Mobility Package 100% Compliant:</strong> Mandatory company-provided 45h weekend hotel accommodation; zero in-cab long rest during regular weekly breaks.
-                              </span>
-                            </div>
-                            <div className="flex items-start gap-2">
-                              <span className="material-symbols-outlined text-primary text-sm mt-0.5">
-                                assignment_turned_in
-                              </span>
-                              <span>
-                                <strong>Rig Amenities:</strong> Scania CS20 Highline Sleeper, dual fuel tanks, auxiliary parking cooler, premium driver seat with climate control, microwave &amp; inverter equipped.
-                              </span>
-                            </div>
+
+                        {/* Salary Highlight */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €54,000 – €74,000
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
+                      </div>
+
+                      {/* Main Job Title */}
+                      <Link href="/jobs/senior-international-long-haul-ce-driver">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          International Long-Haul CE Driver (Reefer &amp; High-Value European Corridors)
+                        </h3>
+                      </Link>
+
+                      {/* Meta Tags: Location, Shift, Type, Clearance */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                          Rotterdam Maasvlakte, Netherlands (Rotterdam ⇄ Scandinavia ⇄ Ruhr Valley Hubs)
+                        </span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                          Full-Time Permanent
+                        </span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                          Tier-1 Cross-Border Logistics
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">shield</span>
+                          EU Blue Card &amp; Driver Visa Package
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Skill Tags / Systems */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Code 95 Certified
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Digital Tachograph Gen 2
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Dedicated Modern Scania V8 Rig
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        GDP Pharma Temp-Logging
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        ADR Class 2-9
+                      </span>
+                    </div>
+
+                    {/* Accordion Reveal Section on Group Hover */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Scheduled international long-haul temperature-controlled transit across Benelux, Germany, and Scandinavia. Operates high-spec Scania V8 with advanced telematics, 3/1 roster, and guaranteed home rest cycles. EU Mobility Package 100% compliant with company-provided hotel accommodation.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-international-long-haul-ce-driver"
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-international-long-haul-ce-driver"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
+                            </Link>
                           </div>
                         </div>
                       </div>
                     </div>
-
-                    {/* Wage bar */}
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-space-xs">
-                      <div>
-                        <span className="font-headline-sm text-headline-sm text-secondary font-bold">
-                          €54,000 – €74,000
-                        </span>
-                        <span className="font-body-sm text-body-sm text-on-surface-variant font-normal">
-                          {" "}
-                          / year base
-                        </span>
-                        <div className="font-label-sm text-label-sm text-primary font-medium">
-                          + €45–€65/day tax-free night per diem + €3,500 fuel/safety annual bonus
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Column 3: Compliance Assessment & Quick Apply Action Panel */}
-                  <div className="lg:col-span-3 bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between h-full gap-space-md">
-                    <div className="flex flex-col gap-space-sm">
-                      <div className="flex items-center justify-between pb-space-xs">
-                        <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">
-                          Statutory Clearance
-                        </span>
-                        <span className="bg-primary/10 text-primary px-2 py-0.5 rounded text-label-sm font-bold">
-                          Grade A Verified
-                        </span>
-                      </div>
-                      <ul className="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
-                        <li className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-primary text-base">check_circle</span>
-                          <span>EU Category CE + Code 95 active</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-primary text-base">check_circle</span>
-                          <span>Smart Tachograph Card (Gen 2)</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-primary text-base">check_circle</span>
-                          <span>Min 2 yrs articulated tractor experience</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-primary text-base">check_circle</span>
-                          <span>ADR Class 2-9 preferred (Tanker optional)</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="flex flex-col gap-2 pt-space-sm">
-                      <Link
-                        href="/jobs/senior-international-long-haul-ce-driver"
-                        className="w-full py-3 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2 group-hover:translate-x-0.5 cursor-pointer text-center"
-                      >
-                        <span>Quick Dispatch Apply</span>
-                        <span className="material-symbols-outlined text-base">arrow_forward</span>
-                      </Link>
-                      <Link
-                        href="/jobs/senior-international-long-haul-ce-driver"
-                        className="w-full py-2.5 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer text-center"
-                      >
-                        <span className="material-symbols-outlined text-base">route</span>
-                        <span>View Route &amp; Technical Specs</span>
-                      </Link>
-                    </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           </section>
 

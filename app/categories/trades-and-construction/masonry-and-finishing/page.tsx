@@ -271,186 +271,159 @@ export default function MasonryAndFinishingPage() {
                 </div>
               </div>
 
-              {/* Exactly ONE primary featured job card */}
-              <div className="rounded-2xl bg-surface-container-lowest shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-12">
-                  {/* Column 1: Image & Badge */}
-                  <div className="lg:col-span-3 p-space-lg flex flex-col gap-space-xs">
-                    <div className="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container-low shadow-sm border border-outline-variant/30 group">
-                      <img
-                        alt="Certified commercial stone mason and architectural bricklayer laying klinker bricks and precast limestone facade"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        src="/masonry-facade-lead.jpg"
-                      />
-                      <span className="absolute top-2 left-2 px-2.5 py-1 rounded bg-on-background/80 backdrop-blur-sm text-on-primary font-label-sm text-[10px] font-bold tracking-wider uppercase shadow">
+              {/* PRIMARY FEATURED JOB CARD */}
+              <article
+                aria-label="Senior Structural Mason, Stone Cladding & Architectural Brickwork Lead requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
+              >
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Column: Visual Media & Badges */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('/masonry-facade-lead.jpg')`,
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    
+                    {/* Floating pill tags on media */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">foundation</span>
                         Architectural Masonry &amp; Facades
                       </span>
-                      <span className="absolute bottom-2 right-2 px-2.5 py-1 rounded-full bg-on-background/75 backdrop-blur-sm text-surface-container-highest text-label-sm text-xs flex items-center gap-1.5 shadow-sm">
-                        <span className="material-symbols-outlined text-[14px] text-primary-fixed">
-                          visibility
-                        </span>
-                        Hover for scope
-                      </span>
                     </div>
-                    <div className="flex items-center justify-between text-tertiary font-label-sm text-[11px] font-mono px-1 mt-1">
-                      <span>Ref: BY-BER-MS-8842</span>
-                      <span>Updated 2h ago</span>
+
+                    <button
+                      aria-label="Bookmark"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                      }}
+                    >
+                      <span className="material-symbols-outlined text-[17px]">bookmark</span>
+                    </button>
+
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
 
-                  {/* Column 2: Job Overview & Specs */}
-                  <div className="lg:col-span-5 p-space-lg pl-0 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap mb-1">
-                        <span className="font-headline-sm text-headline-sm text-on-surface font-bold">
-                          PORR &amp; Implenia Facades JV
-                        </span>
-                        <span
-                          className="inline-flex items-center text-primary text-[16px]"
-                          title="Enterprise Cleared Employer"
-                        >
-                          <span className="material-symbols-outlined text-[18px]">verified</span>
-                        </span>
-                        <span className="text-tertiary font-label-sm text-label-sm">• Posted 2h ago</span>
-                      </div>
-                      <h3 className="font-headline-md text-headline-md text-on-surface tracking-tight hover:text-primary transition-colors cursor-pointer mb-space-sm">
-                        Senior Structural Mason, Stone Cladding &amp; Architectural Brickwork Lead
-                      </h3>
-                      {/* Badges & Location */}
-                      <div className="flex flex-wrap items-center gap-space-xs mb-space-md">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
-                          <span className="material-symbols-outlined text-[14px] text-primary">
-                            location_on
+                  {/* Right Column: Requisition Content & Interactive Reveal */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Top row: Employer, Post Age, Verified & Compensation */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            PORR &amp; Implenia Facades JV
                           </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Employer
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                            Posted 2h ago
+                          </span>
+                        </div>
+
+                        {/* Salary Highlight */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €58,000 – €76,000
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
+                      </div>
+
+                      {/* Main Job Title */}
+                      <Link href="/jobs/senior-structural-mason">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior Structural Mason, Stone Cladding &amp; Architectural Brickwork Lead
+                        </h3>
+                      </Link>
+
+                      {/* Meta Tags: Location, Shift, Type, Clearance */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
                           Berlin, Germany (On-Site • High-End Government &amp; Cultural Complex)
                         </span>
-                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed-variant font-label-sm text-label-sm">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                           Full-Time Permanent
                         </span>
-                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
                           Tier-1 Architectural Facade
                         </span>
-                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
-                          <span className="material-symbols-outlined text-[14px]">flight_takeoff</span>
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">shield</span>
                           EU Blue Card &amp; Relocation Support
                         </span>
                       </div>
-                      {/* Technical Masonry Sub-Discipline Tags */}
-                      <div className="space-y-space-xs mb-space-md">
-                        <span className="font-label-xs text-[11px] font-bold tracking-wider uppercase text-on-surface-variant block mb-1">
-                          Critical Technical Disciplines:
-                        </span>
-                        <div className="flex flex-wrap gap-1.5">
-                          <span className="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
-                            Architectural Facing Brick (Klinker)
-                          </span>
-                          <span className="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
-                            Natural Sandstone Cladding
-                          </span>
-                          <span className="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
-                            DIN 1053-1 / Eurocode 6
-                          </span>
-                          <span className="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
-                            Anchor &amp; Bracket Systems (Halfen)
-                          </span>
-                          <span className="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
-                            Acoustic Cavity Wall Ties
-                          </span>
-                        </div>
-                      </div>
                     </div>
-                    {/* Wage Strip */}
-                    <div className="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mt-space-sm">
-                      <div className="flex items-center gap-space-sm">
-                        <span className="p-2 rounded-lg bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center">
-                          <span className="material-symbols-outlined text-[22px]">euro</span>
-                        </span>
-                        <div>
-                          <div className="font-headline-sm text-headline-sm text-on-surface font-bold">
-                            €58,000 – €76,000{" "}
-                            <span className="font-body-sm text-body-sm font-normal text-on-surface-variant">
-                              / yr base
-                            </span>
-                          </div>
-                          <div className="font-label-sm text-label-sm text-secondary font-semibold">
-                            + 18% Specialty Facade &amp; Height Multiplier + Per Diem Lodge
-                          </div>
-                        </div>
-                      </div>
-                      <span className="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
-                        <span className="material-symbols-outlined text-[14px]">
-                          format_image_left
-                        </span>{" "}
-                        Collective Agreement Tariff (IG BAU)
+
+                    {/* Skill Tags / Systems */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Architectural Facing Brick (Klinker)
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Natural Sandstone Cladding
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        DIN 1053-1 / Eurocode 6
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Anchor &amp; Bracket Systems (Halfen)
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Acoustic Cavity Wall Ties
                       </span>
                     </div>
-                  </div>
 
-                  {/* Column 3: Action Box & Verification Panel */}
-                  <div className="lg:col-span-4 bg-surface-container p-space-xl flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center justify-between mb-space-md">
-                        <span className="px-2.5 py-1 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">
-                          TIER-1 COMPLEX
-                        </span>
-                        <span className="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
-                          <span className="material-symbols-outlined text-[16px]">verified</span>{" "}
-                          Validated
-                        </span>
-                      </div>
-                      <div className="p-space-md rounded-xl bg-surface-container-lowest shadow-sm mb-space-md">
-                        <div className="font-label-md text-label-md text-on-surface font-bold mb-1">
-                          Credential Assessment:
+                    {/* Accordion Reveal Section on Group Hover */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
+                            </span>
+                            <p className="text-body-sm text-on-surface-variant">
+                              Requires verified Maurer Gesellenbrief, Red Seal Bricklayer, or NVQ Level 3 with proven track record in high-tolerance facing brickwork and dry-hung stone facades. Site Clearance: DIN EN 771-1 Quality Class. Facade Tolerance: ±1.0mm per 3m span.
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-structural-mason"
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-structural-mason"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
+                            </Link>
+                          </div>
                         </div>
-                        <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                          Requires verified <strong className="text-on-surface">Maurer Gesellenbrief</strong>,{" "}
-                          <strong className="text-on-surface">Red Seal Bricklayer</strong>, or{" "}
-                          <strong className="text-on-surface">NVQ Level 3</strong> with proven track record in high-tolerance facing brickwork and dry-hung stone facades.
-                        </p>
-                      </div>
-                      {/* Technical Site Requirements Table */}
-                      <div className="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
-                        <div className="flex items-center justify-between py-1 border-b border-surface-container-high">
-                          <span>Site Clearance:</span>
-                          <span className="font-semibold text-on-surface">DIN EN 771-1 Quality Class</span>
-                        </div>
-                        <div className="flex items-center justify-between py-1 border-b border-surface-container-high">
-                          <span>Facade Tolerance:</span>
-                          <span className="font-semibold text-on-surface">±1.0mm per 3m span</span>
-                        </div>
-                        <div className="flex items-center justify-between py-1 border-b border-surface-container-high">
-                          <span>Scaffold Certification:</span>
-                          <span className="font-semibold text-on-surface">TRBS 2121 Compliant</span>
-                        </div>
-                        <div className="flex items-center justify-between py-1">
-                          <span>Language Requirement:</span>
-                          <span className="font-semibold text-on-surface">German A2 or English Professional</span>
-                        </div>
-                      </div>
-                    </div>
-                    {/* CTA Cluster */}
-                    <div className="space-y-space-sm pt-space-md">
-                      <Link
-                        href="/jobs/senior-structural-mason"
-                        className="w-full py-3.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
-                      >
-                        <span>Quick Apply</span>
-                        <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                      </Link>
-                      <Link
-                        className="w-full py-2.5 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
-                        href="/jobs/senior-structural-mason"
-                      >
-                        <span className="material-symbols-outlined text-[18px]">open_in_new</span>
-                        View Position
-                      </Link>
-                      <div className="text-center font-label-sm text-label-sm text-tertiary pt-1">
-                        Direct Contractor Requisition • 4-Day Response Protocol
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           </section>
 

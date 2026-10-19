@@ -442,166 +442,159 @@ export default function WarehouseMaterialHandlingReachForkliftPage() {
                 </button>
               </div>
 
-              {/* Outer interactive mission card container with group-hover animation */}
-              <div
-                className="group relative bg-surface-container-lowest rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden cursor-pointer"
-                onClick={() => setMobileHoverExpanded(!mobileHoverExpanded)}
+              {/* PRIMARY FEATURED JOB CARD */}
+              <article
+                aria-label="Senior High-Bay Reach Truck & Automated Fulfillment Operator requisition"
+                className="group relative w-full rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 ease-out overflow-hidden cursor-pointer"
+                tabIndex={0}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-                  {/* Left Photographic Column */}
-                  <div className="lg:col-span-5 relative min-h-[300px] sm:min-h-[340px] lg:min-h-[440px] overflow-hidden">
-                    <img
-                      alt="Professional European High-Bay Reach Truck and Warehouse Logistics Specialist"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVSibbyszmeZtDxW4N-Ih0NLP7W6Ogz9zmgkGJ-kndx0Uwjk7Kn0P-A5lqv93cHxYZO7u49ibdQzdTQU7jU4D4daG-ixVfn5MuVEWrGZ_rR25ffPMikcJtofeCbfFSV8g7qQVP3_m5H-RFDhS8i7hQIjKO6QlqYAHlDLVB5mEzBJubgdY5OojOXsnsjG6X2lC2RJ9EoUYWsCdoe6EZ-kPZ4wz9Ajb8bzWicz6tHiVmLawGA2rewsFHmg"
+                <div className="flex flex-col md:flex-row items-stretch">
+                  {/* Left Column: Visual Media & Badges */}
+                  <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0 overflow-hidden bg-surface-container">
+                    <div
+                      className="w-full h-full min-h-[190px] bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={{
+                        backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVSibbyszmeZtDxW4N-Ih0NLP7W6Ogz9zmgkGJ-kndx0Uwjk7Kn0P-A5lqv93cHxYZO7u49ibdQzdTQU7jU4D4daG-ixVfn5MuVEWrGZ_rR25ffPMikcJtofeCbfFSV8g7qQVP3_m5H-RFDhS8i7hQIjKO6QlqYAHlDLVB5mEzBJubgdY5OojOXsnsjG6X2lC2RJ9EoUYWsCdoe6EZ-kPZ4wz9Ajb8bzWicz6tHiVmLawGA2rewsFHmg')`,
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent"></div>
-
-                    {/* Top Badges */}
-                    <div className="absolute top-space-md left-space-md right-space-md flex flex-wrap items-center justify-between gap-2">
-                      <span className="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-inverse-surface/85 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-bold tracking-wider uppercase">
-                        <span className="material-symbols-outlined text-sm text-primary-fixed">verified_user</span>
-                        FEATURED INTRALOGISTICS MISSION
-                      </span>
-                      <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">
-                        Tier-1 Contractor
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest/80 via-transparent to-black/30" />
+                    
+                    {/* Floating pill tags on media */}
+                    <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold shadow-sm">
+                        <span className="material-symbols-outlined text-primary text-[13px]">forklift</span>
+                        High-Bay Reach Truck
                       </span>
                     </div>
 
-                    {/* Bottom Hub Details */}
-                    <div className="absolute bottom-space-md left-space-md right-space-md text-on-primary">
-                      <div className="flex items-center gap-1 font-label-sm text-label-sm text-primary-fixed mb-1">
-                        <span className="material-symbols-outlined text-sm">location_on</span>
-                        <span>Hamburg-Billbrook High-Cube Logistics Hub</span>
-                      </div>
-                      <p className="font-headline-sm text-headline-sm font-bold leading-tight">
-                        Amazon Fulfillment / Kuehne+Nagel Logistics Partner
-                      </p>
+                    <button
+                      aria-label="Bookmark Requisition"
+                      className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-on-surface flex items-center justify-center shadow transition-all hover:text-primary active:scale-95 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                      }}
+                    >
+                      <span className="material-symbols-outlined text-[17px]">bookmark</span>
+                    </button>
+
+                    <div className="absolute bottom-2 left-2.5 hidden md:flex items-center gap-1 text-[11px] font-label-sm text-white/90 bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm group-hover:opacity-0 transition-opacity">
+                      <span className="material-symbols-outlined text-[13px]">visibility</span>
+                      <span>Hover for scope</span>
                     </div>
                   </div>
 
-                  {/* Right Content Column */}
-                  <div className="lg:col-span-7 p-4 sm:p-space-lg flex flex-col justify-between">
-                    <div>
-                      <div className="flex flex-wrap items-center justify-between gap-space-xs mb-space-sm">
-                        <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">
-                          Req #WH-7410-DE • Active Dispatch
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold bg-primary/10 px-2.5 py-1 rounded-full">
-                          <span className="material-symbols-outlined text-sm">bolt</span> Immediate Start Available
-                        </span>
-                      </div>
-
-                      <h3 className="font-headline-lg text-xl sm:text-headline-lg text-on-surface font-bold tracking-tight mb-1 group-hover:text-primary transition-colors">
-                        Senior High-Bay Reach Truck &amp; Automated Fulfillment Operator
-                      </h3>
-
-                      <div className="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md flex-wrap">
-                        <span className="material-symbols-outlined text-base text-primary">domain</span>
-                        <span className="font-semibold text-on-surface">EuroLogistics Hub SE</span>
-                        <span>•</span>
-                        <span>Hamburg Metropolitan Logistics Ring</span>
-                      </div>
-
-                      {/* Attribute Badges */}
-                      <div className="flex flex-wrap items-center gap-space-xs mb-space-md">
-                        <span className="px-space-sm py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
-                          <span className="material-symbols-outlined text-xs text-primary">badge</span> DGUV 308-001 Stufe 2
-                        </span>
-                        <span className="px-space-sm py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">
-                          Jungheinrich ETV 216i (12.5m Mast)
-                        </span>
-                        <span className="px-space-sm py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">
-                          SAP EWM Barcode Scanner
-                        </span>
-                        <span className="px-space-sm py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">
-                          Cold-Chain Certified
-                        </span>
-                      </div>
-
-                      {/* Metric Callouts */}
-                      <div className="bg-surface-container-low p-space-md rounded-lg mb-space-md">
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-sm text-left">
-                          <div>
-                            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Approved Tariff</span>
-                            <span className="font-headline-sm text-headline-sm font-bold text-primary">€41,000 – €54,500</span>
-                            <span className="font-label-sm text-label-sm text-on-surface-variant block">/ year base</span>
-                          </div>
-                          <div>
-                            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Shift Premiums</span>
-                            <span className="font-headline-sm text-headline-sm font-bold text-on-surface">+ €16.00 / day</span>
-                            <span className="font-label-sm text-label-sm text-on-surface-variant block">Late &amp; night differential</span>
-                          </div>
-                          <div>
-                            <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Precision Incentive</span>
-                            <span className="font-headline-sm text-headline-sm font-bold text-on-surface">+ €250 / mo</span>
-                            <span className="font-label-sm text-label-sm text-on-surface-variant block">Zero-breakage bonus</span>
-                          </div>
+                  {/* Right Column: Requisition Content & Interactive Reveal */}
+                  <div className="flex-1 p-space-md sm:p-space-lg flex flex-col justify-between gap-space-sm">
+                    {/* Top row: Employer, Post Age, Verified & Compensation */}
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-label-md text-label-md text-secondary font-bold tracking-wide uppercase">
+                            EuroLogistics Hub SE
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-primary font-medium">
+                            <span className="material-symbols-outlined text-[14px]">verified</span>
+                            Verified Carrier
+                          </span>
+                          <span className="w-1 h-1 rounded-full bg-outline-variant" />
+                          <span className="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px] text-outline">schedule</span>
+                            Posted Today
+                          </span>
                         </div>
+
+                        {/* Salary Highlight */}
+                        <div className="text-right">
+                          <span className="font-headline-sm text-[18px] sm:text-headline-sm font-bold text-on-surface">
+                            €41,000 – €54,500
+                          </span>
+                          <span className="font-label-sm text-label-sm text-on-surface-variant"> / yr base</span>
+                        </div>
+                      </div>
+
+                      {/* Main Job Title */}
+                      <Link href="/jobs/senior-high-bay-reach-truck-operator">
+                        <h3 className="font-headline-md text-headline-sm sm:text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors cursor-pointer">
+                          Senior High-Bay Reach Truck &amp; Automated Fulfillment Operator
+                        </h3>
+                      </Link>
+
+                      {/* Meta Tags: Location, Shift, Type, Clearance */}
+                      <div className="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+                        <span className="flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px] text-outline">location_on</span>
+                          Hamburg-Billbrook High-Cube Logistics Hub, Germany
+                        </span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                          Full-Time Permanent
+                        </span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                          Tier-1 Automated Hub
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                          <span className="material-symbols-outlined text-[14px]">shield</span>
+                          DGUV 308-001 Stufe 2
+                        </span>
                       </div>
                     </div>
 
-                    {/* Interactive Accordion Expansion (Hover on desktop, Click toggle on mobile) */}
-                    <div
-                      className={`transition-all duration-500 overflow-hidden ${
-                        mobileHoverExpanded
-                          ? "max-h-96 opacity-100"
-                          : "max-h-0 opacity-0 group-hover:max-h-96 group-hover:opacity-100"
-                      }`}
-                    >
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-space-sm bg-surface-container-low p-space-sm rounded-xl mb-space-sm">
-                        <div className="bg-surface-container-lowest p-space-sm rounded-lg flex items-start gap-2 shadow-sm">
-                          <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
-                            <span className="material-symbols-outlined text-[18px]">route</span>
-                          </div>
-                          <div>
-                            <span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide block">
-                              Aisle Geometry &amp; Staging
+                    {/* Skill Tags / Systems */}
+                    <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Jungheinrich ETV 216i (12.5m Mast)
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        SAP EWM Barcode Scanner
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        Cold-Chain Certified
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        VNA Narrow-Aisle
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                        RFID Slotting
+                      </span>
+                    </div>
+
+                    {/* Accordion Reveal Section on Group Hover */}
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr] transition-all duration-300 ease-out overflow-hidden">
+                      <div className="min-h-0 pt-0 group-hover:pt-space-sm group-focus-within:pt-space-sm flex flex-col gap-space-sm">
+                        <div className="w-full h-px bg-surface-container-high" />
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-lg border border-outline-variant/30">
+                          <div className="flex flex-col gap-0.5 text-on-surface font-body-sm text-body-sm max-w-2xl">
+                            <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[15px]">insights</span>
+                              Operational Scope &amp; Mission Brief
                             </span>
-                            <p className="font-body-sm text-body-sm text-on-surface mt-0.5">
-                              Hamburg-Billbrook Hub Alpha (140 Euro-Pallets / Shift) • 2,780mm VNA narrow-aisle guidance &amp; RFID cross-dock slotting.
+                            <p className="text-body-sm text-on-surface-variant">
+                              Hamburg-Billbrook Hub Alpha (140 Euro-Pallets / Shift) • 2,780mm VNA narrow-aisle guidance &amp; RFID cross-dock slotting. DGUV Vorschrift 68 &amp; FEM 4.004 with speed limiter (≤8 km/h) and optical obstacle detection.
                             </p>
                           </div>
-                        </div>
-
-                        <div className="bg-surface-container-lowest p-space-sm rounded-lg flex items-start gap-2 shadow-sm">
-                          <div className="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center flex-shrink-0">
-                            <span className="material-symbols-outlined text-[18px]">verified_user</span>
+                          <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-high-bay-reach-truck-operator"
+                            >
+                              <span>View Details &amp; Specs</span>
+                              <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
+                            </Link>
+                            <Link
+                              className="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-lg font-semibold transition-all shadow flex items-center gap-1 cursor-pointer"
+                              href="/jobs/senior-high-bay-reach-truck-operator"
+                            >
+                              <span>Quick Apply</span>
+                              <span className="material-symbols-outlined text-[15px]">send</span>
+                            </Link>
                           </div>
-                          <div>
-                            <span className="font-label-sm text-label-sm text-on-surface uppercase font-bold tracking-wide block">
-                              Safety &amp; Telematics Mandate
-                            </span>
-                            <p className="font-body-sm text-body-sm text-on-surface mt-0.5">
-                              DGUV Vorschrift 68 &amp; FEM 4.004 • Mast dampening speed limiter (≤8 km/h), optical obstacle detection &amp; zero-drop safety tolerance.
-                            </p>
-                          </div>
                         </div>
-                      </div>
-
-                      {/* Card Action Buttons */}
-                      <div className="flex flex-col sm:flex-row items-center justify-end gap-space-sm pt-space-xs">
-                        <Link
-                          href="/jobs/senior-high-bay-reach-truck-operator"
-                          onClick={(e) => e.stopPropagation()}
-                          className="w-full sm:w-auto px-space-md py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5 shadow-sm font-semibold"
-                        >
-                          <span className="material-symbols-outlined text-[18px]">bolt</span>
-                          <span>Fast-Track Dispatch Apply</span>
-                        </Link>
-                        <Link
-                          href="/jobs/senior-high-bay-reach-truck-operator"
-                          onClick={(e) => e.stopPropagation()}
-                          className="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-1.5 shadow-sm font-semibold"
-                        >
-                          <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                          <span>View Full Instructions &amp; Technical Specs</span>
-                        </Link>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           </section>
 
