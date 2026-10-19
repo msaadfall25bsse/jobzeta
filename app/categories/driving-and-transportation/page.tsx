@@ -81,7 +81,7 @@ export default function DrivingAndTransportationPage() {
       title: "Fleet Telematics, Safety & Dispatch Logistics",
       desc: "Tachograph compliance, route optimization, fleet safety superintendents, and CMR documentation.",
       band: "€55,000 - €82,000",
-      href: "/find-jobs",
+      href: "/categories/driving-and-transportation/aviation-cargo-and-airport-ramp-ground-support",
     },
   ];
 
