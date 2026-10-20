@@ -359,7 +359,10 @@ export default function AgricultureAndFarmingCategoryPage() {
                 </Link>
 
                 {/* Card 3 */}
-                <div className="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/60">
+                <Link
+                  className="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/60 cursor-pointer block"
+                  href="/categories/agriculture-and-farming/livestock-and-robotic-dairy"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-space-md">
                       <div className="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
@@ -379,13 +382,13 @@ export default function AgricultureAndFarmingCategoryPage() {
                   <div className="mt-space-lg pt-space-md flex items-center justify-between border-t border-surface-container-high/50">
                     <div>
                       <span className="block font-label-sm text-label-sm text-tertiary">Avg. Base Salary</span>
-                      <span className="font-label-lg text-label-lg text-secondary font-bold">€36k – €52k</span>
+                      <span className="font-label-lg text-label-lg text-secondary font-bold">€44k – €68k</span>
                     </div>
                     <span className="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">
                       chevron_right
                     </span>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 4 */}
                 <div className="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-high/60">
